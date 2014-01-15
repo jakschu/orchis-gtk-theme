@@ -25,7 +25,7 @@
     color: @text;
     border: solid @border;
     border-bottom-width: 1px;
-    padding: 6px;
+    padding: 4px;
     background-image: linear-gradient(to bottom,
                                   @gradient_a,
                                   @gradient_b
@@ -61,7 +61,10 @@
 }
 
 .toolbar .button.image-button {
-    padding: 6px 6px 6px 6px;
+    padding-top: 4px;
+    padding-left: 4px;
+    padding-bottom: 4px;
+    padding-right: 4px;
 }
 
 .toolbar GtkComboBox,
@@ -149,7 +152,10 @@
 .primary-toolbar.toolbar {
     border: solid @border;
     border-width: 0px 0px 1px 0px;
-    padding: 6px;
+    padding-top: 4px;
+    padding-left: 4px;
+    padding-bottom: 4px;
+    padding-right: 4px;
     background-image: linear-gradient(to bottom,
                                   @gradient_a,
                                   @gradient_b
@@ -249,7 +255,10 @@
 .inline-toolbar.toolbar {
     border: solid @border;
     border-width: 0px 1px 1px 1px;
-    padding: 6px;
+    padding-top: 4px;
+    padding-left: 4px;
+    padding-bottom: 4px;
+    padding-right: 4px;
     background-image: linear-gradient(to bottom,
                                   @gradient_b,
                                   @gradient_a
@@ -280,7 +289,10 @@
 
 .inline-toolbar .button.image-button,
 .inline-toolbar .button.image-button:active {
-    padding: 6px 6px 6px 6px;
+    padding-top: 4px;
+    padding-left: 4px;
+    padding-bottom: 4px;
+    padding-right: 4px;
     background-image: linear-gradient(to bottom,
                               @button_gradient_a,
                               @button_gradient_b
@@ -291,7 +303,10 @@
 .inline-toolbar .button {
     color: @text;
     border: 1px solid @border;
-    padding: 6px 6px 6px 6px;
+    padding-top: 4px;
+    padding-left: 4px;
+    padding-bottom: 4px;
+    padding-right: 4px;
     background-image: linear-gradient(to bottom,
                                   @button_gradient_a,
                                   @button_gradient_b
@@ -383,7 +398,10 @@
 .header-bar.toolbar {
     border-bottom-width: 1px;
     border: solid @border;
-    padding: 6px;
+    padding-top: 4px;
+    padding-left: 4px;
+    padding-bottom: 4px;
+    padding-right: 4px;
     background-image: linear-gradient(to bottom,
                                   @gradient_a,
                                   @gradient_b
@@ -394,8 +412,11 @@
     padding: 2px 16px;
 }
 
-.header-bar .button.image-button {    
-    padding: 6px;
+.header-bar .button.image-button {
+    padding-top: 4px;
+    padding-left: 4px;
+    padding-bottom: 4px;
+    padding-right: 4px;
 }
 
 /* Title */

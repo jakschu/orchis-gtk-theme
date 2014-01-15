@@ -258,6 +258,57 @@
                 inset 0 -1px alpha(black, 0.05);
 }
 
+
+.primary-toolbar .button.raised.linked:backdrop,
+.primary-toolbar .raised.linked .button:backdrop,
+.toolbar .button.raised.linked:backdrop,
+.toolbar .raised.linked .button:backdrop,
+.header-bar .button.raised.linked:backdrop,
+.header-bar .raised.linked .button:backdrop  {
+    box-shadow: none;
+}
+
+/* remove box shadow from last-child and only-child */
+.primary-toolbar .button.raised.linked:last-child,
+.primary-toolbar .button.raised.linked:only-child,
+.primary-toolbar .button:backdrop.raised.linked:last-child,
+.primary-toolbar .button:backdrop.raised.linked:only-child,
+.primary-toolbar .button:active:backdrop.raised.linked:last-child,
+.primary-toolbar .button:active:backdrop.raised.linked:only-child,
+.primary-toolbar .raised.linked .button:last-child,
+.primary-toolbar .raised.linked .button:only-child,
+.primary-toolbar .raised.linked .button:backdrop:last-child,
+.primary-toolbar .raised.linked .button:backdrop:only-child,
+.primary-toolbar .raised.linked .button:active:backdrop:last-child,
+.primary-toolbar .raised.linked .button:active:backdrop:only-child,
+.toolbar .button.raised.linked:last-child,
+.toolbar .button.raised.linked:only-child,
+.toolbar .button:backdrop.raised.linked:last-child,
+.toolbar .button:backdrop.raised.linked:only-child,
+.toolbar .button:active:backdrop.raised.linked:last-child,
+.toolbar .button:active:backdrop.raised.linked:only-child,
+.toolbar .raised.linked .button:last-child,
+.toolbar .raised.linked .button:only-child,
+.toolbar .raised.linked .button:backdrop:last-child,
+.toolbar .raised.linked .button:backdrop:only-child,
+.toolbar .raised.linked .button:active:backdrop:last-child,
+.toolbar .raised.linked .button:active:backdrop:only-child,
+.header-bar .button.raised.linked:last-child,
+.header-bar .button.raised.linked:only-child,
+.header-bar .button:backdrop.raised.linked:last-child,
+.header-bar .button:backdrop.raised.linked:only-child,
+.header-bar .button:active:backdrop.raised.linked:last-child,
+.header-bar .button:active:backdrop.raised.linked:only-child,
+.header-bar .raised.linked .button:last-child,
+.header-bar .raised.linked .button:only-child,
+.header-bar .raised.linked .button:backdrop:last-child,
+.header-bar .raised.linked .button:backdrop:only-child,
+.header-bar .raised.linked .button:active:backdrop:last-child,
+.header-bar .raised.linked .button:active:backdrop:only-child {
+    box-shadow: none;
+}
+
+
 .primary-toolbar .button.raised.linked:insensitive,
 .primary-toolbar .raised.linked .button:insensitive,
 .toolbar .button.raised.linked:insensitive,

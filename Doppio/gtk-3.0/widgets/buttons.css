@@ -22,9 +22,6 @@
  ***********/
  
 .button {
-    -GtkWidget-focus-padding: 1;
-    -GtkWidget-focus-line-width: 0;
-    
     transition: border 100ms ease-in-out;
 
     padding: 3px 2px;
@@ -49,7 +46,7 @@
 /* Separator */
 .button .separator,
 .button.separator {
-    color: transparent;
+    color: @border;
 }
 
 .button .separator:insensitive,
