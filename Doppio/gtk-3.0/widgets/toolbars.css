@@ -22,6 +22,7 @@
 
 /* Main Colors*/
 .toolbar {
+    color: @text;
     border: solid @border;
     border-bottom-width: 1px;
     padding: 6px;
@@ -36,6 +37,7 @@
 }
 
 .toolbar:insensitive {
+    color: @insensitive_text;
     border: 1px solid @insensitive_border;
     background-image: linear-gradient(to bottom,
                                   @insensitive_gradient_a,
@@ -44,6 +46,7 @@
 }
 
 .toolbar:backdrop {
+    color: @backdrop_text;
     border: 1px solid @backdrop_border;
     background-image: linear-gradient(to bottom,
                                   @backdrop_gradient_a,
@@ -123,7 +126,7 @@
 /* Unfocused */
 .toolbar .button:backdrop,
 .toolbar .button:active:backdrop {
-    color: @backdrop_foreground;
+    color: @backdrop_text;
     border: 1px solid @backdrop_border;
     background-image: linear-gradient(to bottom,
                                       @button_backdrop_gradient_a,
@@ -224,7 +227,7 @@
 /* Unfocused */
 .primary-toolbar .button:backdrop,
 .primary-toolbar .button:active:backdrop {
-    color: @backdrop_foreground;
+    color: @backdrop_text;
     border: 1px solid @backdrop_border;
     background-image: linear-gradient(to bottom,
                                       @button_backdrop_gradient_a,
@@ -351,7 +354,7 @@
 /* Unfocused */
 .inline-toolbar .button:backdrop,
 .inline-toolbar .button:active:backdrop {
-    color: @backdrop_foreground;
+    color: @backdrop_text;
     border: 1px solid @backdrop_border;
     background-image: linear-gradient(to bottom,
                                       @button_backdrop_gradient_a,
@@ -480,7 +483,7 @@
 /* Close button */
 
 .header-bar .button GtkImage {
-    border-radius: 6px;
+    border-radius: 4px;
     color: @text;
     border: 1px solid transparent;
 }

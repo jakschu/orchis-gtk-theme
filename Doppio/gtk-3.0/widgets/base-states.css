@@ -21,18 +21,19 @@
  * Base States *
  ***************/
 .background {
-    background-color: @background;
     color: @foreground;
-}
-
-.background.client-decorated {
-    background-color: transparent;
-}
-
-.background.window-content {
     background-color: @background;
 }
 
+.background:backdrop {
+    /* I want everything nice and flat in the unfocused window */
+    text-shadow: none;
+    icon-shadow: none;
+
+    color: @unfocused_foreground;
+}
+
+/* FIXME: why do we still need this? */
 GtkClutterOffscreen {
     background-color: @background;
     color: @foreground;
@@ -44,13 +45,32 @@ GtkClutterOffscreen {
     color: @selected_foreground;
 }
 
-*:active {
-    background-color: shade(@background, 0.85);
+*:selected:backdrop {
+    /* I would like to remove colors from the backdrop state, next release*/
+    background-color: @theme_unfocused_selected_background;
+    color: @theme_unfocused_selected_foreground;
 }
 
-*:insensitive,
-*:insensitive:insensitive {
+*:insensitive {
+    background-color: @insensitive_background;
     color: @insensitive_foreground;
+    border-color: @insensitive_border;
+}
+
+*:insensitive:backdrop {
+    /* I want everything nice and flat in the unfocused window */
+    text-shadow: none;
+    icon-shadow: none;
+    color: @unfocused_insensitive_foreground;
+}
+
+/* Apply effects to insensitive and prelit images */
+*:insensitive {
+    -gtk-image-effect: dim;
+}
+
+*:hover {
+    -gtk-image-effect: highlight;
 }
 
 .gtkstyle-fallback {
@@ -59,13 +79,13 @@ GtkClutterOffscreen {
 }
 
 .gtkstyle-fallback:prelight {
-    background-color: @hover_background;
+    background-color: shade(@background, 1.10);
     color: @foreground;
 }
 
 .gtkstyle-fallback:active {
-    background-color: @active_background;
-    color: @active_foreground;
+    background-color: shade(@background, 0.90);
+    color: @foreground;
 }
 
 .gtkstyle-fallback:insensitive {
@@ -76,4 +96,11 @@ GtkClutterOffscreen {
 .gtkstyle-fallback:selected {
     background-color: @selected_background;
     color: @selected_foreground;
+}
+
+GtkImage,
+GtkImage:insensitive,
+GtkLabel,
+GtkLabel:insensitive {
+    background-color: transparent;
 }

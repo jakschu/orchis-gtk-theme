@@ -27,7 +27,7 @@
 @define-color foreground #555; /* Foreground color */
 @define-color border shade(@background, 0.8); /* Borders color */
 @define-color separator @border; /* Separator color */
-@define-color text @foreground; /* Text color */
+@define-color text #555; /* Text color */
 @define-color panel #555; /* Panel color */
 @define-color selection #a348b1; /* Selection color */
 @define-color gradient_a @background; /* Gradient color A */
@@ -35,6 +35,7 @@
 @define-color view_background #fff; /* View background */
 @define-color inactive_frame @border; /* Inactive frame color */
 @define-color panel_text #ddd; /* Panel text color */
+@define-color text_shadow alpha(@base, 0.2); /* Text shadow */
 
 /***********
  * Imports *

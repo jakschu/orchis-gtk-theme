@@ -35,6 +35,7 @@
 @define-color view_background #555; /* View background */
 @define-color inactive_frame alpha(#000, 0.2); /* Inactive frame color */
 @define-color panel_text #dddddd; /* Panel text color */
+@define-color text_shadow alpha(@base, 0.2); /* Text shadow */
 
 /***********
  * Imports *

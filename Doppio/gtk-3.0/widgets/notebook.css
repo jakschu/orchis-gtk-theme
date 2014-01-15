@@ -20,16 +20,13 @@
  * Notebook *
  ************/
 
-
-
 .notebook { 
     background-color: @base; 
     border-left: 1px solid @border; 
     border-right: 1px solid @border; 
     border-bottom: 1px solid @border;
-    box-shadow:0 0 0 1px @border;   
+    box-shadow:0 0 0 1px @border;
 }
-
 
 .notebook GtkViewport {
     background-color: @base;
@@ -40,12 +37,14 @@
 .notebook GtkViewport:insensitive {
     background-color: @insensitive_background;
     border-color: @insensitive_border;
+    color: @insensitive_text;
 }
 
 .notebook:backdrop,
 .notebook GtkViewport:backdrop {
     background-color: @backdrop_background;
     border-color: @backdrop_border;
+    color: @backdrop_text;
 }
 
 .notebook:insensitive:backdrop,
@@ -58,24 +57,24 @@
 
 .notebook tab {
     border: none;
-    background: @background;
+    background: transparent;
     color: @text;
 }
 .notebook tab:active {
     border: none;
-    background: @background;
+    background: transparent;
     color: @selection;
 }
 
 .notebook tab:backdrop {
     border: none;
-    background: @background;
+    background: transparent;
     color: @backdrop_text;
 }
 
 .notebook tab:insensitive {
     border: none;
-    background: @background;
+    background: transparent;
     color: @insensitive_text;
 }
 
@@ -229,7 +228,6 @@
 /*----- Labels -----*/
 
 .notebook tab GtkLabel {
-    color: @text;
     text-shadow: 0px 1px alpha(white,0.3);
 }
 

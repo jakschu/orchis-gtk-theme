@@ -3,18 +3,20 @@
  *********/
 
 .frame {
-    border: 1px solid @border;
+    border-color: @border;
     background-color: @base;
 }
 
 .frame:backdrop {
-    border: 1px solid @backdrop_border;
-    background-color: @backdrop_base;
+    border-color: @backdrop_border;
+    background-color: @backdrop_background;
+    color: @backdrop_text;
 }
 
 .frame:insensitive {
-    border: 1px solid @insensitive_border;
+    border-color: @insensitive_border;
     background-color: @insensitive_base;
+    color: @insensitive_text;
 }
 
 /********
@@ -29,20 +31,21 @@
 .view:insensitive,
 .view:insensitive:insensitive {
     background-color: @insensitive_background;
-    color: @insensitive_fg;
-    border: 1px solid @insensitive_border;
+    color: @insensitive_text;
+    border-color: @insensitive_border;
 }
 
 .view:backdrop,
 .view:backdrop:backdrop {
     background-color: @backdrop_background;
-    border: 1px solid @backdrop_border;
+    border-color:  @backdrop_border;
+    color: @backdrop_text;
 }
 
 .view:selected,
 .view:selected:focus {
     background-color: @selected_background;
-    color: @selected_fg;
+    color: @selected_foreground;
 }
 
 .view:selected:backdrop,
@@ -132,7 +135,7 @@ GtkIconView.view.cell:selected:focus {
     border: 1px solid @selected_background;
     border-radius: 0;
     background-color: alpha(@selected_background, 0.5);
-    color: @selected_fg;
+    color: @selected_foreground;
 }
 
 

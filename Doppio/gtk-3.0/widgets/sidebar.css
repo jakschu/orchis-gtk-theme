@@ -26,7 +26,7 @@
 .sidebar GtkScrolledWindow {
     background-color: @background;
     color: @foreground;    
-    border: 0px solid;
+    border: none;
 }
 
 .sidebar .frame {
@@ -44,7 +44,7 @@
 }
 
 .sidebar .frame:insensitive {
-    border: 1px solid @insensitive_border;
+    border-color: @insensitive_border;
 }
 
 /* Backdrop */
@@ -53,20 +53,21 @@
 .sidebar .view:backdrop,
 .sidebar GtkScrolledWindow:backdrop {
     background-color: @backdrop_background;
-    color: @backdrop_foreground;
+    border-color: @backdrop_border;
+    color: @backdrop_text;
 }
 
 .sidebar .frame:backdrop {
-    border: 1px solid @backdrop_border;
+    background-color: @backdrop_background;
+    border-color: @backdrop_border;
+    color: @backdrop_text;
 }
 
 /* Separator */
 .sidebar.view.separator,
 .view.separator,
 .separator {
-    border-width: 0px;
-    border-style: solid;
-    border: 1px solid @border;
+    border: 0px solid @border;
     color: @base;
 }
 
@@ -74,8 +75,7 @@
 .sidebar.view:selected,
 .sidebar.view:hover:selected {
     color: @base;
-    border-style: solid;
-    border-width: 0px;
+    border: 1px solid @selected_border;
     background-color: @active_background;
 }
 

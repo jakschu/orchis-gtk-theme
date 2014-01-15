@@ -29,7 +29,7 @@
 
     padding: 3px 2px;
     border: 1px solid @border;
-    border-radius: 6px;
+    border-radius: 4px;
     background: @button_background;
     color: @text;
 }
@@ -99,7 +99,7 @@
 }
 
 .button.default:hover {
-    border: 1px solid @hover_selection;
+    border: 1px solid @hover_border;
     color: @hover_text;
     background-image: linear-gradient(to bottom,
                                   @button_hover_gradient_a,
@@ -117,7 +117,7 @@
 }
 
 .button.default:active:hover {
-    border: 1px solid  @hover_selection;
+    border: 1px solid  @hover_border;
     background-image: linear-gradient(to bottom,
                               @button_active_gradient_a,
                               @button_active_gradient_b
