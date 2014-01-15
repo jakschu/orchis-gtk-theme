@@ -1,0 +1,148 @@
+/* Copyright 2013 Sam Hewitt.
+*
+* This file is part of the Doppio GTK theme.
+*
+* The Doppio GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Doppio GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Doppio GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/******************
+ * Selection mode *
+ ******************/
+.selection-mode.header-bar,
+.selection-mode.toolbar {
+    border: 1px solid @selected_border;
+    background-color: @selected_background;
+    background-image: none;
+    color: @selected_foreground;
+}
+
+.selection-mode.header-bar {
+    border-top-color: @selected_border;
+    border-bottom-color: @selected_border;
+}
+
+.selection-mode.toolbar {
+    padding: 4px;
+}
+
+/* regular button */
+.selection-mode.header-bar .button,
+.selection-mode.toolbar .button,
+.selection-mode.toolbar GtkToolButton .button {
+    border: 1px solid @selected_border;
+    border-radius: 0;
+    background-image: linear-gradient(to bottom,
+                                  @button_gradient_a,
+                                  @button_gradient_b
+                                  );
+    color: @selected_foreground;
+    text-shadow:none;
+}
+
+.selection-mode.header-bar .button:hover,
+.selection-mode.toolbar .button:hover,
+.selection-mode.toolbar GtkToolButton .button:hover {
+    border: 1px solid @selected_border;
+    background-image: linear-gradient(to bottom,
+                                  @button_hover_gradient_a,
+                                  @button_hover_gradient_b
+                                  );
+    color: @selected_foreground;
+    text-shadow:none;
+}
+
+.selection-mode.header-bar .button:active,
+.selection-mode.toolbar .button:active,
+.selection-mode.toolbar GtkToolButton .button:active {
+    border: 1px solid @selected_border;
+    background-image: linear-gradient(to bottom,
+                                  @button_active_gradient_a,
+                                  @button_active_gradient_b
+                                  );
+    color: shade(@selected_border, 1.1);
+    text-shadow:none;
+}
+
+.selection-mode.header-bar .button:hover:active,
+.selection-mode.toolbar .button:hover:active,
+.selection-mode.toolbar GtkToolButton .button:hover:active {
+    border: 1px solid @selected_border;
+    background-image: linear-gradient(to bottom,
+                                  @button_active_gradient_b,
+                                  @button_active_gradient_a
+                                  );
+    color: shade(@selected_border, 1.1);
+    text-shadow:none;
+}
+
+/* suggested button */
+.selection-mode.header-bar .suggested-action.button,
+.selection-mode.toolbar .suggested-action.button,
+.selection-mode.toolbar GtkToolButton.suggested-action .button {
+    border: 1px solid @selected_border;
+    border-radius: 0;
+    background-color: @selected_background;
+    background-image: none;
+    color: @base;
+    text-shadow:none;
+}
+
+.selection-mode.header-bar .suggested-action.button:hover,
+.selection-mode.toolbar .suggested-action.button:hover,
+.selection-mode.toolbar GtkToolButton.suggested-action .button:hover {
+    border: 1px solid @selected_border;
+    background-color: @selected_background;
+    background-image: none;
+}
+
+.selection-mode.header-bar .suggested-action.button:active,
+.selection-mode.toolbar .suggested-action.button:active,
+.selection-mode.toolbar GtkToolButton.suggested-action:active {
+    border: 1px solid @selected_border;
+    background-color: shade(@selected_background, 1.05);
+    background-image: none;
+}
+
+.selection-mode.header-bar .suggested-action.button:hover:active,
+.selection-mode.toolbar .suggested-action.button:hover:active,
+.selection-mode.toolbar GtkToolButton.suggested-action .button:hover:active {
+    border: 1px solid @selected_border;
+}
+
+/* menu button */
+.selection-mode.header-bar .selection-menu.button,
+.selection-mode.toolbar .selection-menu.button {
+    border-style: none;
+    background: none;
+    color: @selected_foreground;
+}
+
+/* Label */
+.selection-mode.toolbar .dim-label,
+.selection-mode.toolbar .selection-menu.button .dim-label {
+    color: @selected_background;
+}
+
+.selection-mode.header-bar .selection-menu.button:hover,
+.selection-mode.toolbar .dim-label:hover,
+.selection-mode.toolbar .selection-menu.button:hover,
+.selection-mode.toolbar .selection-menu.button .dim-label:hover {
+    color: shade(@selected_foreground, 0.8);
+}
+
+.selection-mode.header-bar .selection-menu.button:active,
+.selection-mode.toolbar .selection-menu.button:active {
+    color: @selected_foreground;
+    box-shadow: none;
+}

@@ -1,0 +1,79 @@
+/* Copyright 2013 Sam Hewitt.
+*
+* This file is part of the Doppio GTK theme.
+*
+* The Doppio GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Doppio GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Doppio GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+
+/***************
+ * Base States *
+ ***************/
+.background {
+    background-color: @background;
+    color: @foreground;
+}
+
+.background.client-decorated {
+    background-color: transparent;
+}
+
+.background.window-content {
+    background-color: @background;
+}
+
+GtkClutterOffscreen {
+    background-color: @background;
+    color: @foreground;
+}
+
+*:selected,
+*:selected:focus {
+    background-color: @selected_background;
+    color: @selected_foreground;
+}
+
+*:active {
+    background-color: shade(@background, 0.85);
+}
+
+*:insensitive,
+*:insensitive:insensitive {
+    color: @insensitive_foreground;
+}
+
+.gtkstyle-fallback {
+    background-color: @background;
+    color: @foreground;
+}
+
+.gtkstyle-fallback:prelight {
+    background-color: @hover_background;
+    color: @foreground;
+}
+
+.gtkstyle-fallback:active {
+    background-color: @active_background;
+    color: @active_foreground;
+}
+
+.gtkstyle-fallback:insensitive {
+    background-color: @insensitive_background;
+    color: @insensitive_foreground;
+}
+
+.gtkstyle-fallback:selected {
+    background-color: @selected_background;
+    color: @selected_foreground;
+}

@@ -1,0 +1,125 @@
+/* Copyright 2013 Sam Hewitt.
+*
+* This file is part of the Doppio GTK theme.
+*
+* The Doppio GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Doppio GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Doppio GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+
+/***********
+ * Buttons *
+ ***********/
+ 
+.button {
+    -GtkWidget-focus-padding: 1;
+    -GtkWidget-focus-line-width: 0;
+    
+    transition: border 100ms ease-in-out;
+
+    padding: 3px 2px;
+    border: 1px solid @border;
+    border-radius: 6px;
+    background: @button_background;
+    color: @text;
+}
+
+.button:hover {
+    border: 1px solid @hover_border;
+    background: @hover_background;
+}
+
+/* Active/Pressed Button */
+.button:active {
+    border: 1px solid @selection;
+    background-color: @button_background_active;
+}
+
+
+/* Separator */
+.button .separator,
+.button.separator {
+    color: transparent;
+}
+
+.button .separator:insensitive,
+.button.separator:insensitive {
+    color: @insensitive_border;
+}
+
+/* Insensitive Button */
+.button:insensitive {
+    border: none;
+    background-color: @insensitive_background;
+    background-image: none;
+    color: @insensitive_text;
+}
+
+.button:active:insensitive {
+    border: 1px solid @insensitive_border;
+    background-color: @insensitive_background;
+    background-image: linear-gradient(to bottom,
+                                  @button_insensitive_gradient_a,
+                                  @button_insensitive_gradient_b
+                                  );
+}
+
+/* Unfocused Button */
+.button:backdrop {
+    border: none;
+    background-color: transparent;
+    background-image: none;
+}
+
+.button:active:backdrop {
+    border: 1px solid @backdrop_border;
+    background-color: @backdrop_background;
+    background-image: linear-gradient(to bottom,
+                                  @button_backdrop_gradient_a,
+                                  @button_backdrop_gradient_b
+                                  );
+}
+
+
+/* Default Button */
+.button.default {
+    border: none;
+    color: @text;
+    background: transparent;
+}
+
+.button.default:hover {
+    border: 1px solid @hover_selection;
+    color: @hover_text;
+    background-image: linear-gradient(to bottom,
+                                  @button_hover_gradient_a,
+                                  @button_hover_gradient_b
+                                  );
+}
+
+.button.default:active {
+    border: 1px solid @selected_background;
+    color: @active_text;
+    background-image: linear-gradient(to bottom,
+                              @button_active_gradient_a,
+                              @button_active_gradient_b
+                              );
+}
+
+.button.default:active:hover {
+    border: 1px solid  @hover_selection;
+    background-image: linear-gradient(to bottom,
+                              @button_active_gradient_a,
+                              @button_active_gradient_b
+                              );
+}

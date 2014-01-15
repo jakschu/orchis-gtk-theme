@@ -1,0 +1,97 @@
+/* Copyright 2013 Sam Hewitt.
+*
+* This file is part of the Moka GTK theme.
+*
+* The Moka GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Moka GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Moka GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/***********************
+ * Fallback Mode Panel *
+ ***********************/
+PanelWidget,
+PanelApplet,
+PanelToplevel {
+    padding: 0;
+    background-color: @panel_color;
+    background-image: none;
+    color: @panel_text_color;
+}
+
+PanelApplet {
+    border-width: 0;
+}
+
+PanelSeparator {
+    border-width: 0;
+    background-color: @panel_color;
+    background-image: none;
+    color: @base_color;
+}
+
+.gnome-panel-menu-bar,
+PanelApplet > GtkMenuBar.menubar,
+PanelApplet > GtkMenuBar.menubar.menuitem,
+PanelMenuBar.menubar,
+PanelMenuBar.menubar.menuitem {
+    -Panelpanel-icon-visible: true;
+
+    border-width: 0;
+    background-color: @panel_color;
+    background-image: none;
+    color: @panel_text_color;
+}
+
+PanelAppletFrame {
+    border-width: 0;
+    background-color: @panel_color;
+    background-image: none;
+}
+
+PanelApplet .button {
+    -GtkButton-inner-border: 2;
+
+    border-width: 0 1px;
+    border-radius: 0;
+    border-color: transparent;
+    background-color: @panel_color;
+    background-image: none;
+    color: @base_color;
+}
+
+PanelApplet .button:active {
+    border-width: 0 1px;
+    border-radius: 0;
+    border-color: mix(@panel_color, @base_color, 0.23);
+    background-color: mix(@panel_color, @base_color, 0.21);
+    background-image: none;
+    color: shade(@base_color, 1.08);
+}
+
+PanelApplet .button:prelight {
+    border-color: mix(@panel_color, @base_color, 0.13);
+    background-color: mix(@panel_color, @base_color, 0.11);
+    background-image: none;
+    color: shade(@base_color, 1.08);
+}
+
+PanelApplet .button:active:prelight {
+    border-color: mix(@panel_color, @base_color, 0.33);
+    background-color: mix(@panel_color, @base_color, 0.31);
+    background-image: none;
+    color: shade(@base_color, 1.08);
+}
+
+WnckPager, WnckTasklist {
+    background-color: @panel_color;
+}

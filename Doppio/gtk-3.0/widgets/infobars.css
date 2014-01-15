@@ -1,0 +1,128 @@
+/**************
+ * GtkInfoBar *
+ **************/
+GtkInfoBar {
+    border-width: 1px;
+    border-style: solid;
+}
+
+.info {
+    text-shadow: 0 1px @info_text_shadow;
+}
+
+.warning {
+    text-shadow: 0 1px @warning_text_shadow;
+}
+
+.question {
+    text-shadow: 0 1px @question_text_shadow;
+}
+
+.error {
+    text-shadow: 0 1px @error_text_shadow;
+}
+
+.info:backdrop,
+.warning:backdrop,
+.question:backdrop,
+.error:backdrop {
+    text-shadow: none;
+    background-color: @backdrop_base;
+    color: @backdrop_foreground;
+    border: 1px solid @backdrop_border;
+}
+
+.info .entry,
+.info .entry:focus,
+.info .button,
+.info .button:insensitive,
+.info .button:active {
+    text-shadow: none;
+    border: 1px solid @info_border;
+    border-style: solid;
+    border-width: 1px;
+}
+
+
+.warning .entry,
+.warning .entry:focus,
+.warning .button,
+.warning .button:insensitive,
+.warning .button:active {
+    text-shadow: none;
+    border: 1px solid @warning_border;
+    border-style: solid;
+    border-width: 1px;
+}
+
+
+.error .entry,
+.error .entry:focus,
+.error .button,
+.error .button:insensitive,
+.error .button:active {
+    text-shadow: none;
+    border: 1px solid @error_border;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.question .entry,
+.question .entry:focus,
+.question .button,
+.question .button:insensitive,
+.question .button:active {
+    text-shadow: none;
+    border: 1px solid @question_border;
+    border-style: solid;
+    border-width: 1px;
+}
+
+
+.info .entry:backdrop,
+.info .button:backdrop,
+.info .button:insensitive:backdrop,
+.info .button:active:backdrop,
+.warning .entry:backdrop,
+.warning .button:backdrop,
+.warning .button:insensitive:backdrop,
+.warning .button:active:backdrop,
+.question .entry:backdrop,
+.question .button:backdrop,
+.question .button:insensitive:backdrop,
+.question .button:active:backdrop,
+.error .entry:backdrop,
+.error .button:backdrop,
+.error .button:insensitive:backdrop,
+.error .button:active:backdrop {
+    text-shadow: none;
+    border-image: none;
+    border: 1px solid @backdrop_border;
+    border-style: solid;
+    border-width: 1px;
+    color: @backdrop_background;
+}
+
+.info {
+    background-color: @info_background;
+    color: @info_foreground;
+    border: 1px solid @info_border;
+}
+
+.warning {
+    background-color: @warning_background;
+    color: @warning_foreground;
+    border: 1px solid @warning_border;
+}
+
+.question {
+    background-color: @question_background;
+    color: @question_foreground;
+    border: 1px solid @question_border;
+}
+
+.error {
+    background-color: @error_background;
+    color: @error_foreground;
+    border: 1px solid @error_border;
+}

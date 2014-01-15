@@ -1,0 +1,144 @@
+#!/bin/bash
+# -*- Mode: sh; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
+#
+# Authors:
+#   Sam Hewitt <hewittsamuel@gmail.com>
+#
+# Description:
+#   An installation bash script for Doppio-Dark GTK Theme
+#
+# Legal Stuff:
+#
+# This file is part of the Doppio-Dark GTK Theme and is free software; you can redistribute it and/or modify it under
+# the terms of the GNU General Public License as published by the Free Software
+# Foundation; version 3.
+#
+# This file is part of the Doppio-Dark GTK Theme and is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+# FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+# details.
+#
+# You should have received a copy of the GNU General Public License along with
+# this program; if not, see <https://www.gnu.org/licenses/gpl-3.0.txt>
+
+echo '#----------------------------------------------#'
+echo '#         Doppio GTK Theme Install Script        #'
+echo '#----------------------------------------------#'
+
+echo '#----------------------------------------------#'
+echo '#     NOTE: The main Doppio theme needs          #'
+echo '#     to be installed otherwise many           #'
+echo '#     icons will be missing.                   #'
+echo '#----------------------------------------------#'
+
+function continue {
+echo ""
+read -p "Do you want to continue? (Y)es, (N)o : " INPUT
+case $INPUT in
+	[Yy]* ) main;;
+    [Nn]* ) exit 99;;
+    * ) echo; echo "Sorry, try again."; continue;;
+esac
+}
+
+function main {
+if [ "$UID" -eq "$ROOT_UID" ]; then
+	if [ -d /usr/local/share/themes/Doppio-Dark ]; then
+		echo
+		read -p "Found an existing installation. Replace it? (Y)es, (N)o : " INPUT
+		case $INPUT in
+		[Yy]* ) 
+			rm -Rf /usr/local/share/themes/Doppio-Dark 2>/dev/null
+			rm -Rf /usr/local/share/themes/Doppio 2>/dev/null
+			;;
+		[Nn]* )
+			;;
+	    * )
+		    clear && echo 'Sorry, try again.'
+		    main
+		    ;;
+		esac
+	fi
+	cp -R ./Doppio-Dark/ /usr/local/share/themes/
+	cp -R ./Doppio/ /usr/local/share/themes/
+	echo "Installation complete!"
+	set
+elif [ "$UID" -ne "$ROOT_UID" ]; then
+	if [ -d $HOME/.local/share/themes/Doppio-Dark ]; then
+		echo
+		read -p "Found an existing installation. Replace it? (Y)es, (N)o : " INPUT
+		case $INPUT in
+		[Yy]* ) 
+			rm -Rf "$HOME/.local/share/themes/Doppio-Dark" 2>/dev/null
+			rm -Rf "$HOME/.local/share/themes/Doppio" 2>/dev/null
+			;;
+		[Nn]* )
+			;;		
+		* )
+		    clear && echo 'Sorry, try again.'
+		    main
+		    ;;
+		esac
+	fi
+	cp -R ./Doppio-Dark/ $HOME/.local/share/themes/
+	cp -R ./Doppio/ $HOME/.local/share/themes/
+	echo "Installation complete!"
+	set
+fi
+}
+
+function set {
+echo ""
+read -p "Do you want to set Doppio as your desktop theme now? (Y)es, (N)o : " INPUT
+case $INPUT in
+	[Yy]* ) settheme;;
+    [Nn]* ) end;;
+    * ) echo; echo "Uh oh, invalid response. Please retry."; set;;
+esac
+}
+
+function settheme {
+echo ''
+echo '1. Dark window borders'
+echo '2. Light window borders'
+echo ''
+read -p 'Which window decorations you like (Enter your choice) : ' REPLY
+case $REPLY in
+# Theme Choice
+1)	
+	echo "Setting Doppio-Dark as GTK window theme..."
+	gsettings set org.gnome.desktop.wm.preferences theme "Doppio-Dark"
+	echo "Done."
+	;;
+2)	
+	echo "Setting Doppio as GTK window theme..."
+	gsettings set org.gnome.desktop.wm.preferences theme "Doppio"
+	echo "Done."
+	;;
+# Invalid choice
+* ) 
+    clear && echo 'Not an option, try again.' && settheme;;
+esac
+echo "Setting Doppio as desktop GTK theme..."
+gsettings set org.gnome.desktop.interface gtk-theme "Doppio"
+echo "Done."
+end
+}
+
+function end {
+	echo "Exiting"
+	exit 0
+}
+
+ROOT_UID=0
+if [ "$UID" -ne "$ROOT_UID" ]; then
+	echo
+	echo "Doppio GTK Theme will be installed in '$HOME/.local/share/themes'."
+	echo "To make them available to all users, run this script as root."
+	continue
+else
+	echo
+	echo "Doppio GTK Theme will be installed in '/usr/local/share/themes'"
+	echo "It will be available to all users."
+	continue
+fi

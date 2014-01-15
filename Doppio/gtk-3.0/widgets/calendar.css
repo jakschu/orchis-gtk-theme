@@ -1,0 +1,66 @@
+/* Copyright 2013 Sam Hewitt.
+*
+* This file is part of the Doppio GTK theme.
+*
+* The Doppio GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Doppio GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Doppio GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/***********
+* Calendar *
+************/
+
+
+GtkCalendar,
+.menuitem GtkCalendar {
+    border-radius: 2px;
+    padding: 4px;
+    border: 1px solid;
+    background-color: transparent;
+    background-image: none;
+}
+
+.menuitem GtkCalendar:inconsistent {
+    color: mix(@text, @background, 0.5);
+}
+
+GtkCalendar.view {
+    border-style: none;
+    background-color: transparent;
+    background-image: none;
+}
+
+GtkCalendar:inconsistent {
+    color: mix(@foreground, @background, 0.5);
+}
+
+GtkCalendar.button,
+GtkCalendar.button:hover,
+GtkCalendar.button:insensitive {
+
+}
+
+/* Header */
+GtkCalendar.header {
+    border: 1px solid alpha(@foreground, 0.4);
+    background-color: alpha(@foreground, 0.2);
+    background-image: none;
+    font-weight: bold;
+}
+
+/* Highlight */
+GtkCalendar.highlight {
+    border-width: 0;
+    background-color: transparent;
+    color: @selected_background;
+}

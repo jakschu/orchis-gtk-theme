@@ -1,0 +1,117 @@
+/************
+ * Nautilus *
+ ************/
+
+.nautilus-canvas-item {
+    border-radius: 5px;
+}
+
+.nautilus-desktop.nautilus-canvas-item {
+    color: @selected_fg_color;
+    text-shadow: 1px 1px black;
+}
+
+.nautilus-desktop.nautilus-canvas-item:active {
+    color: @text_color;
+}
+
+.nautilus-desktop.nautilus-canvas-item:selected {
+    color: @selected_fg_color;
+}
+
+.nautilus-desktop.nautilus-canvas-item:active,
+.nautilus-desktop.nautilus-canvas-item:prelight,
+.nautilus-desktop.nautilus-canvas-item:selected {
+    text-shadow: none;
+}
+
+.nautilus-desktop.nautilus-canvas-item:selected:backdrop {
+    color: @unfocused_selected_fg_color;
+}
+
+NautilusWindow .frame {
+    border-width: 0 0 1px 0;
+}
+
+NautilusWindow GtkScrolledWindow.frame {
+    border-width: 0;
+}
+
+NautilusWindow .sidebar .frame {
+    border-width: 0px;
+}
+
+NautilusWindow .notebook {
+    border-width: 1px 0 0 0;
+}
+
+NautilusWindow > GtkGrid > .pane-separator,
+NautilusWindow > GtkGrid > .pane-separator:hover {
+    border-width: 0 1px 0 0;
+    border-style: solid;
+    border-color: @borders;
+    background-color: @bg_color;
+    color: @borders;
+}
+
+NautilusWindow > GtkGrid > .pane-separator:backdrop,
+NautilusWindow > GtkGrid > .pane-separator:hover:backdrop {
+    border-color: @unfocused_borders_color;
+    background-color: @unfocused_bg_color;
+}
+
+NautilusNotebook .notebook {
+    border-width: 1px 0 0 0;
+}
+
+NautilusNotebook .frame {
+    border-width: 0;
+}
+
+NautilusToolbar .button {
+    icon-shadow: 0 1px @button_text_shadow;
+}
+
+NautilusToolbar .button:active {
+    icon-shadow: 0 1px @button_active_text_shadow;
+}
+
+NautilusToolbar .button:insensitive,
+NautilusToolbar .button:active *:insensitive {
+    icon-shadow: none;
+}
+
+NautilusQueryEditor .primary-toolbar.toolbar {
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+
+NautilusQueryEditor .toolbar {
+    padding-top: 3px;
+    padding-bottom: 2px;
+
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: @bg_color;
+    
+    background-color: mix(@bg_color, @base_color, 0.5);
+}
+
+NautilusQueryEditor .toolbar:nth-child(2) {
+    border-color: @borders;
+}
+
+NautilusQueryEditor .toolbar:last-child,
+NautilusQueryEditor .primary-toolbar.toolbar:only-child {
+    border-bottom-width: 1px;
+    border-bottom-color: @borders;
+}
+
+NautilusQueryEditor .toolbar:backdrop {
+    background-color: @unfocused_base_color;
+    border-color: @unfocused_base_color;
+}
+
+NautilusQueryEditor .toolbar:backdrop:nth-child(2) {
+    border-color: @unfocused_borders;
+}

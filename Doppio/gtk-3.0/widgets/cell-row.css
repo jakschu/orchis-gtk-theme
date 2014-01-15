@@ -1,0 +1,24 @@
+/****************
+ * cell and row *
+ ****************/
+.cell {
+    border-width: 0;
+    border-radius: 0;
+}
+
+.cell:selected,
+.cell:selected:focus {
+    background-color: @theme_selected_background;
+    color: @theme_selected_foreground;
+}
+
+row:selected,
+row:selected:focus {
+    border: 0 solid shade(@theme_selected_background, 0.9);
+    background-color: @theme_selected_background;
+    background-image: none;
+    color: @theme_selected_foreground;
+
+    -GtkWidget-focus-padding: 1;
+    -GtkWidget-focus-line-width: 0;
+}

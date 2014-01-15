@@ -1,0 +1,15 @@
+Source: moka-gtk-theme
+Section: gnome
+Priority: optional
+Maintainer: Sam Hewitt <hewittsamuel@gmail.com>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.9.2
+Homepage: https://github.com/snwh/moka-gtk-theme
+
+Package: moka-gtk-theme
+Architecture: all
+Depends: ${misc:Depends}
+ gtk2-engines-murrine,
+ gnome-themes-standard
+Description: Moka GTK Theme
+ Moka GTK theme.

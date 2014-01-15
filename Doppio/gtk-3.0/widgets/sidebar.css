@@ -1,0 +1,91 @@
+/* Copyright 2013 Sam Hewitt.
+*
+* This file is part of the Doppio GTK theme.
+*
+* The Doppio GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Doppio GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Doppio GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/***********
+ * Sidebar *
+ ***********/
+
+.sidebar,
+.sidebar.view,
+.sidebar .view,
+.sidebar GtkScrolledWindow {
+    background-color: @background;
+    color: @foreground;    
+    border: 0px solid;
+}
+
+.sidebar .frame {
+    border-color: @border;
+    border-width: 0px 1px 1px 1px;
+}
+
+/* Insensitive */
+.sidebar:insensitive,
+.sidebar.view:insensitive,
+.sidebar .view:insensitive,
+.sidebar GtkScrolledWindow:insensitive {
+    background-color: @insensitive_background;
+    color: @insensitive_foreground;
+}
+
+.sidebar .frame:insensitive {
+    border: 1px solid @insensitive_border;
+}
+
+/* Backdrop */
+.sidebar:backdrop,
+.sidebar.view:backdrop,
+.sidebar .view:backdrop,
+.sidebar GtkScrolledWindow:backdrop {
+    background-color: @backdrop_background;
+    color: @backdrop_foreground;
+}
+
+.sidebar .frame:backdrop {
+    border: 1px solid @backdrop_border;
+}
+
+/* Separator */
+.sidebar.view.separator,
+.view.separator,
+.separator {
+    border-width: 0px;
+    border-style: solid;
+    border: 1px solid @border;
+    color: @base;
+}
+
+/* Selected */
+.sidebar.view:selected,
+.sidebar.view:hover:selected {
+    color: @base;
+    border-style: solid;
+    border-width: 0px;
+    background-color: @active_background;
+}
+
+/* Selected Backdrop */
+.sidebar.view:selected:backdrop,
+.sidebar.view:hover:selected:backdrop {
+    background-color: @backdrop_selected_background;
+}
+
+/* Hover */
+.sidebar.view:hover {
+    background-color: @hover_background;
+}
