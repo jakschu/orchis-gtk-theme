@@ -7,16 +7,16 @@
 }
 
 .nautilus-desktop.nautilus-canvas-item {
-    color: @selected_fg_color;
+    color: @selected_foreground;
     text-shadow: 1px 1px black;
 }
 
 .nautilus-desktop.nautilus-canvas-item:active {
-    color: @text_color;
+    color: @text;
 }
 
 .nautilus-desktop.nautilus-canvas-item:selected {
-    color: @selected_fg_color;
+    color: @selected_foreground;
 }
 
 .nautilus-desktop.nautilus-canvas-item:active,
@@ -26,7 +26,7 @@
 }
 
 .nautilus-desktop.nautilus-canvas-item:selected:backdrop {
-    color: @unfocused_selected_fg_color;
+    color: @unfocused_selected_foreground;
 }
 
 NautilusWindow .frame {
@@ -49,15 +49,15 @@ NautilusWindow > GtkGrid > .pane-separator,
 NautilusWindow > GtkGrid > .pane-separator:hover {
     border-width: 0 1px 0 0;
     border-style: solid;
-    border-color: @borders;
-    background-color: @bg_color;
-    color: @borders;
+    border-color: @border;
+    background-color: @background;
+    color: @border;
 }
 
 NautilusWindow > GtkGrid > .pane-separator:backdrop,
 NautilusWindow > GtkGrid > .pane-separator:hover:backdrop {
-    border-color: @unfocused_borders_color;
-    background-color: @unfocused_bg_color;
+    border-color: @unfocused_border;
+    background-color: @unfocused_background;
 }
 
 NautilusNotebook .notebook {
@@ -92,26 +92,26 @@ NautilusQueryEditor .toolbar {
 
     border-width: 1px 0 0 0;
     border-style: solid;
-    border-color: @bg_color;
+    border-color: @background;
     
-    background-color: mix(@bg_color, @base_color, 0.5);
+    background-color: mix(@background, @base, 0.5);
 }
 
 NautilusQueryEditor .toolbar:nth-child(2) {
-    border-color: @borders;
+    border-color: @border;
 }
 
 NautilusQueryEditor .toolbar:last-child,
 NautilusQueryEditor .primary-toolbar.toolbar:only-child {
     border-bottom-width: 1px;
-    border-bottom-color: @borders;
+    border-bottom-color: @border;
 }
 
 NautilusQueryEditor .toolbar:backdrop {
-    background-color: @unfocused_base_color;
-    border-color: @unfocused_base_color;
+    background-color: @unfocused_base;
+    border-color: @unfocused_base;
 }
 
 NautilusQueryEditor .toolbar:backdrop:nth-child(2) {
-    border-color: @unfocused_borders;
+    border-color: @unfocused_border;
 }

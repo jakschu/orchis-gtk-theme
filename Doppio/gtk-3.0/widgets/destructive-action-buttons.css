@@ -1,6 +1,7 @@
 /******************************
  * Destructive action buttons *
  ******************************/
+ 
 .destructive-action.button {
     background-image: linear-gradient(to bottom,
                                       @destructive_action_button_a,
@@ -17,9 +18,7 @@
 
 .destructive-action.button:active,
 .destructive-action.button:hover:active {
-    background-image: linear-gradient(to bottom,
-                                      @destructive_action_button_b,
-                                      @destructive_action_button_a);
+    background-color: @destructive_action_button_b;
 
     color: @destructive_action_button_foreground;
 }

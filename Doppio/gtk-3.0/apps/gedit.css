@@ -5,9 +5,9 @@ GeditWindow .pane-separator,
 GeditWindow .pane-separator:hover {
     border-width: 0 1px 1px 1px;
     border-style: solid;
-    border-color: shade(@theme_bg_color, 0.8);
-    background-color: shade(@theme_bg_color, 1.02);
-    color: shade(@theme_bg_color, 0.8);
+    border-color: shade(@theme_background, 0.8);
+    background-color: shade(@theme_background, 1.02);
+    color: shade(@theme_background, 0.8);
 }
 
 GeditPanel.title GtkLabel {
@@ -25,7 +25,7 @@ GeditPanel .toolbar {
 }
 
 GeditDocumentsPanel .view {
-    background-color: @theme_bg_color;
+    background-color: @theme_background;
 }
 
 GeditPanel.vertical .notebook {
@@ -60,7 +60,7 @@ GeditStatusComboBox .button:active:hover {
 GeditStatusComboBox .button:hover,
 GeditStatusComboBox .button:active,
 GeditStatusComboBox .button:active:hover {
-    border-color: shade(@theme_bg_color, 0.8);
+    border-color: shade(@theme_background, 0.8);
 }
 
 GeditViewFrame .gedit-search-slider {
@@ -68,24 +68,24 @@ GeditViewFrame .gedit-search-slider {
     border-radius: 0 0 2px 2px;
     border-width: 0 1px 1px 1px;
     border-style: solid;
-    border-color: shade(@theme_base_color, 0.8);
-    background-color: @theme_base_color;
+    border-color: shade(@theme_base, 0.8);
+    background-color: @theme_base;
 }
 
 GeditViewFrame .gedit-search-slider .not-found {
-    background-color: @error_bg_color;
+    background-color: @error_background;
     background-image: none;
-    color: @error_fg_color;
+    color: @error_foreground;
 }
 
 GeditViewFrame .gedit-search-slider .not-found:selected {
-    background-color: @theme_selected_bg_color;
-    color: @theme_selected_fg_color;
+    background-color: @theme_selected_background;
+    color: @theme_selected_foreground;
 }
 
 GeditFileBrowserWidget .primary-toolbar.toolbar  {
     padding: 2px;
     border-top: none;
-    background-color: @theme_bg_color;
+    background-color: @theme_background;
     background-image: none;
 }

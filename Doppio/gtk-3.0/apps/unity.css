@@ -24,8 +24,8 @@ UnityPanelWidget,
 .unity-panel {
     border-width: 0 0 1px 0;
     border-style: solid;
-    border-color: @panel_color;
-    background-color: @panel_color;
+    border-color: @panel;
+    background-color: @panel;
     background-image: none;
-    color: @panel_text_color;
+    color: @panel_text;
 }

@@ -26,7 +26,8 @@
 .sidebar GtkScrolledWindow {
     background-color: @background;
     color: @foreground;    
-    border: none;
+    border: solid @border;
+    border-width: 0;
 }
 
 .sidebar .frame {

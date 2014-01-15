@@ -103,7 +103,7 @@
 .scrollbar.slider {
     background-color: alpha(@foreground, 0.2);
     /* Borders are opposite what you'd expect */
-    border-radius: 20px;
+    border-radius: 0;
     border-style: solid;
     border-image: none;
     border: 1px solid transparent;
@@ -112,21 +112,19 @@
 
 .scrollbar.slider:hover {
     background-color: alpha(@selected_background, 0.4);
-    -transition:all 500ms; /* doesn't work */
     background-image: none;
     border-style: solid;
     border-image: none;
-    border: 1px solid @selected_background;
+    border: 1px solid transparent;
     border-width: 1px;
 }
 
 .scrollbar.slider:active {
-    background-color: alpha(@foreground, 0.4);
-    -transition:all 500ms; /* doesn't work */
+    background-color: alpha(@selected_background, 0.7);
     background-image: none;
     border-style: solid;
     border-image: none;
-    border: 1px solid @border;
+    border: 1px solid transparent;
     border-width: 1px;
 }
 
@@ -135,7 +133,7 @@
     background-color: alpha(@foreground, 0.3);
     border-style: solid;
     border-image: none;
-    border: 1px solid @active_border;
+    border: 1px solid transparent;
     border-width: 1px;
 }
 

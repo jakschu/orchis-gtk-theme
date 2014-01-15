@@ -24,6 +24,7 @@ GtkImage,
 GtkImage:active,
 GtkImage:insensitive {
     background-color: transparent;
+    border:none;
 }
 
 /*******************

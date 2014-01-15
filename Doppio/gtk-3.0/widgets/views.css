@@ -62,7 +62,7 @@
 .view.rubberband,
 .rubberband {
     border: 1px solid shade(@selected_background, 0.9);
-    border-radius: 0;
+    border-radius: 4px;
     background-color: alpha(@selected_background, 0.3);
 }
 
@@ -109,7 +109,7 @@ GtkTreeView.dnd {
 }
 
 GtkTreeView .entry {
-    border-radius: 0;
+    border-radius: 4px;
     background-color: @base;
     background-image: none;
 }
@@ -133,14 +133,14 @@ GtkIconView.view {
 GtkIconView.view.cell:selected,
 GtkIconView.view.cell:selected:focus {
     border: 1px solid @selected_background;
-    border-radius: 0;
-    background-color: alpha(@selected_background, 0.5);
+    border-radius: 4px;
+    background-color: alpha(@selected_background, 0.7);
     color: @selected_foreground;
 }
 
 
 GdMainIconView.content-view {
-    -GdMainIconView-icon-size: 48px;
+    -GdMainIconView-icon-size: 64px;
 }
 
 GtkIconView.content-view.check {

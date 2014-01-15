@@ -23,9 +23,9 @@ PanelWidget,
 PanelApplet,
 PanelToplevel {
     padding: 0;
-    background-color: @panel_color;
+    background-color: @panel;
     background-image: none;
-    color: @panel_text_color;
+    color: @panel_text;
 }
 
 PanelApplet {
@@ -34,9 +34,9 @@ PanelApplet {
 
 PanelSeparator {
     border-width: 0;
-    background-color: @panel_color;
+    background-color: @panel;
     background-image: none;
-    color: @base_color;
+    color: @base;
 }
 
 .gnome-panel-menu-bar,
@@ -47,14 +47,14 @@ PanelMenuBar.menubar.menuitem {
     -Panelpanel-icon-visible: true;
 
     border-width: 0;
-    background-color: @panel_color;
+    background-color: @panel;
     background-image: none;
-    color: @panel_text_color;
+    color: @panel_text;
 }
 
 PanelAppletFrame {
     border-width: 0;
-    background-color: @panel_color;
+    background-color: @panel;
     background-image: none;
 }
 
@@ -64,34 +64,34 @@ PanelApplet .button {
     border-width: 0 1px;
     border-radius: 0;
     border-color: transparent;
-    background-color: @panel_color;
+    background-color: @panel;
     background-image: none;
-    color: @base_color;
+    color: @base;
 }
 
 PanelApplet .button:active {
     border-width: 0 1px;
     border-radius: 0;
-    border-color: mix(@panel_color, @base_color, 0.23);
-    background-color: mix(@panel_color, @base_color, 0.21);
+    border-color: mix(@panel, @base, 0.23);
+    background-color: mix(@panel, @base, 0.21);
     background-image: none;
-    color: shade(@base_color, 1.08);
+    color: shade(@base, 1.08);
 }
 
 PanelApplet .button:prelight {
-    border-color: mix(@panel_color, @base_color, 0.13);
-    background-color: mix(@panel_color, @base_color, 0.11);
+    border-color: mix(@panel, @base, 0.13);
+    background-color: mix(@panel, @base, 0.11);
     background-image: none;
-    color: shade(@base_color, 1.08);
+    color: shade(@base, 1.08);
 }
 
 PanelApplet .button:active:prelight {
-    border-color: mix(@panel_color, @base_color, 0.33);
-    background-color: mix(@panel_color, @base_color, 0.31);
+    border-color: mix(@panel, @base, 0.33);
+    background-color: mix(@panel, @base, 0.31);
     background-image: none;
-    color: shade(@base_color, 1.08);
+    color: shade(@base, 1.08);
 }
 
 WnckPager, WnckTasklist {
-    background-color: @panel_color;
+    background-color: @panel;
 }

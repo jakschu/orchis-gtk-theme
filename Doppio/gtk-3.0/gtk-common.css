@@ -187,7 +187,7 @@
 @define-color destructive_action_button_b shade(@error, 0.9);
 @define-color destructive_action_button_border shade(@error, 0.8);
 @define-color destructive_action_button_foreground @base;
-@define-color destructive_action_button_shadow shade(@destructive_action_button_border, 1.15);
+@define-color destructive_action_button_shadow shade(@text, 1.15);
 
 
 /**************************
