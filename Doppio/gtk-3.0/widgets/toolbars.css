@@ -175,6 +175,8 @@
     box-shadow:none;
 }
 
+
+/* Buttons */
 .primary-toolbar .button.text-button {
     padding: 2px 16px;
     color: @text;
@@ -191,6 +193,7 @@
                                   );
 }
 
+/* Buttons Active */
 .primary-toolbar GtkComboBox:active,
 .primary-toolbar .button:active,
 .primary-toolbar .button.image-button:active {
@@ -202,6 +205,7 @@
                                   );
 }
 
+/* Button separator */
 .primary-toolbar .separator,
 .primary-toolbar .button .separator,
 .primary-toolbar .button.separator {
@@ -420,6 +424,17 @@
                                   @gradient_a,
                                   @gradient_b
                                   );
+}
+
+.header-bar:backdrop,
+.header-bar.toolbar:backdrop {
+    border: solid @backdrop_border;
+    border-bottom-width: 1px;
+    padding-top: 4px;
+    padding-left: 6px;
+    padding-bottom: 4px;
+    padding-right: 6px;
+    background-color: @backdrop_background;
 }
 
 .header-bar .button.text-button {
