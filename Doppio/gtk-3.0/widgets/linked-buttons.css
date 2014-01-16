@@ -6,7 +6,7 @@
 .inline-toolbar.toolbar .button,
 .inline-toolbar.toolbar GtkToolButton .button,
 .inline-toolbar.toolbar GtkToolButton > .button {
-    box-shadow: inset -1px 0 alpha(@background, 0.9);
+    box-shadow: none;
 }
 
 .linked .button:active,
@@ -243,7 +243,7 @@
 .toolbar .raised.linked .button,
 .header-bar .button.raised.linked,
 .header-bar .raised.linked .button {
-    box-shadow: inset -1px 0 shade(@toolbar_background, 0.9);
+    box-shadow: none;
 }
 
 .primary-toolbar .button.raised.linked:active,
@@ -371,9 +371,7 @@
 .header-bar .button:active.raised.linked:only-child,
 .header-bar .raised.linked .button:active:last-child,
 .header-bar .raised.linked .button:active:only-child {
-    box-shadow: inset 1px 0 alpha(black, 0.07),
-                inset 0 1px alpha(black, 0.08),
-                inset -1px 0 alpha(black, 0.07);
+    box-shadow: none;
 }
 
 /* middle button */

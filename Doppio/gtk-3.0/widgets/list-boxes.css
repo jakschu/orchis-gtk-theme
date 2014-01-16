@@ -28,7 +28,8 @@ EggListBox:hover {
 }
 
 EggListBox:selected {
-    background-color: @background;
+    background-color: @selection;
+    box-shadow:inset 0 0 0 1px  @selection;
 }
 
 .list {
@@ -40,7 +41,7 @@ EggListBox:selected {
 }
 
 .list-row:selected {
-    background-color: @background;
+    background-color: @selection;
 }
 
 

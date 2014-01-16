@@ -34,7 +34,7 @@
 @define-color backdrop_base shade(@base, 0.95);
 @define-color backdrop_background shade(@background, 0.99);
 @define-color backdrop_foreground shade(@foreground, 1.02);
-@define-color backdrop_border shade(@border, 1.02);
+@define-color backdrop_border shade(@border, 0.99);
 @define-color backdrop_separator shade(@separator, 1.3);
 @define-color backdrop_text shade(@text, 2.0);
 @define-color backdrop_selection shade(@selection, 1.3);
@@ -67,7 +67,7 @@
 /* Selected color */
 @define-color selected_background @selection;
 @define-color selected_foreground shade(@selection, 5.0);
-@define-color selected_border shade(@selection, 0.7);
+@define-color selected_border shade(@selection, 0.8);
 
 /****************
  * Theme colors *
@@ -98,14 +98,14 @@
 
 @define-color button_background_active rgba(0,0,0,0.05);
 
-@define-color button_gradient_a shade(@gradient_a, 1.02);
-@define-color button_gradient_b shade(@gradient_b, 1.02);
+@define-color button_gradient_a shade(@gradient_a, 1.05);
+@define-color button_gradient_b shade(@gradient_b, 1.05);
 
 @define-color button_active_gradient_a @gradient_b;
 @define-color button_active_gradient_b @gradient_a;
 
-@define-color button_hover_gradient_a shade(@gradient_a, 1.05);
-@define-color button_hover_gradient_b shade(@gradient_b, 1.05);
+@define-color button_hover_gradient_a shade(@gradient_a, 1.07);
+@define-color button_hover_gradient_b shade(@gradient_b, 1.07);
 
 @define-color button_insensitive_gradient_a @insensitive_background;
 @define-color button_insensitive_gradient_b @insensitive_background;
@@ -269,10 +269,10 @@
 /******
  * WM *
  ******/
-@define-color wm_title shade(@foreground,1.8);
+@define-color wm_title @text;
 @define-color wm_backdrop_title @backdrop_foreground;
 @define-color wm_highlight #ffffff;
-@define-color wm_title_highlight_dark alpha(#ffffff, 0.0);
+@define-color wm_title_highlight_dark alpha(#ffffff, 0.2);
 @define-color wm_title_highlight #ffffff;
 @define-color wm_title_shadow @wm_title_highlight;
 

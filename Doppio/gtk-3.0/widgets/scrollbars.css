@@ -103,7 +103,7 @@
 .scrollbar.slider {
     background-color: alpha(@foreground, 0.2);
     /* Borders are opposite what you'd expect */
-    border-radius: 0;
+    border-radius: 10px;
     border-style: solid;
     border-image: none;
     border: 1px solid transparent;

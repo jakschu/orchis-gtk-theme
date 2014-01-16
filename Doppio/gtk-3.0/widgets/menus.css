@@ -54,17 +54,18 @@ GtkTreeMenu .menuitem * {
 .menuitem,
 .menu .menuitem {
     padding: 3px;
-    border: 1px solid transparent;
+    border: transparent;
     border-radius: 0;
     background-color: transparent;
     color: @text;
+    text-shadow: 0 1px @sptext_shadow;
 
     -GtkMenuItem-arrow-scaling: 0.5;
 }
 
 .menu .menuitem:active,
 .menu .menuitem:hover {
-    border: 1px solid shade(@selected_background, 0.9);
+    border: none;
     background-color: @selected_background;
     background-image: none;
 }
@@ -106,14 +107,14 @@ GtkTreeMenu .menuitem * {
 
 /* Separator color */
 .menuitem.separator {
-    border-style: none;
-    color: alpha(#000, 0.2); 
+    border: none;
+    color: @menu_separator; 
     -GtkMenuItem-horizontal-padding: 0;
     -GtkWidget-separator-height: 1;
 }
 
 .menuitem .entry {
-    border: 1px solid @border;
+    border: none;
     background-color: @base;
     background-image: none;
     color: @text;
@@ -121,7 +122,7 @@ GtkTreeMenu .menuitem * {
 
 .menuitem .entry:active,
 .menuitem .entry:focus {
-    border: 1px solid @border;
+    border: none;
     color: white;
 }
 
@@ -153,9 +154,7 @@ GtkTreeMenu .menuitem * {
 
 .menubar.menuitem,
 .menubar .menuitem {
-    padding: 3px 5px;
-    border-width: 1px;
-    border-style: solid;
+    padding: 2px 6px;
     border: 1px solid transparent;
     background-color: transparent;
     background-image: none;
@@ -165,7 +164,7 @@ GtkTreeMenu .menuitem * {
 .menubar.menuitem:hover,
 .menubar .menuitem:hover,
 .menubar .menuitem *:hover {
-    border: 1px solid @selected_border;
+    border: none;
     background-color: @selected_background;
     background-image: none;
     color: @selected_foreground;
@@ -176,8 +175,8 @@ GtkTreeMenu .menuitem * {
 .menubar.menuitem.separator {
     -GtkMenuItem-horizontal-padding: 0;
     -GtkWidget-separator-height: 1;
-    border-style: none;
-    color: alpha(#000, 0.2);
+    border: none;
+    color: @menu_separator;
 }
 
 /*********************
@@ -188,6 +187,7 @@ GtkTreeMenu .menuitem * {
 .unity-panel .menuitem {
     border-width: 0 1px;
     color: @panel_text;
+    text-shadow: 0 1px @panel_text_shadow;
 }
 
 .unity-panel.menubar {
@@ -227,8 +227,8 @@ GtkTreeMenu .menuitem * {
 .unity-panel.menubar.menuitem.separator {
     -GtkMenuItem-horizontal-padding: 0;
     -GtkWidget-separator-height: 1;
-    border-style: none;
-    color: alpha(#000, 0.2);
+    border: none;
+    color: @menu_separator;
 }
 
 /*******************

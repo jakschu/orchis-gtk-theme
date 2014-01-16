@@ -33,7 +33,7 @@
 }
 
 .toolbar .button {
-    padding: 2px;
+    padding: 4px;
 }
 
 .toolbar:insensitive {
@@ -93,7 +93,7 @@
 /* Hover */
 .toolbar .button:hover {
     color: @hover_text;
-    border: 1px solid @hover_selection;
+    border: 1px solid @hover_border;
     background-image: linear-gradient(to bottom,
                                   @button_hover_gradient_a,
                                   @button_hover_gradient_b
@@ -102,7 +102,7 @@
 
 .toolbar .button:active:hover {
     color: @hover_text;
-    border: 1px solid @hover_selection;
+    border: 1px solid @hover_border;
     background-image: linear-gradient(to bottom,
                                   @button_hover_gradient_b,
                                   @button_hover_gradient_a
@@ -147,7 +147,10 @@
 /*******************
  * Primary Toolbar *
  *******************/
+/* e.g. search bar */
 
+
+/* Normal */
 .primary-toolbar .toolbar,
 .primary-toolbar.toolbar {
     border: solid @border;
@@ -157,23 +160,34 @@
     padding-bottom: 4px;
     padding-right: 4px;
     background-image: linear-gradient(to bottom,
-                                  @gradient_a,
-                                  @gradient_b
-                                  );
+                                      shade(@background,0.85),
+                                      shade(@background,0.9)
+                                      );
+    box-shadow:inset 0 1px 1px 0 rgba(0,0,0,0.2);
+}
+
+/* Backdrop */
+.primary-toolbar .toolbar:backdrop,
+.primary-toolbar.toolbar:backdrop {
+    border: solid @backdrop_border;
+    border-width: 1px 0px 1px 0px;
+    background: @backdrop_background;
+    box-shadow:none;
 }
 
 .primary-toolbar .button.text-button {
     padding: 2px 16px;
+    color: @text;
 }
 
 .primary-toolbar GtkComboBox,
 .primary-toolbar .button,
 .primary-toolbar .button.image-button {
     color: @text;
-    border: 1px solid @border;
+    border: 1px solid shade(@border,0.95);
     background-image: linear-gradient(to bottom,
-                                  @button_gradient_a,
-                                  @button_gradient_b
+                                  shade(@button_gradient_a,0.95),
+                                  shade(@button_gradient_b,0.95)
                                   );
 }
 
@@ -181,10 +195,10 @@
 .primary-toolbar .button:active,
 .primary-toolbar .button.image-button:active {
     color: @text;
-    border: 1px solid @border;
+    border: 1px solid shade(@border,0.95);
     background-image: linear-gradient(to bottom,
-                                  @button_active_gradient_a,
-                                  @button_active_gradient_b
+                                  shade(@button_active_gradient_a,0.95),
+                                  shade(@button_active_gradient_b,0.95)
                                   );
 }
 
@@ -194,26 +208,26 @@
     color: @insensitive_separator;
 }
 
-/* Hover */
+/* Hover buttons */
 .primary-toolbar .button:hover {
     color: @hover_text;
-    border: 1px solid @hover_selection;
+    border: 1px solid shade(@hover_border,0.95);
     background-image: linear-gradient(to bottom,
-                                  @button_hover_gradient_a,
-                                  @button_hover_gradient_b
+                                  shade(@button_hover_gradient_a,0.95),
+                                  shade(@button_hover_gradient_b,0.95)
                                   );
 }
 
 .primary-toolbar .button:active:hover {
     color: @hover_text;
-    border: 1px solid @hover_selection;
+    border: 1px solid shade(@hover_border,0.95);
     background-image: linear-gradient(to bottom,
-                                  @button_hover_gradient_b,
-                                  @button_hover_gradient_a
+                                  shade(@button_hover_gradient_b,0.95),
+                                  shade(@button_hover_gradient_a,0.95)
                                   );
 }
 
-/* Insensitive */
+/* Insensitive buttons */
 .primary-toolbar .button:insensitive,
 .primary-toolbar .button:active:insensitive {
     color: @insensitive_foreground;
@@ -230,7 +244,7 @@
     color: @insensitive_separator;
 }
 
-/* Unfocused */
+/* Unfocused buttons */
 .primary-toolbar .button:backdrop,
 .primary-toolbar .button:active:backdrop {
     color: @backdrop_text;
@@ -260,8 +274,8 @@
     padding-bottom: 4px;
     padding-right: 4px;
     background-image: linear-gradient(to bottom,
-                                  @gradient_b,
-                                  @gradient_a
+                                  shade(@gradient_b, 0.95),
+                                  shade(@gradient_a, 0.95)
                                   );
     box-shadow: none;
 
@@ -289,10 +303,10 @@
 
 .inline-toolbar .button.image-button,
 .inline-toolbar .button.image-button:active {
-    padding-top: 4px;
-    padding-left: 4px;
-    padding-bottom: 4px;
-    padding-right: 4px;
+    padding-top: 1px;
+    padding-left: 1px;
+    padding-bottom: 1px;
+    padding-right: 1px;
     background-image: linear-gradient(to bottom,
                               @button_gradient_a,
                               @button_gradient_b
@@ -303,10 +317,10 @@
 .inline-toolbar .button {
     color: @text;
     border: 1px solid @border;
-    padding-top: 4px;
-    padding-left: 4px;
-    padding-bottom: 4px;
-    padding-right: 4px;
+    padding-top: 1px;
+    padding-left: 1px;
+    padding-bottom: 1px;
+    padding-right: 1px;
     background-image: linear-gradient(to bottom,
                                   @button_gradient_a,
                                   @button_gradient_b
@@ -332,7 +346,7 @@
 /* Hover */
 .inline-toolbar .button:hover {
     color: @hover_text;
-    border: 1px solid @hover_selection;
+    border: 1px solid @hover_border;
     background-image: linear-gradient(to bottom,
                                   @button_hover_gradient_a,
                                   @button_hover_gradient_b
@@ -341,7 +355,7 @@
 
 .inline-toolbar .button:active:hover {
     color: @hover_text;
-    border: 1px solid @hover_selection;
+    border: 1px solid @hover_border;
     background-image: linear-gradient(to bottom,
                                   @button_hover_gradient_b,
                                   @button_hover_gradient_a
@@ -396,12 +410,12 @@
 
 .header-bar,
 .header-bar.toolbar {
-    border-bottom-width: 1px;
     border: solid @border;
+    border-bottom-width: 1px;
     padding-top: 4px;
-    padding-left: 4px;
+    padding-left: 6px;
     padding-bottom: 4px;
-    padding-right: 4px;
+    padding-right: 6px;
     background-image: linear-gradient(to bottom,
                                   @gradient_a,
                                   @gradient_b
@@ -477,7 +491,7 @@
 .header-bar GtkComboBox:hover,
 .header-bar .button:hover {
     color: @hover_text;
-    border: 1px solid @hover_selection;
+    border: 1px solid @hover_border;
     background-image: linear-gradient(to bottom,
                                   @button_hover_gradient_a,
                                   @button_hover_gradient_b
@@ -487,7 +501,7 @@
 .header-bar GtkComboBox:active:hover,
 .header-bar .button:active:hover {
     color: @hover_text;
-    border: 1px solid @hover_selection;
+    border: 1px solid @hover_border;
     background-image: linear-gradient(to bottom,
                                   @button_hover_gradient_b,
                                   @button_hover_gradient_a

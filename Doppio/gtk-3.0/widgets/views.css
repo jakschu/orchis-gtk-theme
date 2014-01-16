@@ -4,18 +4,18 @@
 
 .frame {
     border-color: @border;
-    background-color: @base;
+    background-color: transparent;
 }
 
 .frame:backdrop {
     border-color: @backdrop_border;
-    background-color: @backdrop_background;
+    background-color: transparent;
     color: @backdrop_text;
 }
 
 .frame:insensitive {
     border-color: @insensitive_border;
-    background-color: @insensitive_base;
+    background-color: transparent;
     color: @insensitive_text;
 }
 
@@ -128,6 +128,8 @@ GtkTextView {
  ************/
 GtkIconView.view {
     background-color: @base;
+    border: solid @selected_background;
+    border-top-width: 1px;
 }
  
 GtkIconView.view.cell:selected,

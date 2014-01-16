@@ -44,6 +44,5 @@
 /* Import Main CSS */
 @import url("gtk-common.css");
 @import url("gtk-widgets-assets-dark.css");
-@import url("gtk-widgets-border.css");
 @import url("gtk-fallback.css");
 @import url("gtk-widgets.css");
