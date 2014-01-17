@@ -1,0 +1,92 @@
+/* Copyright 2013 - 2014 Sam Hewitt.
+*
+* This file is part of the Orchis GTK theme.
+*
+* The Orchis GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Orchis GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Orchis GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/***********
+ * Sidebar *
+ ***********/
+
+.sidebar,
+.sidebar.view,
+.sidebar .view,
+.sidebar GtkScrolledWindow {
+    background-color: @background;
+    color: @foreground;    
+    border: solid @border;
+    border-width: 0;
+}
+
+.sidebar .frame {
+    border-color: @border;
+    border-width: 0px 1px 1px 1px;
+}
+
+/* Insensitive */
+.sidebar:insensitive,
+.sidebar.view:insensitive,
+.sidebar .view:insensitive,
+.sidebar GtkScrolledWindow:insensitive {
+    background-color: @insensitive_background;
+    color: @insensitive_foreground;
+}
+
+.sidebar .frame:insensitive {
+    border-color: @insensitive_border;
+}
+
+/* Backdrop */
+.sidebar:backdrop,
+.sidebar.view:backdrop,
+.sidebar .view:backdrop,
+.sidebar GtkScrolledWindow:backdrop {
+    background-color: @backdrop_background;
+    border-color: @backdrop_border;
+    color: @backdrop_text;
+}
+
+.sidebar .frame:backdrop {
+    background-color: @backdrop_background;
+    border-color: @backdrop_border;
+    color: @backdrop_text;
+}
+
+/* Separator */
+.sidebar.view.separator,
+.view.separator,
+.separator {
+    border: 0px solid @border;
+    color: @base;
+}
+
+/* Selected */
+.sidebar.view:selected,
+.sidebar.view:hover:selected {
+    color: @base;
+    border: 1px solid @selected_border;
+    background-color: @active_background;
+}
+
+/* Selected Backdrop */
+.sidebar.view:selected:backdrop,
+.sidebar.view:hover:selected:backdrop {
+    background-color: @backdrop_selected_background;
+}
+
+/* Hover */
+.sidebar.view:hover {
+    background-color: @hover_background;
+}

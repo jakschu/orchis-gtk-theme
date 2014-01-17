@@ -4,6 +4,6 @@
 	dh $@ 
 
 override_dh_auto_install:
-    --sourcedir=Moka
-    --sourcedir=Moka-Dark
+    --sourcedir=Doppio
+    --sourcedir=Doppio-Dark
 

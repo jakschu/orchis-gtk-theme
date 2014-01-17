@@ -5,15 +5,15 @@
 #   Sam Hewitt <hewittsamuel@gmail.com>
 #
 # Description:
-#   An installation bash script for Doppio-Dark GTK Theme
+#   An installation bash script for Orchis-Dark GTK Theme
 #
 # Legal Stuff:
 #
-# This file is part of the Doppio-Dark GTK Theme and is free software; you can redistribute it and/or modify it under
+# This file is part of the Orchis-Dark GTK Theme and is free software; you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
 # Foundation; version 3.
 #
-# This file is part of the Doppio-Dark GTK Theme and is distributed in the hope that it will be useful, but WITHOUT
+# This file is part of the Orchis-Dark GTK Theme and is distributed in the hope that it will be useful, but WITHOUT
 # ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
 # FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
 # details.
@@ -22,11 +22,11 @@
 # this program; if not, see <https://www.gnu.org/licenses/gpl-3.0.txt>
 
 echo '#----------------------------------------------#'
-echo '#         Doppio GTK Theme Install Script        #'
+echo '#         Orchis GTK Theme Install Script        #'
 echo '#----------------------------------------------#'
 
 echo '#----------------------------------------------#'
-echo '#     NOTE: The main Doppio theme needs          #'
+echo '#     NOTE: The main Orchis theme needs          #'
 echo '#     to be installed otherwise many           #'
 echo '#     icons will be missing.                   #'
 echo '#----------------------------------------------#'
@@ -43,13 +43,13 @@ esac
 
 function main {
 if [ "$UID" -eq "$ROOT_UID" ]; then
-	if [ -d /usr/local/share/themes/Doppio-Dark ]; then
+	if [ -d /usr/local/share/themes/Orchis-Dark ]; then
 		echo
 		read -p "Found an existing installation. Replace it? (Y)es, (N)o : " INPUT
 		case $INPUT in
 		[Yy]* ) 
-			rm -Rf /usr/local/share/themes/Doppio-Dark 2>/dev/null
-			rm -Rf /usr/local/share/themes/Doppio 2>/dev/null
+			rm -Rf /usr/local/share/themes/Orchis-Dark 2>/dev/null
+			rm -Rf /usr/local/share/themes/Orchis 2>/dev/null
 			;;
 		[Nn]* )
 			;;
@@ -59,18 +59,18 @@ if [ "$UID" -eq "$ROOT_UID" ]; then
 		    ;;
 		esac
 	fi
-	cp -R ./Doppio-Dark/ /usr/local/share/themes/
-	cp -R ./Doppio/ /usr/local/share/themes/
+	cp -R ./Orchis-Dark/ /usr/local/share/themes/
+	cp -R ./Orchis/ /usr/local/share/themes/
 	echo "Installation complete!"
 	set
 elif [ "$UID" -ne "$ROOT_UID" ]; then
-	if [ -d $HOME/.local/share/themes/Doppio-Dark ]; then
+	if [ -d $HOME/.local/share/themes/Orchis-Dark ]; then
 		echo
 		read -p "Found an existing installation. Replace it? (Y)es, (N)o : " INPUT
 		case $INPUT in
 		[Yy]* ) 
-			rm -Rf "$HOME/.local/share/themes/Doppio-Dark" 2>/dev/null
-			rm -Rf "$HOME/.local/share/themes/Doppio" 2>/dev/null
+			rm -Rf "$HOME/.local/share/themes/Orchis-Dark" 2>/dev/null
+			rm -Rf "$HOME/.local/share/themes/Orchis" 2>/dev/null
 			;;
 		[Nn]* )
 			;;		
@@ -80,8 +80,8 @@ elif [ "$UID" -ne "$ROOT_UID" ]; then
 		    ;;
 		esac
 	fi
-	cp -R ./Doppio-Dark/ $HOME/.local/share/themes/
-	cp -R ./Doppio/ $HOME/.local/share/themes/
+	cp -R ./Orchis-Dark/ $HOME/.local/share/themes/
+	cp -R ./Orchis/ $HOME/.local/share/themes/
 	echo "Installation complete!"
 	set
 fi
@@ -89,7 +89,7 @@ fi
 
 function set {
 echo ""
-read -p "Do you want to set Doppio as your desktop theme now? (Y)es, (N)o : " INPUT
+read -p "Do you want to set Orchis as your desktop theme now? (Y)es, (N)o : " INPUT
 case $INPUT in
 	[Yy]* ) settheme;;
     [Nn]* ) end;;
@@ -106,21 +106,21 @@ read -p 'Which window decorations you like (Enter your choice) : ' REPLY
 case $REPLY in
 # Theme Choice
 1)	
-	echo "Setting Doppio-Dark as GTK window theme..."
-	gsettings set org.gnome.desktop.wm.preferences theme "Doppio-Dark"
+	echo "Setting Orchis-Dark as GTK window theme..."
+	gsettings set org.gnome.desktop.wm.preferences theme "Orchis-Dark"
 	echo "Done."
 	;;
 2)	
-	echo "Setting Doppio as GTK window theme..."
-	gsettings set org.gnome.desktop.wm.preferences theme "Doppio"
+	echo "Setting Orchis as GTK window theme..."
+	gsettings set org.gnome.desktop.wm.preferences theme "Orchis"
 	echo "Done."
 	;;
 # Invalid choice
 * ) 
     clear && echo 'Not an option, try again.' && settheme;;
 esac
-echo "Setting Doppio as desktop GTK theme..."
-gsettings set org.gnome.desktop.interface gtk-theme "Doppio"
+echo "Setting Orchis as desktop GTK theme..."
+gsettings set org.gnome.desktop.interface gtk-theme "Orchis"
 echo "Done."
 end
 }
@@ -133,12 +133,12 @@ function end {
 ROOT_UID=0
 if [ "$UID" -ne "$ROOT_UID" ]; then
 	echo
-	echo "Doppio GTK Theme will be installed in '$HOME/.local/share/themes'."
+	echo "Orchis GTK Theme will be installed in '$HOME/.local/share/themes'."
 	echo "To make them available to all users, run this script as root."
 	continue
 else
 	echo
-	echo "Doppio GTK Theme will be installed in '/usr/local/share/themes'"
+	echo "Orchis GTK Theme will be installed in '/usr/local/share/themes'"
 	echo "It will be available to all users."
 	continue
 fi
