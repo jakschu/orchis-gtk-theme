@@ -43,13 +43,13 @@ esac
 
 function main {
 if [ "$UID" -eq "$ROOT_UID" ]; then
-	if [ -d /usr/local/share/themes/Orchis-Dark ]; then
+	if [ -d /usr/share/themes/Orchis-Dark ]; then
 		echo
 		read -p "Found an existing installation. Replace it? (Y)es, (N)o : " INPUT
 		case $INPUT in
 		[Yy]* ) 
-			rm -Rf /usr/local/share/themes/Orchis-Dark 2>/dev/null
-			rm -Rf /usr/local/share/themes/Orchis 2>/dev/null
+			rm -Rf /usr/share/themes/Orchis-Dark 2>/dev/null
+			rm -Rf /usr/share/themes/Orchis 2>/dev/null
 			;;
 		[Nn]* )
 			;;
@@ -59,11 +59,10 @@ if [ "$UID" -eq "$ROOT_UID" ]; then
 		    ;;
 		esac
 	fi
-	cp -R ./Orchis/ /usr/local/share/themes/
-	cp -R ./Orchis-Dark/ /usr/local/share/themes/
-	chmod -R 655 /usr/local/share/themes
-	chmod -R 655 /usr/local/share/themes/Orchis
-	chmod -R 655 /usr/local/share/themes/Orchis-Dark
+	cp -R ./Orchis/ /usr/share/themes/
+	cp -R ./Orchis-Dark/ /usr/share/themes/
+	chmod -R 755 /usr/share/themes/Orchis
+	chmod -R 755 /usr/share/themes/Orchis-Dark
 	echo "Installation complete!"
 	set
 elif [ "$UID" -ne "$ROOT_UID" ]; then
@@ -141,7 +140,7 @@ if [ "$UID" -ne "$ROOT_UID" ]; then
 	continue
 else
 	echo
-	echo "Orchis GTK Theme will be installed in '/usr/local/share/themes'"
+	echo "Orchis GTK Theme will be installed in '/usr/share/themes'"
 	echo "It will be available to all users."
 	continue
 fi

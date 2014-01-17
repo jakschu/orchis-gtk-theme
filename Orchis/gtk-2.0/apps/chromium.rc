@@ -9,13 +9,13 @@ style "chromium-toolbar-button" {
 
 style "chrome-gtk-frame" {
   ChromeGtkFrame::frame-color = @menubar_bg_color
-  ChromeGtkFrame::inactive-frame-color = @menubar_bg_color
+  ChromeGtkFrame::inactive-frame-color = shade(@menubar_bg_color,0.9)
 
   ChromeGtkFrame::frame-gradient-size = 0
   ChromeGtkFrame::frame-gradient-color = @menubar_bg_color
 
-  ChromeGtkFrame::incognito-frame-color = @menubar_bg_color
-  ChromeGtkFrame::incognito-inactive-frame-color = @menubar_bg_color
+  ChromeGtkFrame::incognito-frame-color = shade*@menubar_bg_color,0.9)
+  ChromeGtkFrame::incognito-inactive-frame-color = shade(@menubar_bg_color,0.8)
 
   ChromeGtkFrame::incognito-frame-gradient-size = 0
   ChromeGtkFrame::incognito-frame-gradient-color = @menubar_bg_color
