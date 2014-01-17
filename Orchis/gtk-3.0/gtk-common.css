@@ -19,7 +19,7 @@
 
 /**********************
  * Common Definitions *
-  *********************/
+ **********************/
 
 /* Insensitive colors */
 @define-color insensitive_base shade(@base, 0.95);
