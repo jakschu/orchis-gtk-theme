@@ -1,4 +1,4 @@
-/* Copyright 2013 Sam Hewitt.
+/* Copyright 2013 - 2014 Sam Hewitt.
 *
 * This file is part of the Doppio GTK theme.
 *
@@ -84,7 +84,7 @@ GtkBubbleWindow {
 }
 
 GtkBubbleWindow.osd.background {
-    background-color: @osd_bg;
+    background-color: @osd_background;
 }
 
 GtkBubbleWindow .toolbar {
@@ -102,13 +102,13 @@ GtkBubbleWindow .toolbar {
 
 .dim-label:selected,
 .dim-label:selected:focus {
-    color: mix(@selected_fg, @selected_bg, 0.5);
+    color: mix(@selected_foreground, @selected_background, 0.5);
 }
 
 .dnd {
     border-width: 1px;
     border-style: solid;
-    border: 1px solid shade(@selected_bg, 0.9);
+    border: 1px solid shade(@selected_background, 0.9);
 }
 
 .grip {

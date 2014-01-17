@@ -1,4 +1,4 @@
-/* Copyright 2013 Sam Hewitt.
+/* Copyright 2013 - 2014 Sam Hewitt.
 *
 * This file is part of the Doppio GTK theme.
 *
@@ -75,14 +75,14 @@ GtkColorSwatch.bottom {
 GtkColorChooserWidget #add-color-button {
     background-clip: padding-box;
     border: 1px solid alpha(black, 0.1);
-    background-color: shade(@theme_background, 0.95);
-    color: @theme_foreground;
+    background-color: shade(@background, 0.95);
+    color: @foreground;
 }
 
 GtkColorChooserWidget #add-color-button:hover {
     border: 1px solid alpha(black, 0.3);
-    background-color: shade(@theme_background, 0.90);
-    color: @theme_foreground;
+    background-color: shade(@background, 0.90);
+    color: @foreground;
 }
 
 .color-active-badge,

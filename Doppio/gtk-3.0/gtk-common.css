@@ -27,7 +27,7 @@
 @define-color insensitive_foreground shade(@foreground, 1.05);
 @define-color insensitive_border shade(@border, 1.05);
 @define-color insensitive_separator shade(@separator, 1.05);
-@define-color insensitive_text shade(@text, 1.8);
+@define-color insensitive_text alpha(@text, 0.4);
 @define-color insensitive_selection shade(@selection, 1.05);
 
 /* Unfocused colors */
@@ -36,13 +36,14 @@
 @define-color backdrop_foreground shade(@foreground, 1.02);
 @define-color backdrop_border shade(@border, 0.99);
 @define-color backdrop_separator shade(@separator, 1.3);
-@define-color backdrop_text shade(@text, 1.5);
+@define-color backdrop_text alpha(@text, 0.8);
 @define-color backdrop_selection shade(@selection, 1.3);
 
 /* Unfocused-insensitive colors */
 @define-color backdrop_insensitive_border mix(@backdrop_background, @backdrop_border, 0.5);
 @define-color backdrop_insensitive_foreground mix(@backdrop_background, @backdrop_foreground, 0.5);
 @define-color backdrop_insensitive_background mix(@backdrop_background, @backdrop_base, 0.5);
+@define-color backdrop_insensitive_text alpha(@text, 0.7);
 
 /* Unfocused-selected colors */
 @define-color backdrop_selected_background shade(@backdrop_background, 0.95);
@@ -122,9 +123,9 @@
 /**************
  * Scrollbars *
  **************/
-@define-color scrollbar_trough @background;
-@define-color scrollbar_trough_insensitive @insensitive_background;
-@define-color scrollbar_trough_backdrop @backdrop_background;
+@define-color scrollbar_trough shade(@background,0.95);
+@define-color scrollbar_trough_insensitive shade(@insensitive_background,0.95);
+@define-color scrollbar_trough_backdrop shade(@backdrop_background,0.95);
 
 /****************
  * Progressbars *
@@ -144,11 +145,9 @@
  ***********/
 @define-color trough_active @selected_background;
 
-@define-color trough_background @background;
-
-@define-color insensitive_trough_background shade(@trough_background, 0.95);
-
-@define-color backdrop_trough_background_a shade(@trough_background, 0.98);
+@define-color trough_background shade(@background,0.95);
+@define-color insensitive_trough_background shade(@insensitive_background, 0.95);
+@define-color backdrop_trough_background shade(@backdrop_background, 0.98);
 
 
 /*********************

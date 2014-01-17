@@ -1,4 +1,4 @@
-/* Copyright 2013 Sam Hewitt.
+/* Copyright 2013 - 2014 Sam Hewitt.
 *
 * This file is part of the Doppio GTK theme.
 *
@@ -151,7 +151,7 @@
 .primary-toolbar .toolbar,
 .primary-toolbar.toolbar {
     border: solid @border;
-    border-width: 0px 0px 1px 0px;
+    border-width: 1px 0px 1px 0px;
     padding-top: 4px;
     padding-left: 6px;
     padding-bottom: 4px;

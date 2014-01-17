@@ -1,4 +1,4 @@
-/* Copyright 2013 Sam Hewitt.
+/* Copyright 2013 - 2014 Sam Hewitt.
 *
 * This file is part of the Doppio GTK theme.
 *
@@ -46,7 +46,7 @@ GtkSwitch.slider {
 GtkSwitch.slider:active {
     border: 1px solid shade(@selected_background, 0.8);
     background-image: linear-gradient(to bottom,
-                                      @button_gradient_b,
+                                      @button_gradient_a,
                                       @button_gradient_a
                                       );
 }
@@ -66,7 +66,7 @@ GtkSwitch.trough:active {
 GtkSwitch.slider:insensitive {
     border: 1px solid @insensitive_border;
     background-image: linear-gradient(to bottom,
-                                      @button_insensitive_gradient_b,
+                                      @button_insensitive_gradient_a,
                                       @button_insensitive_gradient_a
                                       );
 }
@@ -85,7 +85,7 @@ GtkSwitch.trough:active:insensitive {
 GtkSwitch.slider:backdrop {
     border: 1px solid @backdrop_border;
     background-image: linear-gradient(to bottom,
-                                      @button_backdrop_gradient_b,
+                                      @button_backdrop_gradient_a,
                                       @button_backdrop_gradient_a
                                       );
 }
@@ -93,7 +93,7 @@ GtkSwitch.slider:backdrop {
 GtkSwitch.trough:backdrop,
 GtkSwitch.trough:active:backdrop {
     color: @backdrop_text;
-    box-shadow: inset 0px 0px 0px 1px @backdrop_border;
+    box-shadow: none;
     background: @backdrop_trough_background;
     text-shadow: none;
 }

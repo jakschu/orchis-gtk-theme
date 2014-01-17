@@ -1,4 +1,4 @@
-/* Copyright 2013 Sam Hewitt.
+/* Copyright 2013 - 2014 Sam Hewitt.
 *
 * This file is part of the Doppio GTK theme.
 *
@@ -27,34 +27,44 @@ GtkCheckButton:selected:focus {
     background-color: transparent;
 }
 
-.check {
+.check,
+.check row:selected,
+.check row:selected:focus {
 	background-color: transparent;
+    color: @text;
 }
 
-.check:insensitive {
+.check:insensitive,
+.check row:selected:insensitive,
+.check row:selected:focus:insensitive {
+    background-color: transparent;
     color: @insensitive_text;
+}
+
+
+.check:backdrop,
+.check row:selected:backdrop,
+.check row:selected:focus:backdrop {
+    background-color: transparent;
+    color: @backdrop_text;
+}
+
+.check:insensitive:backdrop,
+.check row:selected:insensitive:backdrop,
+.check row:selected:focus:insensitive:backdrop {
+    background-color: transparent;
+    color: @backdrop_insensitive_text;
 }
 
 .check:selected {
     color: @selected_foreground;
-    border: 1px solid @selected_background;
 }
 
-.check:insensitive {
-    color: @insensitive_text;
-}
-
-.check:backdrop {
-    color: @backdrop_text;
-}
-
-.check:insensitive:backdrop {
-    color: mix(@backdrop_text, @insensitive_text, 0.2);
-}
 
 .check:selected:backdrop {
     color: @backdrop_selected_foreground;
 }
+
 
 
 /*****************
@@ -73,16 +83,12 @@ GtkCheckButton:selected:focus {
     color: @selected_foreground;
 }
 
-.radio:insensitive {
-    color: @insensitive_text;
-}
-
 .radio:backdrop {
     color: @backdrop_text;
 }
 
 .radio:insensitive:backdrop {
-    color: mix(@backdrop_text, @insensitive_text, 0.2);
+    color: @backdrop_insensitive_text;
 }
 
 .radio:selected:backdrop {

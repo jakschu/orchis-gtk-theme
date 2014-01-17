@@ -1,4 +1,4 @@
-/* Copyright 2013 Sam Hewitt.
+/* Copyright 2013 - 2014 Sam Hewitt.
 *
 * This file is part of the Doppio GTK theme.
 *
@@ -47,8 +47,8 @@ GtkClutterOffscreen {
 
 *:selected:backdrop {
     /* I would like to remove colors from the backdrop state, next release*/
-    background-color: @theme_backdrop_selected_background;
-    color: @theme_backdrop_selected_foreground;
+    background-color: @backdrop_selected_background;
+    color: @backdrop_selected_foreground;
 }
 
 *:insensitive {

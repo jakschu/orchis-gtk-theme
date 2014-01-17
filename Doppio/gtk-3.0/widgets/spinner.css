@@ -115,5 +115,5 @@
 
 .menu.spinner,
 .primary-toolbar .spinner {
-    color: @selected_bg;
+    color: @selected_background;
 }

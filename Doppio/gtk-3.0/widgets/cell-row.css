@@ -1,4 +1,4 @@
-/* Copyright 2013 Sam Hewitt.
+/* Copyright 2013 - 2014 Sam Hewitt.
 *
 * This file is part of the Doppio GTK theme.
 *
@@ -26,16 +26,16 @@
 
 .cell:selected,
 .cell:selected:focus {
-    background-color: @theme_selected_background;
-    color: @theme_selected_foreground;
+    background-color: @selected_background;
+    color: @selected_foreground;
 }
 
 row:selected,
 row:selected:focus {
-    border: 0 solid shade(@theme_selected_background, 0.9);
-    background-color: @theme_selected_background;
+    border: 0 solid shade(@selected_background, 0.9);
+    background-color: @selected_background;
     background-image: none;
-    color: @theme_selected_foreground;
+    color: @selected_foreground;
 
     -GtkWidget-focus-padding: 1;
     -GtkWidget-focus-line-width: 0;
