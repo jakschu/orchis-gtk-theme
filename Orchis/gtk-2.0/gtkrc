@@ -68,7 +68,7 @@ style "murrine-default" {
 	GtkScrollbar::slider-width = 10
 	GtkScrollbar::trough-border = 0
 
-	GtkScrolledWindow::scrollbar-spacing = 0
+	GtkScrolledWindow::scrollbar-spacing = 1
 	GtkScrolledWindow::scrollbars-within-bevel = 1
 
 	GtkToolbar::internal-padding = 0
@@ -137,7 +137,7 @@ style "murrine-default" {
 		progressbarstyle = 0 
 		reliefstyle = 0 
 		roundness = 4
-		scrollbarstyle = 0 
+		scrollbarstyle = 1
 		sliderstyle = 0	
 		stepperstyle = 1
 		toolbarstyle = 0
@@ -161,7 +161,7 @@ style "murrine-notebook" = "murrine-notebook-bg" {
 	ythickness = 2
 
 	engine "murrine" {
-		roundness = 2
+		roundness = 0
 	}
 }
 
@@ -183,9 +183,9 @@ style "murrine-scrollbar" {
 	bg[ACTIVE] = @selected_bg_color
 
 	engine "murrine" {
-		roundness = 0
+		roundness = 10
 		contrast = 0.00
-		border_shades = { 0.9, 0.9 }
+		border_shades = { 0.95, 0.95 }
 		trough_shades = { 0.97, 0.97 }
 		trough_border_shades = { 1.0, 1.0 }
 	}
@@ -297,7 +297,9 @@ style "murrine-vscale" = "murrine-scale" { }
 style "murrine-hscrollbar" = "murrine-scrollbar" { }
 style "murrine-vscrollbar" = "murrine-scrollbar" { }
 
-# Menus
+#-------------#
+#    Menus    #
+#-------------#
 
 style "murrine-menu" {
 	ythickness = 0
@@ -339,7 +341,7 @@ style "murrine-menu-item" = "murrine-wider" {
 
 	engine "murrine" {
 		textstyle = 0
-		border_shades = { 1.2, 1.2 }
+		border_shades = { 0.99, 0.99 }
 	}
 }
 
@@ -352,14 +354,14 @@ style "murrine-separator-menu-item" {
 
 style "murrine-menubar" {
 	bg[NORMAL] = @menubar_bg_color
-	bg[PRELIGHT] =  mix (0.21, @menubar_fg_color, @menubar_bg_color)
-	bg[SELECTED] =  mix (0.21, @menubar_fg_color, @menubar_bg_color)
+	bg[PRELIGHT] = @selected_bg_color
+	bg[SELECTED] = @selected_bg_color
 	bg[ACTIVE] = shade (0.9, @menubar_bg_color)
 	bg[INSENSITIVE] = @menubar_bg_color
 
 	fg[NORMAL] = @menubar_fg_color
-	fg[PRELIGHT] = shade (1.08, @menubar_fg_color)
-	fg[SELECTED] = shade (1.08, @menubar_fg_color)
+	fg[PRELIGHT] = @selected_fg_color
+	fg[SELECTED] = @selected_fg_color
 	fg[ACTIVE] = @menubar_fg_color
 	fg[INSENSITIVE] = mix (0.5, @menubar_bg_color, @menubar_fg_color)
 
@@ -370,14 +372,14 @@ style "murrine-menubar" {
 
 style "murrine-menubaritem" {
 	bg[NORMAL] = @menubar_bg_color
-	bg[PRELIGHT] =  mix (0.21, @menubar_fg_color, @menubar_bg_color)
-	bg[SELECTED] =  mix (0.21, @menubar_fg_color, @menubar_bg_color)
+	bg[PRELIGHT] = @selected_bg_color
+	bg[SELECTED] = @selected_bg_color
 	bg[ACTIVE] = shade (0.9, @menubar_bg_color)
 	bg[INSENSITIVE] = @menubar_bg_color
 
 	fg[NORMAL] = @menubar_fg_color
-	fg[PRELIGHT] = shade (1.08, @menubar_fg_color)
-	fg[SELECTED] = shade (1.08, @menubar_fg_color)
+	fg[PRELIGHT] = @selected_fg_color
+	fg[SELECTED] = @selected_fg_color
 	fg[ACTIVE] = @menubar_fg_color
 	fg[INSENSITIVE] = mix (0.5, @menubar_bg_color, @menubar_fg_color)
 

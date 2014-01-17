@@ -1,7 +1,7 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: doppio-gtk-theme
+Upstream-Name: orchis-gtk-theme
 Upstream-Contact: Sam Hewitt <hewittsamuel@gmail.com>
-Source: https://launchpad.net/doppio-gtk-theme/+download
+Source: https://launchpad.net/orchis-gtk-theme/+download
 
 Files: *
 Copyright: 2014, Sam Hewitt <hewittsamuel@gmail.com>

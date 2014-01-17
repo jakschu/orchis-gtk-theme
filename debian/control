@@ -1,15 +1,14 @@
-Source: doppio-gtk-theme
+Source: orchis-gtk-theme
 Section: gnome
 Priority: optional
 Maintainer: Sam Hewitt <hewittsamuel@gmail.com>
 Build-Depends: debhelper (>= 7)
 Standards-Version: 3.9.2
-Homepage: https://github.com/snwh/doppio-gtk-theme
+Homepage: https://github.com/snwh/orchis-gtk-theme
 
-Package: doppio-gtk-theme
+Package: orchis-gtk-theme
 Architecture: all
 Depends: ${misc:Depends}
- gtk2-engines-murrine,
- gnome-themes-standard
+ gtk2-engines-murrine
 Description: Orchis GTK Theme
- doppio GTK theme.
+ Orchis GTK theme.
