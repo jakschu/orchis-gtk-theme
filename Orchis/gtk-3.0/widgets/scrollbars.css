@@ -26,7 +26,7 @@
     border: 1px solid transparent;
     -GtkScrollbar-has-backward-stepper: false;
     -GtkScrollbar-has-forward-stepper: false;
-    -GtkRange-slider-width: 10;
+    -GtkRange-slider-width: 8;
     -GtkScrollbar-min-slider-length: 60; /* minimum size for the slider. sadly can't be in '.slider' where it belongs */
 
     -GtkRange-stepper-spacing: 0;
@@ -104,35 +104,35 @@
     background-color: alpha(@foreground, 0.2);
     /* Borders are opposite what you'd expect */
     border-radius: 10px;
-    border: 1px solid transparent;
+    border: 1px solid alpha(@foreground, 0.2);
 }
 
 .scrollbar.slider:hover {
-    background-color: alpha(@selection, 0.4);
+    background-color: alpha(@selection, 0.8);
     background-image: none;
-    border: 1px solid transparent;
+    border: 1px solid @selection;
 }
 
 .scrollbar.slider:active {
     background-color: alpha(@selection, 0.7);
     background-image: none;
-    border: 1px solid transparent;
+    border: 1px solid @selection;
 }
 
 .scrollbar.slider:prelight:active {
     background-image: none;
     background-color: alpha(@foreground, 0.3);
-    border: 1px solid transparent;
+    border: 1px solid alpha(@foreground, 0.5);
 }
 
 .scrollbar.slider:insensitive {
     background-color: alpha(@insensitive_foreground, 0.2);
-    border: 1px solid transparent;
+    border: 1px solid  alpha(@insensitive_foreground, 0.4);
 }
 
 .scrollbar.slider:backdrop {
     background-color: alpha(@backdrop_foreground, 0.2);
-    border: 1px solid transparent;
+    border: 1px solid alpha(@backdrop_foreground, 0.4);
 }
 
 .scrollbar.slider.fine-tune:prelight:active {
@@ -144,22 +144,22 @@
 /* Troughs */
 .scrollbars-junction, /* the small square between scrollbars!!! */
 .scrollbar.trough {
+    border-radius: 10px;
     background-image: none;
-    background-color: @scrollbar_trough;
+    background-color: transparent;
     border-width: 0;
-    border-radius: 0;
     border-image: none;
 }
 
 .scrollbar.trough:insensitive {
-    background-color: @scrollbar_trough_insensitive;
+    background-color: transparent;
     border: 3px solid transparent;
 }
 
 .scrollbars-junction:backdrop,
 .scrollbar.trough:backdrop {
     background-image: none;
-    background-color: @scrollbar_trough_backdrop;
+    background-color: transparent;
     border-width: 0;
     border-radius: 0;
     border-image: none;
@@ -167,7 +167,7 @@
 
 .scrollbar.trough:insensitive:backdrop {
     background-image: none;
-    background-color: mix(@scrollbar_trough_backdrop, @scrollbar_trough_insensitive, 0.5);
+    background-color: transparent;
     border-width: 0;
     border-radius: 0;
     border-image: none;

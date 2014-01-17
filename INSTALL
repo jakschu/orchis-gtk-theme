@@ -61,6 +61,8 @@ if [ "$UID" -eq "$ROOT_UID" ]; then
 	fi
 	cp -R ./Orchis-Dark/ /usr/local/share/themes/
 	cp -R ./Orchis/ /usr/local/share/themes/
+	chmod -R 655 /usr/local/share/themes/Orchis
+	chmod -R 655 /usr/local/share/themes/Orchis-Dark
 	echo "Installation complete!"
 	set
 elif [ "$UID" -ne "$ROOT_UID" ]; then

@@ -1,10 +1,10 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=Moka
+Name=Orchis
 Comment=The one and only.
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=Moka
-MetacityTheme=Moka
+GtkTheme=Orchis
+MetacityTheme=Orchis
 IconTheme=Moka

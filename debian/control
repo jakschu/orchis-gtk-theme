@@ -11,5 +11,5 @@ Architecture: all
 Depends: ${misc:Depends}
  gtk2-engines-murrine,
  gnome-themes-standard
-Description: Doppio GTK Theme
+Description: Orchis GTK Theme
  doppio GTK theme.
