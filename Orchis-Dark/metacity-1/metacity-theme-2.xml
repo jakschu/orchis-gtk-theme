@@ -21,7 +21,7 @@
 <info>
 	<name>Orchis-Dark</name>
 	<author>Sam Hewitt &lt;hewittsamuel@gmail&gt;</author>
-	<copyright>&#194; Sam Hewitt, 2013</copyright>
+	<copyright>&#194; Sam Hewitt, 2014</copyright>
 	<date>2014</date>
 	<description>Orchis-Dark Metacity Theme</description>
 </info>
@@ -46,7 +46,7 @@
 	<distance name="title_vertical_pad" value="8" />
 	<aspect_ratio name="button" value="1.0" />
 	<border name="title_border" left="4" right="4" top="6" bottom="6" />
-	<border name="button_border" left="8" right="0" top="8" bottom="6" />
+	<border name="button_border" left="6" right="0" top="6" bottom="6" />
 </frame_geometry>
 
 <!-- Unfocused window -->
@@ -57,7 +57,7 @@
 	<distance name="left_titlebar_edge" value="4"/>
 	<distance name="right_titlebar_edge" value="4"/>
 	<distance name="title_vertical_pad" value="8"/>
-	<border name="button_border" left="8" right="0" top="8" bottom="6" />
+	<border name="button_border" left="6" right="0" top="6" bottom="6" />
 </frame_geometry>
 
 <!-- Maximized window -->
@@ -69,7 +69,7 @@
 	<distance name="right_titlebar_edge" value="4" />
 	<distance name="title_vertical_pad" value="8" />
 	<border name="title_border" left="4" right="4" top="6" bottom="6" />
-	<border name="button_border" left="8" right="0" top="8" bottom="6" />
+	<border name="button_border" left="6" right="0" top="6" bottom="6" />
 </frame_geometry>
 
 <!-- Left tiled window -->
