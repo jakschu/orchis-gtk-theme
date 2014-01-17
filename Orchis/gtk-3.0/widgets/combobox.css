@@ -32,6 +32,7 @@ GtkComboBox {
 
 GtkCombobox *:insensitive {
     background-color: @insensitive_background;
+    -GtkComboBox-shadow-type: none;
     background-image: none;
     color: @insensitive_text;
 }
@@ -40,11 +41,6 @@ GtkCombobox *:selected {
     color: white;
     background-color: @selection;
     border: 1px solid @selection;
-}
-
-GtkCombobox *:insensitive {
-    background-color: @insensitive_background;
-    color: @insensitive_text;
 }
 
 GtkCombobox *:backdrop {

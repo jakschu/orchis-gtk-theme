@@ -27,43 +27,48 @@
     border-style: none;
 }
 
-.spinbutton.entry {
-    border: none;
-    border-radius: 0;
-    color: @backdrop_text;
-    padding: 4px;
-    box-shadow:inset 0 -1px 0 0 @border;
+.spinbutton.entry {    
+    background-color: @base;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 6px;
 }
 
-.spinbutton.entry:selected,
-.spinbutton.vertical.entry:selected {
-    color: @selected_foreground;
-    background-color: @selection;
-    border: 1px solid @selection;
-}
-
-.spinbutton.entry:active,
-.spinbutton.entry:focus {
-    color: @text;
+.spinbutton.entry:selected {
+    border: 1px solid alpha(@selection, 0.4);
+    background-color: @base;
     box-shadow: inset 0 1px alpha(black, 0.1);
-    border:1px solid @border;
+    color: @text;
 }
 
-.spinbutton .button,
+.spinbutton.entry:focus {
+    border: 1px solid alpha(@selection, 0.4);
+    background-color: @base;
+    box-shadow: inset 0 1px alpha(black, 0.1);
+    color: @text;
+}
+
+.spinbutton .button {
+    box-shadow: inset 1px 0 shade(@base, 0.9);
+}
+
 .spinbutton .button:first-child {
-    border: none;
+    border-radius: 6px 0 0 6px;
     box-shadow: none;
 }
 
 .spinbutton .button:last-child {
-    border-radius: 0;
+    border-radius: 0 6px 6px 0;
 }
 
 .spinbutton .button:hover,
 .spinbutton .button:hover:focus {
     color: @text;
-    border: none;
-    background: none;
+    border-color: @border;
+    background-image: linear-gradient(to bottom,
+                                  @button_hover_gradient_a,
+                                  @button_hover_gradient_b
+                                  );
 }
 
 .spinbutton:active,
@@ -71,48 +76,48 @@
 .spinbutton .button:active:focus,
 .spinbutton .button:active:hover:focus {
     color: @text;
-    border: none;
-    background: none;
+    border-color: @border;
+    background-image: linear-gradient(to bottom,
+                                  @button_active_gradient_a,
+                                  @button_active_gradient_b
+                                  );
 }
-
 .spinbutton .button,
 .spinbutton .button:focus {
     color: @text;
-    border: none;
-    background: none;
+    border-color: @border;
+    background-image: linear-gradient(to bottom,
+                                  @button_gradient_a,
+                                  @button_gradient_b
+                                  );
 }
 
-
-/* Insensitive */
 .spinbutton.entry:insensitive,
 .spinbutton .button:insensitive,
 .spinbutton .button:focus:insensitive {
     color: @insensitive_text;
-    border: none;
-    background: none;
-    box-shadow: none;
+    border-color: @insensitive_border;
+    background-color: @background;
+    background-image: none;
 }
 
-/* Backdrop */
 .spinbutton.entry:backdrop,
 .spinbutton .button:backdrop {
     color: @backdrop_text;
-    background: none;
-    border: none;
-    box-shadow: none;
+    background-color: @backdrop_background;
+    background-image: none;
+    border-color: @backdrop_border;
 }
 
 /* Separator */
 .spinbutton .separator,
 .spinbutton.separator {
     color: @border;
-    padding-top: 2px;
-    padding-bottom: 2px;
 }
 
 .spinbutton .separator:insensitive,
 .spinbutton.separator:insensitive {
-    color: transparent;
+    color: @insensitive_border;
 }
 
 /***********************
@@ -129,19 +134,24 @@
     border-style: solid;
 }
 
-.spinbutton.vertical.entry {
-    border: none;
-    border-radius: 0;
-    color: @backdrop_text;
-    padding: 4px;
-    border-left:1px solid @border;
-    border-right:1px solid @border;
+.spinbutton.vertical.entry {    
+    background-color: @base;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0px;
+}
+
+.spinbutton.vertical.entry:selected {
+    border: 1px solid alpha(@selection, 0.4);
+    background-color: @base;
+    box-shadow: inset 0 1px alpha(black, 0.1);
+    color: @text;
 }
 
 .spinbutton.vertical .button:hover,
 .spinbutton.vertical .button:hover:focus {
     color: @text;
-    border: 1px solid @border;
+    border-color: @border;
     background-image: linear-gradient(to bottom,
                                   @button_hover_gradient_a,
                                   @button_hover_gradient_b
@@ -153,14 +163,14 @@
 .spinbutton.vertical .button:active:focus,
 .spinbutton.vertical .button:active:hover:focus {
     color: @text;
-    border: 1px solid @border;
+    border-color: @border;
     background-color: @base;
 }
 
 .spinbutton.vertical .button
 .spinbutton.vertical .button:focus {
     color: @text;
-    border: 1px solid @border;
+    border-color: @border;
     background-image: linear-gradient(to bottom,
                                   @button_gradient_a,
                                   @button_gradient_b
@@ -171,7 +181,7 @@
 .spinbutton.vertical .button:insensitive
 .spinbutton.vertical .button:focus:insensitive {
     color: @insensitive_text;
-    border: 1px solid @insensitive_border;
+    border-color: @insensitive_border;
     background-color: @background;
     background-image: none;
 }
@@ -181,19 +191,17 @@
     color: @backdrop_text;
     background-color: @backdrop_background;
     background-image: none;
-    border: 1px solid @backdrop_border;
+    border-color: @backdrop_border;
 }
 
 .spinbutton.vertical .button:first-child {
     border-width: 1px;
     border-bottom-width: 0;
     border-radius: 6px 6px 0px 0px;
-    border-color: @border;
 }
 
 .spinbutton.vertical .button:last-child {
     border-width: 1px;
     border-top-width: 0;
     border-radius: 0px 0px 6px 6px;
-    border-color: @border;
 }

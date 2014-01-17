@@ -174,8 +174,8 @@
 .primary-toolbar .toolbar:backdrop,
 .primary-toolbar.toolbar:backdrop {
     border: solid @backdrop_border;
-    border-width: 0px 0px 1px 0px;
-    background-color: shade(@backdrop_background,0.95);
+    border-width: 1px 0px 1px 0px;
+    background: shade(@backdrop_background,0.95);
     box-shadow:none;
 }
 

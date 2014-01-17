@@ -228,19 +228,19 @@
 /*----- Labels -----*/
 
 .notebook tab GtkLabel {
-    text-shadow: 0px 1px alpha(white,0.3);
+    text-shadow: 0px 1px alpha(@base,0.3);
 }
 
 .notebook tab:active GtkLabel,
 .notebook .active-page,
 .notebook tab .active-page GtkLabel {
     color: @selection;
-    text-shadow: 0 1px alpha(white,0.3);
+    text-shadow: 0 1px alpha(@base,0.3);
 }
 
 .notebook tab:backdrop GtkLabel {
     color: @backdrop_text;
-    text-shadow: 0 1px alpha(white,0.3);
+    text-shadow: 0 1px alpha(@base,0.3);
 }
 
 /*----- Close Button -----*/

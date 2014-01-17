@@ -65,7 +65,8 @@ style "murrine-default" {
 	GtkScrollbar::has-secondary-backward-stepper = 0
 	GtkScrollbar::has-secondary-forward-stepper = 0
 	GtkScrollbar::min-slider-length = 100
-	GtkScrollbar::slider-width = 10
+	GtkScrollbar::slider-width = 8
+	GtkScrollbar::slider-border = 0
 	GtkScrollbar::trough-border = 0
 
 	GtkScrolledWindow::scrollbar-spacing = 1
@@ -137,7 +138,7 @@ style "murrine-default" {
 		progressbarstyle = 0 
 		reliefstyle = 0 
 		roundness = 4
-		scrollbarstyle = 1
+		scrollbarstyle = 0
 		sliderstyle = 0	
 		stepperstyle = 1
 		toolbarstyle = 0
@@ -153,11 +154,11 @@ style "murrine-widest"      =   "murrine-default"   { xthickness = 4 ythickness 
 
 style "murrine-notebook-bg" {
 	bg[NORMAL] = @base_color
-	bg[ACTIVE] = shade (0.87, @base_color)
+	bg[ACTIVE] = shade (0.95, @base_color)
 }
 
 style "murrine-notebook" = "murrine-notebook-bg" {
-	xthickness = 2
+	xthickness = 7
 	ythickness = 2
 
 	engine "murrine" {
@@ -174,20 +175,21 @@ style "murrine-button" {
 	bg[INSENSITIVE] = shade (0.85, @bg_color)
 
   	engine "murrine" {
+		roundness = 4
 	}
 }
 
 style "murrine-scrollbar" {
 	bg[NORMAL] = shade (0.90, @bg_color)
-	bg[PRELIGHT] = shade (0.80, @bg_color)
+	bg[PRELIGHT] = @selected_bg_color
 	bg[ACTIVE] = @selected_bg_color
 
 	engine "murrine" {
 		roundness = 10
 		contrast = 0.00
-		border_shades = { 0.95, 0.95 }
+		border_shades = { 0.9, 0.9 }
 		trough_shades = { 0.97, 0.97 }
-		trough_border_shades = { 1.0, 1.0 }
+		trough_border_shades = { 0.9, 0.9 }
 	}
 }
 
@@ -211,7 +213,7 @@ style "murrine-scale" = "murrine-default" {
 	engine "murrine" {
 		roundness = 7
 		gradient_shades = { 1.08, 1.08, 1.08, 1.08 }
-		border_shades = { 1.0, 1.0 }
+		border_shades = { 0.9, 0.9 }
 		trough_shades = { 1.08, 1.08 }
 		trough_border_shades = { 0.8, 0.8 }
 	}
@@ -228,7 +230,7 @@ style "murrine-progressbar" = "murrine-default" {
 
 	engine "murrine" {
 		roundness = 2
-		border_shades = { 1.2, 1.2 }
+		border_shades = { 0.9, 0.9 }
 		trough_border_shades = { 0.8, 0.8 }
 	}
 }

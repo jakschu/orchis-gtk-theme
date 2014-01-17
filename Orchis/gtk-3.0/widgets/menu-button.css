@@ -78,8 +78,8 @@ GtkMenuButton.button *:active,
 .linked GtkMenuButton.button *:active,
 .toolbar .linked.raised GtkMenuButton.button *:active,
 .toolbar GtkMenuButton.button.linked.raised *:active {
-    text-shadow: 0 1px alpha(white,0.3);
-    icon-shadow: 0 1px alpha(white,0.3);
+    text-shadow: 0 1px alpha(@base,0.3);
+    icon-shadow: 0 1px alpha(@base,0.3);
 }
 
 .linked GtkMenuButton.button:active:last-child,
