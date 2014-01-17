@@ -104,61 +104,40 @@
     background-color: alpha(@foreground, 0.2);
     /* Borders are opposite what you'd expect */
     border-radius: 10px;
-    border-style: solid;
-    border-image: none;
     border: 1px solid transparent;
-    border-width: 1px;
 }
 
 .scrollbar.slider:hover {
     background-color: alpha(@selected_background, 0.4);
     background-image: none;
-    border-style: solid;
-    border-image: none;
     border: 1px solid transparent;
-    border-width: 1px;
 }
 
 .scrollbar.slider:active {
     background-color: alpha(@selected_background, 0.7);
     background-image: none;
-    border-style: solid;
-    border-image: none;
     border: 1px solid transparent;
-    border-width: 1px;
 }
 
 .scrollbar.slider:prelight:active {
     background-image: none;
     background-color: alpha(@foreground, 0.3);
-    border-style: solid;
-    border-image: none;
     border: 1px solid transparent;
-    border-width: 1px;
 }
 
 .scrollbar.slider:insensitive {
     background-color: alpha(@insensitive_foreground, 0.2);
-    border-style: solid;
-    border-image: none;
-    border: 1px solid alpha(@insensitive_foreground, 0.5);
-    border-width: 1px;
+    border: 1px solid transparent;
 }
 
 .scrollbar.slider:backdrop {
     background-color: alpha(@backdrop_foreground, 0.2);
-    border-style: solid;
-    border-image: none;
-    border: 1px solid alpha(@backdrop_foreground, 0.5);
-    border-width: 1px;
+    border: 1px solid transparent;
 }
 
 .scrollbar.slider.fine-tune:prelight:active {
       background-image: none;
-      border-style: solid;
-      border-image: none;
-      border: 1px solid transparent;
-      border-width: 3px;
+      border: 3px solid transparent;
 }
 
 
@@ -174,10 +153,7 @@
 
 .scrollbar.trough:insensitive {
     background-color: @scrollbar_trough_insensitive;
-    border-style: solid;
-    border-image: none;
-    border: 1px solid transparent;
-    border-width: 3px;
+    border: 3px solid transparent;
 }
 
 .scrollbars-junction:backdrop,

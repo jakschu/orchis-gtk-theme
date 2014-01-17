@@ -23,7 +23,7 @@
 GtkProgressBar {
     padding: 0;
     border-width: 1px;
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 .progressbar,
@@ -122,8 +122,4 @@ GtkProgressBar {
 .trough.vertical:backdrop {
     border: 1px solid @backdrop_border;
     background-color: transparent;
-    background-image: linear-gradient(to bottom,
-                                  @backdrop_trough_background_a,
-                                  @backdrop_trough_background_b
-                                  ); 
 }

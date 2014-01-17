@@ -36,7 +36,7 @@
 @define-color backdrop_foreground shade(@foreground, 1.02);
 @define-color backdrop_border shade(@border, 0.99);
 @define-color backdrop_separator shade(@separator, 1.3);
-@define-color backdrop_text shade(@text, 2.0);
+@define-color backdrop_text shade(@text, 1.5);
 @define-color backdrop_selection shade(@selection, 1.3);
 
 /* Unfocused-insensitive colors */
@@ -187,7 +187,7 @@
 @define-color destructive_action_button_b shade(@error, 0.9);
 @define-color destructive_action_button_border shade(@error, 0.8);
 @define-color destructive_action_button_foreground @base;
-@define-color destructive_action_button_shadow shade(@text, 1.15);
+@define-color destructive_action_button_shadow alpha(@base, 0.5);
 
 
 /**************************

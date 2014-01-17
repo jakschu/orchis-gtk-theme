@@ -48,10 +48,7 @@
 .toolbar:backdrop {
     color: @backdrop_text;
     border: 1px solid @backdrop_border;
-    background-image: linear-gradient(to bottom,
-                                  @backdrop_gradient_a,
-                                  @backdrop_gradient_b
-                                  );
+    background-color: @backdrop_background;
 }
 
 
@@ -126,7 +123,7 @@
     color: @insensitive_separator;
 }
 
-/* Unfocused */
+/* backdrop */
 .toolbar .button:backdrop,
 .toolbar .button:active:backdrop {
     color: @backdrop_text;
@@ -156,9 +153,9 @@
     border: solid @border;
     border-width: 0px 0px 1px 0px;
     padding-top: 4px;
-    padding-left: 4px;
+    padding-left: 6px;
     padding-bottom: 4px;
-    padding-right: 4px;
+    padding-right: 6px;
     background-image: linear-gradient(to bottom,
                                       shade(@background,0.85),
                                       shade(@background,0.9)
@@ -171,14 +168,17 @@
 .primary-toolbar.toolbar:backdrop {
     border: solid @backdrop_border;
     border-width: 1px 0px 1px 0px;
-    background: @backdrop_background;
+    background: shade(@backdrop_background,0.95);
     box-shadow:none;
 }
 
 
 /* Buttons */
 .primary-toolbar .button.text-button {
-    padding: 2px 16px;
+    padding-top: 2px;
+    padding-left: 4px;
+    padding-bottom: 2px;
+    padding-right: 4px;
     color: @text;
 }
 
@@ -248,7 +248,7 @@
     color: @insensitive_separator;
 }
 
-/* Unfocused buttons */
+/* backdrop buttons */
 .primary-toolbar .button:backdrop,
 .primary-toolbar .button:active:backdrop {
     color: @backdrop_text;
@@ -384,7 +384,7 @@
     color: @insensitive_separator;
 }
 
-/* Unfocused */
+/* backdrop */
 .inline-toolbar .button:backdrop,
 .inline-toolbar .button:active:backdrop {
     color: @backdrop_text;

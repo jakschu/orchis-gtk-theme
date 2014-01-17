@@ -71,7 +71,7 @@
     background-image: none;
 }
 
-/* Unfocused fill colors */
+/* backdrop fill colors */
 .scale.vertical.highlight.left:backdrop,
 .scale.vertical.highlight.bottom:backdrop,
 .menubar .menuitem.scale.highlight.left:backdrop,
@@ -117,7 +117,7 @@
     border: 1px solid @insensitive_border;
 }
 
-/* Unfocused trough colors */
+/* backdrop trough colors */
 .scale.trough:backdrop,
 .scale.trough.vertical:backdrop {
     background-color: @backdrop_background;

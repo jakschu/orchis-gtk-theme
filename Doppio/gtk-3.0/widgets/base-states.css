@@ -26,11 +26,11 @@
 }
 
 .background:backdrop {
-    /* I want everything nice and flat in the unfocused window */
+    /* I want everything nice and flat in the backdrop window */
     text-shadow: none;
     icon-shadow: none;
 
-    color: @unfocused_foreground;
+    color: @backdrop_foreground;
 }
 
 /* FIXME: why do we still need this? */
@@ -47,8 +47,8 @@ GtkClutterOffscreen {
 
 *:selected:backdrop {
     /* I would like to remove colors from the backdrop state, next release*/
-    background-color: @theme_unfocused_selected_background;
-    color: @theme_unfocused_selected_foreground;
+    background-color: @theme_backdrop_selected_background;
+    color: @theme_backdrop_selected_foreground;
 }
 
 *:insensitive {
@@ -58,10 +58,10 @@ GtkClutterOffscreen {
 }
 
 *:insensitive:backdrop {
-    /* I want everything nice and flat in the unfocused window */
+    /* I want everything nice and flat in the backdrop window */
     text-shadow: none;
     icon-shadow: none;
-    color: @unfocused_insensitive_foreground;
+    color: @backdrop_insensitive_foreground;
 }
 
 /* Apply effects to insensitive and prelit images */

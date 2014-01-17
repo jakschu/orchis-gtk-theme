@@ -3,8 +3,8 @@
  *********/
 
 .frame {
-    border-color: @border;
     background-color: transparent;
+    border: 1px solid @border;
 }
 
 .frame:backdrop {

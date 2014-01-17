@@ -128,7 +128,7 @@
 .inline-toolbar.toolbar GtkToolButton:only-child .button,
 .inline-toolbar.toolbar GtkToolButton:only-child .button:active,
 .inline-toolbar.toolbar GtkToolButton:only-child .button:insensitive {
-    border-width: 1px;
+    border-width: 0;
     border-radius: 4px;
 }
 

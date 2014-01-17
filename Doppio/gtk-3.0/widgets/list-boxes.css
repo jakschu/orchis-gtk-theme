@@ -53,12 +53,12 @@ EggListBox:selected {
 }
 
 .content-view.view:insensitive {
-    background-color: @unfocused_base;
+    background-color: @backdrop_base;
     background-image: none;
 }
 
 .content-view.view:backdrop {
-    background-color: @sidebar_background_unfocused;
+    background-color: @sidebar_background_backdrop;
     background-image: none;
 }
 
@@ -68,7 +68,7 @@ EggListBox:selected {
 }
 
 .content-view.view:selected:backdrop {
-    background-color: @unfocused_selected_background;
+    background-color: @backdrop_selected_background;
     background-image: none;
 }
 
@@ -95,6 +95,6 @@ EggListBox.content-view:active,
 
 EggListBox.content-view:selected:backdrop,
 .content-view.cell:selected:backdrop {
-    background-color: @unfocused_selected_background;
+    background-color: @backdrop_selected_background;
     background-image: none;
 }

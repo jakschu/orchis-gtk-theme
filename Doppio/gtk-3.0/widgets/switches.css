@@ -81,7 +81,7 @@ GtkSwitch.trough:active:insensitive {
 
 
 
-/* Unfocused */
+/* backdrop */
 GtkSwitch.slider:backdrop {
     border: 1px solid @backdrop_border;
     background-image: linear-gradient(to bottom,
