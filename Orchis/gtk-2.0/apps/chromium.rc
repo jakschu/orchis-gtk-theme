@@ -4,6 +4,7 @@ style "chromium-toolbar-button" {
   engine "murrine" {
     roundness = 3
     textstyle = 0
+    border_shades = { 0.99, 0.99 }
   }
 }
 

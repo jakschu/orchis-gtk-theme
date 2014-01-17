@@ -187,7 +187,7 @@ style "murrine-scrollbar" {
 	engine "murrine" {
 		roundness = 10
 		contrast = 0.00
-		border_shades = { 0.9, 0.9 }
+		border_shades = { 0.99, 0.99 }
 		trough_shades = { 0.97, 0.97 }
 		trough_border_shades = { 0.9, 0.9 }
 	}
@@ -213,7 +213,7 @@ style "murrine-scale" = "murrine-default" {
 	engine "murrine" {
 		roundness = 7
 		gradient_shades = { 1.08, 1.08, 1.08, 1.08 }
-		border_shades = { 0.9, 0.9 }
+		border_shades = { 0.99, 0.99 }
 		trough_shades = { 1.08, 1.08 }
 		trough_border_shades = { 0.8, 0.8 }
 	}
@@ -230,7 +230,7 @@ style "murrine-progressbar" = "murrine-default" {
 
 	engine "murrine" {
 		roundness = 2
-		border_shades = { 0.9, 0.9 }
+		border_shades = { 0.99, 0.99 }
 		trough_border_shades = { 0.8, 0.8 }
 	}
 }
@@ -737,3 +737,5 @@ widget_class "*XfsmLogoutDialog*GtkButton" style "xfsm-logout-button"
 include "apps/chromium.rc"
 include "apps/firefox.rc"
 include "apps/gnome-terminal.rc"
+include "apps/xfce.rc"
+include "apps/thunar.rc"
