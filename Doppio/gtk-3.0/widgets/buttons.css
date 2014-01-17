@@ -22,7 +22,7 @@
  ***********/
  
 .button {
-    -GtkWidget-focus-padding: 1;
+    -GtkWidget-focus-padding: 0;
     -GtkWidget-focus-line-width: 0;
     
     transition: border 100ms ease-in-out;
@@ -35,6 +35,7 @@
                                   @button_gradient_b
                                   );
     color: @text;
+    text-shadow: @button_text_shadow;
 }
 
 
@@ -43,14 +44,12 @@
 .button:hover:focus,
 .button:active:focus,
 .button:active:hover:focus {
-    border: 1px solid;
-    border-color: @active_border;
+    border: 1px solid @border;
 }
 
 
 .button:hover {
-    border: 1px solid;
-    border-color: @hover_selection;
+    border: 1px solid @hover_selection;
     background-image: linear-gradient(to bottom,
                                   @button_hover_gradient_a,
                                   @button_hover_gradient_b
@@ -59,8 +58,7 @@
 
 /* Active/Pressed Button */
 .button:active {
-    border: 1px solid;
-    border-color: @selected_background; 
+    border: 1px solid @border; 
     background-image: linear-gradient(to bottom,
                                   @button_active_gradient_a,
                                   @button_active_gradient_b
@@ -81,46 +79,35 @@
 }
 
 /* Insensitive Button */
-.button:insensitive {
-    border: 1px solid;
-    border-color: @insensitive_border;
+.button:insensitive,
+.button.default:insensitive,
+.button:active:insensitive {
+    border: 1px solid @insensitive_border;
     background-color: @insensitive_background;
     background-image: none;
-}
-
-.button:active:insensitive {
-    border: 1px solid;
-    border-color: @insensitive_border;
-    background-color: @insensitive_background;
-    background-image: linear-gradient(to bottom,
-                                  @button_insensitive_gradient_a,
-                                  @button_insensitive_gradient_b
-                                  );
+    color: @insensitive_text;
+    text-shadow: none;
 }
 
 /* backdrop Button */
-.button:backdrop {
-    border: 1px solid;
-    border-color: @backdrop_border;
-    background-color: @backdrop_background;
-    background-image: none;
-}
-
+.button:backdrop,
+.button.default:backdrop,
 .button:active:backdrop {
-    border: 1px solid;
-    border-color: @backdrop_border;
+    border: 1px solid @backdrop_border;
     background-color: @backdrop_background;
     background-image: linear-gradient(to bottom,
                                   @button_backdrop_gradient_a,
                                   @button_backdrop_gradient_b
                                   );
+    color: @backdrop_text;
+    text-shadow: none;
 }
 
 
 /* Default Button */
 .button.default {
-    border: 1px solid;
-    border-color: @selected_background;
+    border: 1px solid @selection;
+
     color: @text;
     background-image: linear-gradient(to bottom,
                               @button_gradient_a,
@@ -128,19 +115,9 @@
                               );
 }
 
-.button.default:hover {
-    border: 1px solid;
-    border-color: @hover_selection;
-    color: @hover_text;
-    background-image: linear-gradient(to bottom,
-                                  @button_hover_gradient_a,
-                                  @button_hover_gradient_b
-                                  );
-}
-
+.button.default:hover,
 .button.default:active {
-    border: 1px solid;
-    border-color: @selected_background;
+    border: 1px solid alpha(@selection, 0.4);
     color: @active_text;
     background-image: linear-gradient(to bottom,
                               @button_active_gradient_a,
@@ -149,8 +126,7 @@
 }
 
 .button.default:active:hover {
-    border: 1px solid;
-    border-color:  @hover_selection;
+    border: 1px solid @hover_selection;
     background-image: linear-gradient(to bottom,
                               @button_active_gradient_a,
                               @button_active_gradient_b

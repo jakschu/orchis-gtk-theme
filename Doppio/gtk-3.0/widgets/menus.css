@@ -66,7 +66,7 @@ GtkTreeMenu .menuitem * {
 .menu .menuitem:active,
 .menu .menuitem:hover {
     border: none;
-    background-color: @selected_background;
+    background-color: @selection;
     background-image: none;
 }
 
@@ -165,7 +165,7 @@ GtkTreeMenu .menuitem * {
 .menubar .menuitem:hover,
 .menubar .menuitem *:hover {
     border: none;
-    background-color: @selected_background;
+    background-color: @selection;
     background-image: none;
     color: @selected_foreground;
 }

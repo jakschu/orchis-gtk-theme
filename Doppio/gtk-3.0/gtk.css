@@ -32,7 +32,7 @@
 @define-color panel #555; /* Panel color */
 @define-color selection #a348b1; /* Selection color */
 @define-color gradient_a @background; /* Gradient color A */
-@define-color gradient_b shade(@gradient_a, 0.9); /* Gradient color B */
+@define-color gradient_b shade(@gradient_a, 0.95); /* Gradient color B */
 @define-color view_background #fff; /* View background */
 @define-color inactive_frame @border; /* Inactive frame color */
 @define-color panel_text #ddd; /* Panel text color */

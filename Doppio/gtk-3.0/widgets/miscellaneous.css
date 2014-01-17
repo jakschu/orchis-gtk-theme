@@ -102,13 +102,13 @@ GtkBubbleWindow .toolbar {
 
 .dim-label:selected,
 .dim-label:selected:focus {
-    color: mix(@selected_foreground, @selected_background, 0.5);
+    color: mix(@selected_foreground, @selection, 0.5);
 }
 
 .dnd {
     border-width: 1px;
     border-style: solid;
-    border: 1px solid shade(@selected_background, 0.9);
+    border: 1px solid shade(@selection, 0.9);
 }
 
 .grip {

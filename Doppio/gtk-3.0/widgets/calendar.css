@@ -62,5 +62,5 @@ GtkCalendar.header {
 GtkCalendar.highlight {
     border-width: 0;
     background-color: transparent;
-    color: @selected_background;
+    color: @selection;
 }

@@ -22,7 +22,7 @@
 .selection-mode.header-bar,
 .selection-mode.toolbar {
     border: 1px solid @selected_border;
-    background-color: @selected_background;
+    background-color: @selection;
     background-image: none;
     color: @base;
     text-shadow: 0px 1px alpha(black,0.3);
@@ -102,7 +102,7 @@
 .selection-mode.toolbar GtkToolButton.suggested-action .button {
     border: 1px solid @selected_border;
     border-radius: 4px;
-    background-color: @selected_background;
+    background-color: @selection;
     background-image: none;
     color: @base;
     text-shadow: 0px 1px alpha(black,0.3);
@@ -112,7 +112,7 @@
 .selection-mode.toolbar .suggested-action.button:hover,
 .selection-mode.toolbar GtkToolButton.suggested-action .button:hover {
     border: 1px solid @selected_border;
-    background-color: @selected_background;
+    background-color: @selection;
     background-image: none;
     color: @base;
     text-shadow: 0px 1px alpha(black,0.3);
@@ -122,7 +122,7 @@
 .selection-mode.toolbar .suggested-action.button:active,
 .selection-mode.toolbar GtkToolButton.suggested-action:active {
     border: 1px solid @selected_border;
-    background-color: shade(@selected_background, 1.05);
+    background-color: shade(@selection, 1.05);
     background-image: none;
     color: @base;
     text-shadow: 0px 1px alpha(black,0.3);
@@ -148,7 +148,7 @@
 /* Label */
 .selection-mode.toolbar .dim-label,
 .selection-mode.toolbar .selection-menu.button .dim-label {
-    color: @selected_background;
+    color: @selection;
     text-shadow: 0px 1px alpha(black,0.3);
 }
 

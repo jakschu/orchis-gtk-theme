@@ -41,7 +41,7 @@ GtkClutterOffscreen {
 
 *:selected,
 *:selected:focus {
-    background-color: @selected_background;
+    background-color: @selection;
     color: @selected_foreground;
 }
 
@@ -94,7 +94,7 @@ GtkClutterOffscreen {
 }
 
 .gtkstyle-fallback:selected {
-    background-color: @selected_background;
+    background-color: @selection;
     color: @selected_foreground;
 }
 

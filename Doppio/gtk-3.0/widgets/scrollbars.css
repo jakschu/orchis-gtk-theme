@@ -108,13 +108,13 @@
 }
 
 .scrollbar.slider:hover {
-    background-color: alpha(@selected_background, 0.4);
+    background-color: alpha(@selection, 0.4);
     background-image: none;
     border: 1px solid transparent;
 }
 
 .scrollbar.slider:active {
-    background-color: alpha(@selected_background, 0.7);
+    background-color: alpha(@selection, 0.7);
     background-image: none;
     border: 1px solid transparent;
 }

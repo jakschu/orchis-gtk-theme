@@ -46,7 +46,7 @@
 .scale.vertical.highlight.bottom,
 .menubar .menuitem .scale.highlight.left,
 .menubar .menuitem.scale.highlight.bottom {
-    background-color: @selected_background;
+    background-color: @selection;
     border: 1px solid @selected_border;
     background-image: none;
 }
@@ -131,7 +131,7 @@
 .scale.progressbar.vertical {
     border-width: 1px;
     border-style: solid;
-    border: 1px solid shade(@selected_background, 0.8);
+    border: 1px solid shade(@selection, 0.8);
     background-image: linear-gradient(to bottom,
                                       @progressbar_background_a,
                                       @progressbar_background_b
@@ -142,7 +142,7 @@
 .scale.progressbar.vertical:insensitive {
     border-width: 1px;
     border-style: solid;
-    border: 1px solid shade(@selected_background, 0.8);
+    border: 1px solid shade(@selection, 0.8);
     background-image: linear-gradient(to bottom,
                                       @insensitive_progressbar_background_a,
                                       @insensitive_progressbar_background_b
@@ -154,7 +154,7 @@
 .scale.progressbar.vertical:backdrop {
     border-width: 1px;
     border-style: solid;
-    border: 1px solid shade(@selected_background, 0.8);
+    border: 1px solid shade(@selection, 0.8);
     background-image: linear-gradient(to bottom,
                                       @backdrop_progressbar_background_a,
                                       @backdrop_progressbar_background_b

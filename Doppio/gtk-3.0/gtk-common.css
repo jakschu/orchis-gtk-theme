@@ -43,7 +43,7 @@
 @define-color backdrop_insensitive_border mix(@backdrop_background, @backdrop_border, 0.5);
 @define-color backdrop_insensitive_foreground mix(@backdrop_background, @backdrop_foreground, 0.5);
 @define-color backdrop_insensitive_background mix(@backdrop_background, @backdrop_base, 0.5);
-@define-color backdrop_insensitive_text alpha(@text, 0.7);
+@define-color backdrop_insensitive_text alpha(@text, 0.4);
 
 /* Unfocused-selected colors */
 @define-color backdrop_selected_background shade(@backdrop_background, 0.95);
@@ -95,18 +95,14 @@
  * Button colors *
  *****************/
 
-@define-color button_background shade(@background, 1.02);
-
-@define-color button_background_active rgba(0,0,0,0.05);
-
-@define-color button_gradient_a shade(@gradient_a, 1.05);
-@define-color button_gradient_b shade(@gradient_b, 1.05);
+@define-color button_gradient_a shade(@gradient_a, 1.02);
+@define-color button_gradient_b shade(@gradient_b, 1.02);
 
 @define-color button_active_gradient_a @gradient_b;
 @define-color button_active_gradient_b @gradient_a;
 
-@define-color button_hover_gradient_a shade(@gradient_a, 1.07);
-@define-color button_hover_gradient_b shade(@gradient_b, 1.07);
+@define-color button_hover_gradient_a shade(@gradient_a, 1.05);
+@define-color button_hover_gradient_b shade(@gradient_b, 1.05);
 
 @define-color button_insensitive_gradient_a @insensitive_background;
 @define-color button_insensitive_gradient_b @insensitive_background;
@@ -133,11 +129,11 @@
 @define-color progressbar_background_a shade(@selected_background, 1.1);
 @define-color progressbar_background_b @selected_background;
 
-@define-color insensitive_progressbar_background_a shade(@progressbar_background_a, 2.0);
-@define-color insensitive_progressbar_background_b shade(@progressbar_background_a, 2.0);
+@define-color insensitive_progressbar_background_a @insensitive_border;
+@define-color insensitive_progressbar_background_b @insensitive_border;
 
-@define-color backdrop_progressbar_background_a shade(@progressbar_background_a, 0.98);
-@define-color backdrop_progressbar_background_b shade(@progressbar_background_a, 0.98);
+@define-color backdrop_progressbar_background_a shade(@backdrop_background, 0.85);
+@define-color backdrop_progressbar_background_b shade(@backdrop_background, 0.85);
 
 
 /***********

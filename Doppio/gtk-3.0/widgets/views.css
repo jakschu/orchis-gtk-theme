@@ -44,7 +44,7 @@
 
 .view:selected,
 .view:selected:focus {
-    background-color: @selected_background;
+    background-color: @selection;
     color: @selected_foreground;
 }
 
@@ -61,9 +61,9 @@
 /* Selected */
 .view.rubberband,
 .rubberband {
-    border: 1px solid shade(@selected_background, 0.9);
+    border: 1px solid shade(@selection, 0.9);
     border-radius: 4px;
-    background-color: alpha(@selected_background, 0.3);
+    background-color: alpha(@selection, 0.3);
 }
 
 /************
@@ -128,15 +128,15 @@ GtkTextView {
  ************/
 GtkIconView.view {
     background-color: @base;
-    border: solid @selected_background;
+    border: solid @selection;
     border-top-width: 1px;
 }
  
 GtkIconView.view.cell:selected,
 GtkIconView.view.cell:selected:focus {
-    border: 1px solid @selected_background;
+    border: 1px solid @selection;
     border-radius: 4px;
-    background-color: alpha(@selected_background, 0.7);
+    background-color: alpha(@selection, 0.7);
     color: @selected_foreground;
 }
 
@@ -168,12 +168,12 @@ GtkIconView.content-view.check:selected {
 }
 
 .content-view.view:hover {
-    background-color: alpha(@selected_background, 0.6);
+    background-color: alpha(@selection, 0.6);
 }
 
 .content-view.view:selected,
 .content-view.view:active {
-    background-color: @selected_background;
+    background-color: @selection;
 }
 
 .content-view.view:insensitive {

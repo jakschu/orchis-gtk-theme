@@ -26,14 +26,14 @@
 
 .cell:selected,
 .cell:selected:focus {
-    background-color: @selected_background;
+    background-color: @selection;
     color: @selected_foreground;
 }
 
 row:selected,
 row:selected:focus {
-    border: 0 solid shade(@selected_background, 0.9);
-    background-color: @selected_background;
+    border: 0 solid shade(@selection, 0.9);
+    background-color: @selection;
     background-image: none;
     color: @selected_foreground;
 

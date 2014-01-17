@@ -22,8 +22,6 @@
  
 GtkProgressBar {
     padding: 0;
-    border-width: 1px;
-    border-radius: 0;
 }
 
 .progressbar,
@@ -36,7 +34,7 @@ GtkProgressBar {
 .progressbar.vertical row:hover,
 .progressbar.vertical row:selected,
 .progressbar.vertical row:selected:focus {
-    border: 1px solid shade(@selected_background, 0.8);
+    border: 1px solid shade(@selection, 0.8);
     background-image: linear-gradient(to bottom,
                                       @progressbar_background_a,
                                       @progressbar_background_b
@@ -53,7 +51,7 @@ GtkProgressBar {
 .progressbar.vertical row:hover:insensitive,
 .progressbar.vertical row:selected:insensitive,
 .progressbar.vertical row:selected:focus:insensitive {
-    border: 1px solid shade(@selected_background, 0.8);
+    border: 1px solid @insensitive_border;
     background-image: linear-gradient(to bottom,
                                       @insensitive_progressbar_background_a,
                                       @insensitive_progressbar_background_b
@@ -71,8 +69,7 @@ GtkProgressBar {
 .progressbar.vertical row:hover:backdrop,
 .progressbar.vertical row:selected:backdrop,
 .progressbar.vertical row:selected:focus:backdrop {
-    border: 1px solid shade(@selected_background, 0.8);
-    background-color: transparent;
+    border: 1px solid @backdrop_border;
     background-image: linear-gradient(to bottom,
                                       @backdrop_progressbar_background_a,
                                       @backdrop_progressbar_background_b
@@ -89,11 +86,8 @@ GtkProgressBar {
 .trough row:selected,
 .trough row:selected:focus {
     border: 1px solid @border;
-    border-radius: 0px;
-    background-image: linear-gradient(to bottom,
-                                      @trough_background_a,
-                                      @trough_background_b
-                                      );
+    border-radius: 0;
+    background-color: @base;
 }
 
 .trough.vertical,
@@ -101,25 +95,18 @@ GtkProgressBar {
 .trough.vertical row:selected,
 .trough.vertical row:selected:focus {
     border: 1px solid @border;
-    border-radius: 0px;
-    background-image: linear-gradient(to left,
-                                      @trough_background_a,
-                                      @trough_background_b
-                                      );
+    border-radius: 0;
+    background-color: @base;
 }
 
 .trough:insensitive,
 .trough.vertical:insensitive {
     border: 1px solid  @insensitive_border;
-    background-color: transparent;
-    background-image: linear-gradient(to bottom,
-                                  @insensitive_trough_background_a,
-                                  @insensitive_trough_background_b
-                                  );
+    background-color: @insensitive_base;
 }
 
 .trough:backdrop,
 .trough.vertical:backdrop {
     border: 1px solid @backdrop_border;
-    background-color: transparent;
+    background-color: @backdrop_background;
 }

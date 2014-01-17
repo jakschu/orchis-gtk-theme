@@ -1,3 +1,22 @@
+/* Copyright 2013 - 2014 Sam Hewitt.
+*
+* This file is part of the Moka GTK theme.
+*
+* The Moka GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Moka GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Moka GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+
 /******************
  * linked buttons *
  *****************/
@@ -6,7 +25,7 @@
 .inline-toolbar.toolbar .button,
 .inline-toolbar.toolbar GtkToolButton .button,
 .inline-toolbar.toolbar GtkToolButton > .button {
-    box-shadow: none;
+    box-shadow: inset -1px 0 shade(@background, 0.9);
 }
 
 .linked .button:active,
@@ -23,7 +42,7 @@
 .inline-toolbar.toolbar .button:insensitive,
 .inline-toolbar.toolbar GtkToolButton .button:insensitive,
 .inline-toolbar.toolbar GtkToolButton > .button:insensitive {
-    box-shadow: none;
+    box-shadow: inset -1px 0 shade(@background, 0.9);
 }
 
 /* remove box shadow from last-child and only-child */
@@ -128,7 +147,7 @@
 .inline-toolbar.toolbar GtkToolButton:only-child .button,
 .inline-toolbar.toolbar GtkToolButton:only-child .button:active,
 .inline-toolbar.toolbar GtkToolButton:only-child .button:insensitive {
-    border-width: 0;
+    border-width: 1px;
     border-radius: 4px;
 }
 
@@ -151,7 +170,7 @@
 .linked.vertical .button:insensitive,
 .inline-toolbar.toolbar.vertical .button:insensitive,
 .inline-toolbar.toolbar.vertical GtkToolButton > .button:insensitive {
-    box-shadow: none;
+    box-shadow: inset 0 -1px shade(@background, 0.9);
 }
 
 /* remove box shadow from last-child and only-child */
@@ -243,7 +262,7 @@
 .toolbar .raised.linked .button,
 .header-bar .button.raised.linked,
 .header-bar .raised.linked .button {
-    box-shadow: none;
+    box-shadow: inset -1px 0 shade(@toolbar_background, 0.9);
 }
 
 .primary-toolbar .button.raised.linked:active,
@@ -258,64 +277,13 @@
                 inset 0 -1px alpha(black, 0.05);
 }
 
-
-.primary-toolbar .button.raised.linked:backdrop,
-.primary-toolbar .raised.linked .button:backdrop,
-.toolbar .button.raised.linked:backdrop,
-.toolbar .raised.linked .button:backdrop,
-.header-bar .button.raised.linked:backdrop,
-.header-bar .raised.linked .button:backdrop  {
-    box-shadow: none;
-}
-
-/* remove box shadow from last-child and only-child */
-.primary-toolbar .button.raised.linked:last-child,
-.primary-toolbar .button.raised.linked:only-child,
-.primary-toolbar .button:backdrop.raised.linked:last-child,
-.primary-toolbar .button:backdrop.raised.linked:only-child,
-.primary-toolbar .button:active:backdrop.raised.linked:last-child,
-.primary-toolbar .button:active:backdrop.raised.linked:only-child,
-.primary-toolbar .raised.linked .button:last-child,
-.primary-toolbar .raised.linked .button:only-child,
-.primary-toolbar .raised.linked .button:backdrop:last-child,
-.primary-toolbar .raised.linked .button:backdrop:only-child,
-.primary-toolbar .raised.linked .button:active:backdrop:last-child,
-.primary-toolbar .raised.linked .button:active:backdrop:only-child,
-.toolbar .button.raised.linked:last-child,
-.toolbar .button.raised.linked:only-child,
-.toolbar .button:backdrop.raised.linked:last-child,
-.toolbar .button:backdrop.raised.linked:only-child,
-.toolbar .button:active:backdrop.raised.linked:last-child,
-.toolbar .button:active:backdrop.raised.linked:only-child,
-.toolbar .raised.linked .button:last-child,
-.toolbar .raised.linked .button:only-child,
-.toolbar .raised.linked .button:backdrop:last-child,
-.toolbar .raised.linked .button:backdrop:only-child,
-.toolbar .raised.linked .button:active:backdrop:last-child,
-.toolbar .raised.linked .button:active:backdrop:only-child,
-.header-bar .button.raised.linked:last-child,
-.header-bar .button.raised.linked:only-child,
-.header-bar .button:backdrop.raised.linked:last-child,
-.header-bar .button:backdrop.raised.linked:only-child,
-.header-bar .button:active:backdrop.raised.linked:last-child,
-.header-bar .button:active:backdrop.raised.linked:only-child,
-.header-bar .raised.linked .button:last-child,
-.header-bar .raised.linked .button:only-child,
-.header-bar .raised.linked .button:backdrop:last-child,
-.header-bar .raised.linked .button:backdrop:only-child,
-.header-bar .raised.linked .button:active:backdrop:last-child,
-.header-bar .raised.linked .button:active:backdrop:only-child {
-    box-shadow: none;
-}
-
-
 .primary-toolbar .button.raised.linked:insensitive,
 .primary-toolbar .raised.linked .button:insensitive,
 .toolbar .button.raised.linked:insensitive,
 .toolbar .raised.linked .button:insensitive,
 .header-bar .button.raised.linked:insensitive,
 .header-bar .raised.linked .button:insensitive {
-    box-shadow: none;
+    box-shadow: inset -1px 0 shade(@toolbar_background, 0.9);
 }
 
 /* remove box shadow from last-child and only-child */
@@ -371,7 +339,9 @@
 .header-bar .button:active.raised.linked:only-child,
 .header-bar .raised.linked .button:active:last-child,
 .header-bar .raised.linked .button:active:only-child {
-    box-shadow: none;
+    box-shadow: inset 1px 0 alpha(black, 0.07),
+                inset 0 1px alpha(black, 0.08),
+                inset -1px 0 alpha(black, 0.07);
 }
 
 /* middle button */

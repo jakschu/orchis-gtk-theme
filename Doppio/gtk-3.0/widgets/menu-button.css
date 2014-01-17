@@ -23,7 +23,7 @@
 .menu.button {
     background-image: none;
     background-color: @base;
-    border: 1px solid @selected_background; 
+    border: 1px solid @selection; 
 }
 
 .menu.button.separator {

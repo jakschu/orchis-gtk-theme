@@ -38,8 +38,8 @@
 .spinbutton.entry:selected,
 .spinbutton.vertical.entry:selected {
     color: @selected_foreground;
-    background-color: @selected_background;
-    border: 1px solid @selected_background;
+    background-color: @selection;
+    border: 1px solid @selection;
 }
 
 .spinbutton.entry:active,
