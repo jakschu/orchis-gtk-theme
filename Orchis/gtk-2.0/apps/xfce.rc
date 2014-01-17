@@ -1,18 +1,18 @@
 # XFCE Styles
 
 style "workspace-switcher" = "murrine-panel" {
-	background[SELECTED] = @selection
+	bg[SELECTED] = @selected_bg_color
 }
 
 style "xfce-header" {
-	background[NORMAL] = shade (0.9, @background)
-	base[NORMAL] = shade (1.18, @background)
+	bg[NORMAL] = shade (0.9, @bg_color)
+	base[NORMAL] = shade (1.18, @bg_color)
 }
 
 style "xfdesktop-windowlist" {
-	background[NORMAL] = @base
-	foreground[INSENSITIVE] = shade (0.95, @base)
-	text[INSENSITIVE] = shade (0.95, @base)
+	bg[NORMAL] = @base_color
+	fg[INSENSITIVE] = shade (0.95, @base_color)
+	text[INSENSITIVE] = shade (0.95, @base_color)
 }
 
 style "xfdesktop-icon-view" {
@@ -20,13 +20,13 @@ style "xfdesktop-icon-view" {
 	XfdesktopIconView::selected-label-alpha = 60
 	XfdesktopIconVIew::ellipsize-icon-labels = 1
 
-	base[NORMAL] = @selection
-	base[SELECTED] = @selection
-	base[ACTIVE] = @selection
+	base[NORMAL] = @selected_bg_color
+	base[SELECTED] = @selected_bg_color
+	base[ACTIVE] = @selected_bg_color
 
-	foreground[NORMAL] = @selected_foreground
-	foreground[SELECTED] = @selected_foreground
-	foreground[ACTIVE] = @selected_foreground
+	fg[NORMAL] = @selected_fg_color
+	fg[SELECTED] = @selected_fg_color
+	fg[ACTIVE] = @selected_fg_color
 
 	engine "murrine" {
 		textstyle = 5
@@ -38,8 +38,8 @@ style "xfwm-tabwin" {
 	Xfwm4TabwinWidget::border-width = 0
 	Xfwm4TabwinWidget::icon-size = 64
 
-	background[NORMAL]	= @menu_background
-	foreground[NORMAL]	= @menu_foreground
+	bg[NORMAL]	= @menu_bg_color
+	fg[NORMAL]	= @menu_fg_color
 
 	engine "murrine" {
 		focusstyle = 0
@@ -47,24 +47,24 @@ style "xfwm-tabwin" {
 }
 
 style "xfsm-logout" {
-	background[NORMAL]	= @menu_background
-	background[ACTIVE]	= @menu_background
-	background[PRELIGHT]	= shade (1.1, @menu_background)
-	background[SELECTED]	= shade (0.5, @menu_background)
-	background[INSENSITIVE]	= shade (1.3, @menu_background)
+	bg[NORMAL]	= @menu_bg_color
+	bg[ACTIVE]	= @menu_bg_color
+	bg[PRELIGHT]	= shade (1.1, @menu_bg_color)
+	bg[SELECTED]	= shade (0.5, @menu_bg_color)
+	bg[INSENSITIVE]	= shade (1.3, @menu_bg_color)
 
-	foreground[NORMAL]	= @menu_foreground
-	foreground[PRELIGHT]	= @menu_foreground
+	fg[NORMAL]	= @menu_fg_color
+	fg[PRELIGHT]	= @menu_fg_color
 
-	text[NORMAL]	= @menu_foreground
+	text[NORMAL]	= @menu_fg_color
 
 	engine "murrine" {
 	}
 }
 
 style "xfsm-logout-button" {
-	background[NORMAL]	= shade (1.2, @menu_background)
-	background[PRELIGHT]	= shade (1.4, @menu_background)
+	bg[NORMAL]	= shade (1.2, @menu_bg_color)
+	bg[PRELIGHT]	= shade (1.4, @menu_bg_color)
 
 	engine "murrine" {
 	}
