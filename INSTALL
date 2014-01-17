@@ -59,8 +59,9 @@ if [ "$UID" -eq "$ROOT_UID" ]; then
 		    ;;
 		esac
 	fi
-	cp -R ./Orchis-Dark/ /usr/local/share/themes/
 	cp -R ./Orchis/ /usr/local/share/themes/
+	cp -R ./Orchis-Dark/ /usr/local/share/themes/
+	chmod -R 655 /usr/local/share/themes
 	chmod -R 655 /usr/local/share/themes/Orchis
 	chmod -R 655 /usr/local/share/themes/Orchis-Dark
 	echo "Installation complete!"

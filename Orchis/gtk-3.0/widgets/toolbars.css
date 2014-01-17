@@ -170,6 +170,7 @@
 }
 
 /* Backdrop */
+.primary-toolbar:backdrop,
 .primary-toolbar .toolbar:backdrop,
 .primary-toolbar.toolbar:backdrop {
     border: solid @backdrop_border;
