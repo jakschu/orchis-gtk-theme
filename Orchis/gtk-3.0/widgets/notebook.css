@@ -21,10 +21,8 @@
  ************/
 
 .notebook { 
-    background-color: @base; 
-    border-left: 1px solid @border; 
-    border-right: 1px solid @border; 
-    border-bottom: 1px solid @border;
+    background-color: @base;
+    border:none;
     box-shadow:0 0 0 1px @border;
 }
 
