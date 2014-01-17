@@ -67,7 +67,7 @@
 .toolbar GtkComboBox,
 .toolbar .button {
     color: @text;
-    border: none;
+    border: 1px solid @border;
     background:none;
 }
 
@@ -168,7 +168,7 @@
 .primary-toolbar.toolbar:backdrop {
     border: solid @backdrop_border;
     border-width: 1px 0px 1px 0px;
-    background: shade(@backdrop_background,0.95);
+    background-color: shade(@backdrop_background,0.95);
     box-shadow:none;
 }
 
@@ -486,10 +486,8 @@
 .header-bar .button:backdrop,
 .header-bar .button.image-button:backdrop {
     color: @backdrop_text;
-    border-style: none;
     border: 1px solid @backdrop_border;
     background-color: @backdrop_background;
-    background-image: none;
 }
 
 .header-bar .button GtkImage:insensitive,

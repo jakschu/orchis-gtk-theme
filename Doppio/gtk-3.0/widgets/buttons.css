@@ -43,11 +43,13 @@
 .button:hover:focus,
 .button:active:focus,
 .button:active:hover:focus {
+    border: 1px solid;
     border-color: @active_border;
 }
 
 
 .button:hover {
+    border: 1px solid;
     border-color: @hover_selection;
     background-image: linear-gradient(to bottom,
                                   @button_hover_gradient_a,
@@ -57,6 +59,7 @@
 
 /* Active/Pressed Button */
 .button:active {
+    border: 1px solid;
     border-color: @selected_background; 
     background-image: linear-gradient(to bottom,
                                   @button_active_gradient_a,
@@ -79,12 +82,14 @@
 
 /* Insensitive Button */
 .button:insensitive {
+    border: 1px solid;
     border-color: @insensitive_border;
     background-color: @insensitive_background;
     background-image: none;
 }
 
 .button:active:insensitive {
+    border: 1px solid;
     border-color: @insensitive_border;
     background-color: @insensitive_background;
     background-image: linear-gradient(to bottom,
@@ -95,12 +100,14 @@
 
 /* backdrop Button */
 .button:backdrop {
+    border: 1px solid;
     border-color: @backdrop_border;
     background-color: @backdrop_background;
     background-image: none;
 }
 
 .button:active:backdrop {
+    border: 1px solid;
     border-color: @backdrop_border;
     background-color: @backdrop_background;
     background-image: linear-gradient(to bottom,
@@ -112,6 +119,7 @@
 
 /* Default Button */
 .button.default {
+    border: 1px solid;
     border-color: @selected_background;
     color: @text;
     background-image: linear-gradient(to bottom,
@@ -121,6 +129,7 @@
 }
 
 .button.default:hover {
+    border: 1px solid;
     border-color: @hover_selection;
     color: @hover_text;
     background-image: linear-gradient(to bottom,
@@ -130,6 +139,7 @@
 }
 
 .button.default:active {
+    border: 1px solid;
     border-color: @selected_background;
     color: @active_text;
     background-image: linear-gradient(to bottom,
@@ -139,6 +149,7 @@
 }
 
 .button.default:active:hover {
+    border: 1px solid;
     border-color:  @hover_selection;
     background-image: linear-gradient(to bottom,
                               @button_active_gradient_a,
