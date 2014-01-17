@@ -80,20 +80,16 @@
 
 /* Normal */
 .notebook tab.top {
-    /*box-shadow:inset 0 -1px 0 0 @border;*/
-    box-shadow: none;
+    box-shadow:inset 0 -1px 0 0 @border;
 }
 .notebook tab.bottom {
-    /*box-shadow:inset 0 1px 0 0 @border;*/
-    box-shadow: none;
+    box-shadow:inset 0 1px 0 0 @border;
 }
 .notebook tab.left {
-    /*box-shadow:inset -1px 0 0 0 @border;*/
-    box-shadow: none;
+    box-shadow:inset -1px 0 0 0 @border;
 }
 .notebook tab.right {
-    /*box-shadow:inset 1px 0 0 0 @border;*/
-    box-shadow: none;
+    box-shadow:inset 1px 0 0 0 @border;
 }
 
 /* Active */
@@ -126,38 +122,30 @@
 
 /* Backdrop */
 .notebook tab.top:backdrop {
-    /*box-shadow:inset 0 -1px 0 0 @backdrop_border;*/
-    box-shadow: none;
+    box-shadow:inset 0 -1px 0 0 @backdrop_border;
 }
 .notebook tab.bottom:backdrop {
-    /*box-shadow:inset 0 1px 0 0 @backdrop_border;*/
-    box-shadow: none;
+    box-shadow:inset 0 1px 0 0 @backdrop_border;
 }
 .notebook tab.left:backdrop {
-    /*box-shadow:inset -1px 0 0 0 @backdrop_border;*/
-    box-shadow: none;
+    box-shadow:inset -1px 0 0 0 @backdrop_border;
 }
 .notebook tab.right:backdrop {
-    /*box-shadow:inset 1px 0 0 0 @backdrop_border;*/
-    box-shadow: none;
+    box-shadow:inset 1px 0 0 0 @backdrop_border;
 }
 
 /* Insensitive */
 .notebook tab.top:insensitive {
-    /*box-shadow:inset 0 -1px 0 0 @insensitive_border;*/
-    box-shadow: none;
+    box-shadow:inset 0 -1px 0 0 @insensitive_border;
 }
 .notebook tab.bottom:insensitive {
-    /*box-shadow:inset 0 1px 0 0 @insensitive_border;*/
-    box-shadow: none;
+    box-shadow:inset 0 1px 0 0 @insensitive_border;
 }
 .notebook tab.left:insensitive {
-    /*box-shadow:inset -1px 0 0 0 @insensitive_border;*/
-    box-shadow: none;
+    box-shadow:inset -1px 0 0 0 @insensitive_border;
 }
 .notebook tab.right:insensitive {
-    /*box-shadow:inset 1px 0 0 0 @insensitive_border;*/
-    box-shadow: none;
+    box-shadow:inset 1px 0 0 0 @insensitive_border;
 }
 
 /*----- In-tab padding -----*/
