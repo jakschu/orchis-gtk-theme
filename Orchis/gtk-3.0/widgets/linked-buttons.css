@@ -45,6 +45,13 @@
     box-shadow: inset -1px 0 shade(@inset_dark, 0.9);
 }
 
+.linked .button:hover,
+.inline-toolbar.toolbar .button:hover,
+.inline-toolbar.toolbar GtkToolButton .button:hover,
+.inline-toolbar.toolbar GtkToolButton > .button:hover {
+    box-shadow: none;
+}
+
 .linked .button:backdrop,
 .inline-toolbar.toolbar .button:backdrop,
 .inline-toolbar.toolbar GtkToolButton .button:backdrop,
