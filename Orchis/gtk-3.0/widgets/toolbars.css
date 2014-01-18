@@ -74,6 +74,7 @@
     color: @text;
     border: 1px solid @border;
     background:none;
+    box-shadow: none;
 }
 
 .toolbar GtkComboBox:active,
@@ -84,6 +85,7 @@
                                   @button_active_gradient_a,
                                   @button_active_gradient_b
                                   );
+    box-shadow: none;
 }
 
 .toolbar .separator,
@@ -100,6 +102,7 @@
                                   @button_hover_gradient_a,
                                   @button_hover_gradient_b
                                   );
+    box-shadow: none;
 }
 
 .toolbar .button:active:hover {
@@ -184,6 +187,7 @@
     padding-bottom: 2px;
     padding-right: 4px;
     color: @text;
+    box-shadow: none;
 }
 
 .primary-toolbar GtkComboBox,
@@ -195,6 +199,7 @@
                                   @button_gradient_a,
                                   @button_gradient_b
                                   );
+    box-shadow: none;
 }
 
 /* Buttons Active */
@@ -207,6 +212,7 @@
                                   @button_active_gradient_a,
                                   @button_active_gradient_b
                                   );
+    box-shadow: none;
 }
 
 /* Button separator */
@@ -225,6 +231,7 @@
                                   @button_hover_gradient_a,
                                   @button_hover_gradient_b
                                   );
+    box-shadow: none;
 }
 
 
@@ -507,6 +514,7 @@
                                   @button_gradient_a,
                                   @button_gradient_b
                                   );
+    box-shadow: none;
 }
 
 .header-bar GtkComboBox:active,

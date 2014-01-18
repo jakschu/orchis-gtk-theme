@@ -262,6 +262,7 @@
     border-width: 1px;
     padding: 2px;
     icon-shadow: 0 1px @text_shadow;
+    box-shadow: none;
 }
 
 .notebook tab .button:hover {
