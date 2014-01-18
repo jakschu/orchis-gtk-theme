@@ -38,8 +38,29 @@ column-header .button:hover,
 column-header .button:active:hover,
 column-header .button:hover:focus,
 column-header .button:active:hover:focus {
-    border-color: @border;
-    background-color: @hover_background;
+    border: solid @border;
+    border-width: 0 1px 1px 0;
+    background-color: shade(@background,1.02);
+    background-image: none;
+}
+
+column-header .button:backdrop,
+column-header .button:active:backdrop,
+column-header .button:backdrop:focus,
+column-header .button:active:backdrop:focus {
+    border: solid @backdrop_border;
+    border-width: 0 1px 1px 0;
+    background-color: @backdrop_background;
+    background-image: none;
+}
+
+column-header .button:insensitive,
+column-header .button:active:insensitive,
+column-header .button:insensitive:focus,
+column-header .button:active:insensitive:focus {
+    border: solid @insensitive_border;
+    border-width: 0 1px 1px 0;
+    background-color: @backdrop_background;
     background-image: none;
 }
 
