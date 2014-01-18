@@ -16,13 +16,15 @@
 * with the Orchis GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-/***********
- * Sidebar *
- ***********/
+/*************************
+ * Sidebar & Source list *
+ *************************/
 
 .sidebar,
 .sidebar.view,
 .sidebar .view,
+.source-list,
+.source-list.view
 .sidebar GtkScrolledWindow {
     background-color: @background;
     color: @foreground;    
@@ -30,32 +32,42 @@
     border-width: 0;
 }
 
-.sidebar .frame {
-    border-color: @border;
-    border-width: 0px 1px 1px 1px;
+.sidebar,
+.source-list {
+    -GtkTreeView-horizontal-separator: 1px;
+    -GtkTreeView-vertical-separator: 6px;
 }
 
-/* Insensitive */
-.sidebar:insensitive,
-.sidebar.view:insensitive,
-.sidebar .view:insensitive,
-.sidebar GtkScrolledWindow:insensitive {
-    background-color: @insensitive_background;
-    color: @insensitive_foreground;
+
+/* Separator */
+.sidebar.view.separator,
+.view.separator,
+.separator {
+    border: none;
+    color: transparent;
+}
+
+/* Shadows */
+.sidebar,
+.sidebar.view,
+.sidebar.view:selected:backdrop,
+.sidebar.view:prelight:selected:backdrop,
+.source-list,
+.source-list.view,
+.source-list.view:selected:backdrop,
+.source-list.view:prelight:selected:backdrop {
+    text-shadow: 0 1px alpha (@base, 0.4);
+    icon-shadow: 0 1px alpha (@base, 0.4);
+}
+
+/* Frame */
+.sidebar .frame {
+    border: solid @border;
+    border-width: 0px 1px 1px 1px;
 }
 
 .sidebar .frame:insensitive {
     border-color: @insensitive_border;
-}
-
-/* Backdrop */
-.sidebar:backdrop,
-.sidebar.view:backdrop,
-.sidebar .view:backdrop,
-.sidebar GtkScrolledWindow:backdrop {
-    background-color: @backdrop_background;
-    border-color: @backdrop_border;
-    color: @backdrop_text;
 }
 
 .sidebar .frame:backdrop {
@@ -64,29 +76,92 @@
     color: @backdrop_text;
 }
 
-/* Separator */
-.sidebar.view.separator,
-.view.separator,
-.separator {
-    border: 0px solid @border;
-    color: @base;
+/* Insensitive */
+.sidebar:insensitive,
+.sidebar.view:insensitive,
+.sidebar.view:hover:insensitive,
+.sidebar .view:insensitive,
+.sidebar .view:hover:insensitive,
+.source-list.view:insensitive,
+.source-list.view:hover:insensitive,
+.source-list.view:focus:insensitive,
+.source-list.category-expander:hover {
+
+    color: @insensitive_text;
+    background: @insensitive_background;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+    icon-shadow: none;
+}
+
+
+/* Backdrop */
+.sidebar:backdrop,
+.sidebar.view:backdrop,
+.sidebar.view:hover:backdrop,
+.sidebar .view:backdrop,
+.sidebar .view:hover:backdrop,
+.source-list.view:backdrop,
+.source-list.view:hover:backdrop,
+.source-list.view:focus:backdrop,
+.source-list.category-expander:hover {
+
+    color: @backdrop_text;
+    background: @backdrop_background;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+    icon-shadow: none;
 }
 
 /* Selected */
 .sidebar.view:selected,
-.sidebar.view:hover:selected {
+.sidebar.view:hover:selected,
+.sidebar .view:selected,
+.sidebar .view:hover:selected,
+.source-list.view:selected,
+.source-list.view:hover:selected,
+.source-list.view:focus:selected,
+.source-list.category-expander:hover {
+
     color: @base;
-    border: 1px solid @selected_border;
-    background-color: @active_background;
+    border: solid;
+    border-width: 1px 0 1px 0;
+
+    background: @selection;
+    box-shadow: inset 0 1px 0 0 alpha (#000, 0.15),
+                inset 0 -1px 0 0 alpha (#000, 0.08);
+    text-shadow: 0 1px alpha (#000, 0.4);
+    icon-shadow: 0 1px alpha (#000, 0.4);
+}
+
+/* Hover */
+.sidebar.view:hover,
+.sidebar .view:hover,
+.source-list.view:hover,
+.source-list.view:focus:hover,
+.source-list.category-expander:hover {
+
+    color: @text;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    text-shadow: none;
+    icon-shadow: none;
 }
 
 /* Selected Backdrop */
 .sidebar.view:selected:backdrop,
-.sidebar.view:hover:selected:backdrop {
-    background-color: @backdrop_selected_background;
-}
-
-/* Hover */
-.sidebar.view:hover {
-    background-color: @hover_background;
+.sidebar.view:hover:selected:backdrop,
+.sidebar .view:selected:backdrop,
+.sidebar .view:hover:selected:backdrop,
+.source-list.view:selected:backdrop,
+.source-list.view:hover:selected:backdrop {
+    color: @base;
+    background: shade(@backdrop_background,0.8);
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+    icon-shadow: none;
 }

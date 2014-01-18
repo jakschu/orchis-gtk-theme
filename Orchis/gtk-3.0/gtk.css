@@ -38,6 +38,7 @@
 @define-color panel_text #ddd; /* Panel text color */
 @define-color panel_text_shadow alpha(black, 0.2); /* Panel text color */
 @define-color text_shadow alpha(white, 0.2); /* Text shadow */
+@define-color titlebar shade(@background, 0.95); /* Titlebar */
 
 /***********
  * Imports *

@@ -29,13 +29,14 @@
 @define-color separator @border; /* Separator color */
 @define-color text @foreground; /* Text color */
 @define-color panel #444; /* Panel color */
-@define-color selection #a348b1; /* Selection color */
+@define-color selection shade(#a348b1,0.8); /* Selection color */
 @define-color gradient_a @background; /* Gradient color A */
 @define-color gradient_b shade(@background, 0.95); /* Gradient color B */
 @define-color view_background #555; /* View background */
 @define-color inactive_frame alpha(#000, 0.2); /* Inactive frame color */
 @define-color panel_text #f7f7f7; /* Panel text color */
 @define-color text_shadow alpha(@base, 0.2); /* Text shadow */
+@define-color titlebar shade(@background, 0.95); /* Titlebar */
 
 /***********
  * Imports *

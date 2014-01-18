@@ -149,30 +149,27 @@
 /*******************
  * Primary Toolbar *
  *******************/
-/* e.g. search bar */
-
 
 /* Normal */
-.primary-toolbar .toolbar,
-.primary-toolbar.toolbar {
-    border: solid @border;
-    border-width: 0px 0px 1px 0px;
+.primary-toolbar.toolbar,
+.primary-toolbar .toolbar {
+    border: none;
     padding-top: 4px;
     padding-left: 6px;
     padding-bottom: 4px;
     padding-right: 6px;
     background-image: linear-gradient(to bottom,
-                                      shade(@background,0.8),
-                                      shade(@background,0.9),
-                                      shade(@background,0.95)
+                                      alpha(#000,0.10),
+                                      alpha(#000,0.08)
                                       );
-    box-shadow: inset 0 2px alpha(black, 0.02), inset 0 1px alpha(black, 0.02);
+
+    box-shadow: inset 0 1px 0 0 alpha (#000, 0.12),
+                inset 0 -1px 0 0 alpha (#000, 0.08);
 }
 
 /* Backdrop */
-.primary-toolbar:backdrop,
-.primary-toolbar .toolbar:backdrop,
-.primary-toolbar.toolbar:backdrop {
+.primary-toolbar.toolbar:backdrop,
+.primary-toolbar .toolbar:backdrop {
     border: solid @backdrop_border;
     border-width: 1px 0px 1px 0px;
     background: shade(@backdrop_background,0.95);
@@ -270,6 +267,46 @@
 .primary-toolbar .button .separator:backdrop,
 .primary-toolbar .button.separator:backdrop {
     color: @backdrop_separator;
+}
+
+/*********************
+* Secondary Toolbars *
+*********************/
+
+.secondary-toolbar.toolbar {
+    padding: 2px;
+
+    background-image: linear-gradient(to bottom,
+                                  shade (@background, 0.84),
+                                  shade (@background, 0.80)
+                                  );
+
+    box-shadow: inset 0 1px 0 0 alpha (#fff, 0.30),
+                inset 0 -1px 0 0 alpha (#fff, 0.20);
+
+    border-color: shade (@background, 0.50);
+
+    text-shadow: 0 1px alpha (#fff, 0.4);
+    icon-shadow: 0 1px alpha (#fff, 0.4);
+}
+
+.secondary-toolbar.toolbar:backdrop {
+    background-image: linear-gradient(to bottom,
+                                  shade (@background, 0.98),
+                                  shade (@background, 0.94)
+                                  );
+    border-color: shade (@background, 0.70);
+    
+    color: @insensitive_text;
+    
+    -gtk-image-effect: dim;
+}
+
+.secondary-toolbar.toolbar .button {
+    border-color: alpha (#000, 0.3);
+
+    text-shadow: 0 1px alpha (#fff, 0.4);
+    icon-shadow: 0 1px alpha (#fff, 0.4);
 }
 
 /******************
