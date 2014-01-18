@@ -192,8 +192,8 @@
     color: @text;
     border: 1px solid shade(@border,0.95);
     background-image: linear-gradient(to bottom,
-                                  shade(@button_gradient_a,0.95),
-                                  shade(@button_gradient_b,0.95)
+                                  @button_gradient_a,
+                                  @button_gradient_b
                                   );
 }
 
@@ -204,8 +204,8 @@
     color: @text;
     border: 1px solid shade(@border,0.95);
     background-image: linear-gradient(to bottom,
-                                  shade(@button_active_gradient_a,0.95),
-                                  shade(@button_active_gradient_b,0.95)
+                                  @button_active_gradient_a,
+                                  @button_active_gradient_b
                                   );
 }
 
@@ -217,23 +217,16 @@
 }
 
 /* Hover buttons */
-.primary-toolbar .button:hover {
-    color: @hover_text;
-    border: 1px solid shade(@hover_border,0.95);
-    background-image: linear-gradient(to bottom,
-                                  shade(@button_hover_gradient_a,0.95),
-                                  shade(@button_hover_gradient_b,0.95)
-                                  );
-}
-
+.primary-toolbar .button:hover,
 .primary-toolbar .button:active:hover {
     color: @hover_text;
     border: 1px solid shade(@hover_border,0.95);
     background-image: linear-gradient(to bottom,
-                                  shade(@button_hover_gradient_b,0.95),
-                                  shade(@button_hover_gradient_a,0.95)
+                                  @button_hover_gradient_a,
+                                  @button_hover_gradient_b
                                   );
 }
+
 
 /* Insensitive buttons */
 .primary-toolbar .button:insensitive,
@@ -537,7 +530,7 @@
                                   );
 }
 
-.header-bar .button GtkImage:insensitive,
+
 .header-bar GtkComboBox:insensitive,
 .header-bar .button:insensitive {
     color: @insensitive_text;
@@ -546,6 +539,10 @@
                                   @button_insensitive_gradient_a,
                                   @button_insensitive_gradient_b
                                   );
+}
+
+.header-bar .button GtkImage:insensitive {
+    color: @insensitive_text;
 }
 
 .header-bar GtkComboBox:hover,

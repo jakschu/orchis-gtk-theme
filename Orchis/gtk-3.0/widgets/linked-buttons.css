@@ -45,6 +45,13 @@
     box-shadow: inset -1px 0 shade(@inset_dark, 0.9);
 }
 
+.linked .button:backdrop,
+.inline-toolbar.toolbar .button:backdrop,
+.inline-toolbar.toolbar GtkToolButton .button:backdrop,
+.inline-toolbar.toolbar GtkToolButton > .button:backdrop {
+    box-shadow: none;
+}
+
 /* remove box shadow from last-child and only-child */
 .linked .button:last-child,
 .linked .button:only-child,
