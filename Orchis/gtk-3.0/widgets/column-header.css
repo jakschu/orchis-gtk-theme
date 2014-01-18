@@ -29,7 +29,8 @@ column-header .button,
 column-header .button:active,
 column-header .button:focus,
 column-header .button:active:focus {
-    border-color: @border; 
+    border: solid @border;
+    border-width: 0 1px 1px 0;
     background-color: @background;
     background-image: none;
 }
@@ -46,6 +47,7 @@ column-header .button:active:hover:focus {
 
 column-header .button:backdrop,
 column-header .button:active:backdrop,
+column-header .button:active:focus:backdrop,
 column-header .button:backdrop:focus,
 column-header .button:active:backdrop:focus {
     border: solid @backdrop_border;
