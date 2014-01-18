@@ -44,7 +44,7 @@ GtkSwitch.trough {
 }
 
 GtkSwitch.slider {
-    border: 1px solid alpha (#000, 0.35);
+    border: 1px solid alpha (#000, 0.3);
     background-color: @switch_background;
 }
 
