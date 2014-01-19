@@ -330,9 +330,10 @@
     -GtkToolbar-button-relief: normal;
 }
 
-.inline-toolbar.toolbar:last-child {
-    border-radius: 0px 0px 6px 6px;
-    border-width: 0px 1px 1px 1px;
+
+.inline-toolbar.toolbar.vertical:first-child {
+    border-radius: 0 0 6px 6px;
+    border-width: 1px 1px 0px 1px;
 }
 
 .inline-toolbar.toolbar.vertical:last-child {
