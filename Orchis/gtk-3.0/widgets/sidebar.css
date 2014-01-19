@@ -56,8 +56,8 @@
 .source-list.view,
 .source-list.view:selected:backdrop,
 .source-list.view:prelight:selected:backdrop {
-    text-shadow: 0 1px alpha (@base, 0.4);
-    icon-shadow: 0 1px alpha (@base, 0.4);
+    text-shadow: 0 1px @text_shadow;
+    icon-shadow: 0 1px @text_shadow;
 }
 
 /* Frame */
@@ -125,8 +125,8 @@
 .source-list.view:focus:selected,
 .source-list.category-expander:hover {
 
-    color: @base;
-    border: solid;
+    color: @foreground;
+    border: solid @border;
     border-width: 1px 0 1px 0;
 
     background: @selection;
@@ -158,7 +158,7 @@
 .sidebar .view:hover:selected:backdrop,
 .source-list.view:selected:backdrop,
 .source-list.view:hover:selected:backdrop {
-    color: @base;
+    color: @backdrop_foreground;
     background: shade(@backdrop_background,0.8);
     border: none;
     box-shadow: none;

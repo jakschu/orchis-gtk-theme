@@ -39,8 +39,8 @@
                 inset 0 1px 0 0 alpha (@base, 0.45),
                 inset 0 -1px 0 0 alpha (@base, 0.15);
     color: @text;
-    text-shadow: 0 1px alpha (@base, 0.4);
-    icon-shadow: 0 1px alpha (@base, 0.4);
+    text-shadow: 0 1px @text_shadow;
+    icon-shadow: 0 1px @text_shadow;
 }
 
 

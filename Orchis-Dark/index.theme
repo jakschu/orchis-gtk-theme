@@ -5,6 +5,6 @@ Comment=The one and only.
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=Orchis
-MetacityTheme=Orchis
+GtkTheme=Orchis-Dark
+MetacityTheme=Orchis-Dark
 IconTheme=Moka

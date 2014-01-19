@@ -286,8 +286,8 @@
 
     border-color: shade (@background, 0.50);
 
-    text-shadow: 0 1px alpha (#fff, 0.4);
-    icon-shadow: 0 1px alpha (#fff, 0.4);
+    text-shadow: 0 1px @text_shadow;
+    icon-shadow: 0 1px @text_shadow;
 }
 
 .secondary-toolbar.toolbar:backdrop {
@@ -305,8 +305,8 @@
 .secondary-toolbar.toolbar .button {
     border-color: alpha (#000, 0.3);
 
-    text-shadow: 0 1px alpha (#fff, 0.4);
-    icon-shadow: 0 1px alpha (#fff, 0.4);
+    text-shadow: 0 1px @text_shadow;
+    icon-shadow: 0 1px @text_shadow;
 }
 
 /******************
@@ -586,6 +586,8 @@
     border-radius: 4px;
     color: @text;
     border: 1px solid transparent;
+    icon-shadow: 0 1px @text_shadow;
+    text-shadow: 0 1px @text_shadow;
 }
 
 .header-bar .button GtkImage:hover {
@@ -598,7 +600,8 @@
     background-color: alpha(black, 0.08);
     box-shadow: inset 0 1px alpha(black, 0.05);
     color:  @button_active_text;
-    icon-shadow: 0 1px @button_active_text_shadow;
+    icon-shadow: 0 1px @text_shadow;
+    text-shadow: 0 1px @text_shadow;
 
     border-color: @border;
 }
@@ -615,30 +618,42 @@
 
 
 /* Text & Button Shadows */
+.toolbar,
+.primary-toolbar,
+.header-bar,
+.inline-toolbar {
+    icon-shadow: 0 1px @text_shadow;
+    text-shadow: 0 1px @text_shadow;
+}
+
 .toolbar .button.raised,
 .toolbar .raised .button,
-.inline-toolbar .button {
-    icon-shadow: 0 1px @button_text_shadow;
-    text-shadow: 0 1px @button_text_shadow;
+.inline-toolbar .button,
+.header-bar .button {
+    icon-shadow: 0 1px @text_shadow;
+    text-shadow: 0 1px @text_shadow;
 }
 
 .toolbar .button.raised:active,
 .toolbar .raised .button:active,
-.inline-toolbar .button:active {
-    icon-shadow: 0 1px @button_active_text_shadow;
-    text-shadow: 0 1px @button_active_text_shadow;
+.inline-toolbar .button:active,
+.header-bar .button:active {
+    icon-shadow: 0 1px @text_shadow;
+    text-shadow: 0 1px @text_shadow;
 }
 
 .toolbar .button.raised:insensitive,
 .toolbar .raised .button:insensitive,
-.inline-toolbar .button:insensitive {
+.inline-toolbar .button:insensitive,
+.header-bar .button:insensitive {
     icon-shadow: none;
     text-shadow: none;
 }
 
 .toolbar .button.raised:backdrop,
 .toolbar .raised .button:backdrop,
-.inline-toolbar .button:backdrop {
+.inline-toolbar .button:backdrop,
+.header-bar .button:backdrop  {
     text-shadow: none;
     icon-shadow: none;
 }
