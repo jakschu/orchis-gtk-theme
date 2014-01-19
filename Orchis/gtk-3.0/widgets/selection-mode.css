@@ -22,18 +22,13 @@
 .selection-mode.header-bar,
 .selection-mode.toolbar {
     border: 1px solid @selected_border;
-    background-color: @selection;
     background-image: none;
-    color: @base;
+    color: white;
     text-shadow: 0px 1px alpha(black,0.3);
-}
-
-.selection-mode.header-bar {
-    border-top-color: @selected_border;
-    border-bottom-color: @selected_border;
-}
-
-.selection-mode.toolbar {
+    background-image: linear-gradient(to bottom,
+                                  @selection,
+                                  shade(@selection, 0.8)
+                                  );
     padding: 4px;
 }
 
@@ -44,10 +39,10 @@
     border: 1px solid @selected_border;
     border-radius: 4px;
     background-image: linear-gradient(to bottom,
-                                  shade(@selection, 1.1),
-                                  shade(@selection, 1.08)
+                                  @selection,
+                                  shade(@selection, 0.9)
                                   );
-    color: @base;
+    color: white;
     text-shadow: 0px 1px alpha(black,0.3);
 }
 
@@ -56,20 +51,20 @@
 .selection-mode.toolbar GtkToolButton .button:hover {
     border: 1px solid @selected_border;
     background-image: linear-gradient(to bottom,
-                                  shade(@selection, 1.12),
-                                  shade(@selection, 1.10)
+                                  shade(@selection, 1.10),
+                                  @selection
                                   );
-    color: @base;
+    color: white;
     text-shadow: 0px 1px alpha(black,0.3);
 }
 
 .selection-mode.header-bar .button:backdrop,
 .selection-mode.toolbar .button:backdrop,
 .selection-mode.toolbar GtkToolButton .button:backdrop {
-    border: 1px solid @selected_border;
-    background-color: shade(@selection, 1.12);
-    color: @base;
-    text-shadow: 0px 1px alpha(black,0.3);
+    border: 1px solid @backdrop_border;
+    background-color: @backdrop_background;
+    color: @backdrop_text;
+    text-shadow: none;
 }
 
 .selection-mode.header-bar .button:active,
@@ -80,7 +75,7 @@
                                   shade(@selection, 1.2),
                                   shade(@selection, 1.18)
                                   );
-    color: @base;
+    color: white;
     text-shadow: 0px 1px alpha(black,0.3);
 }
 
@@ -92,7 +87,7 @@
                                   shade(@selection, 1.2),
                                   shade(@selection, 1.18)
                                   );
-    color: @base;
+    color: white;
     text-shadow: 0px 1px alpha(black,0.3);
 }
 
@@ -104,7 +99,7 @@
     border-radius: 4px;
     background-color: @selection;
     background-image: none;
-    color: @base;
+    color: white;
     text-shadow: 0px 1px alpha(black,0.3);
 }
 
@@ -114,7 +109,7 @@
     border: 1px solid @selected_border;
     background-color: @selection;
     background-image: none;
-    color: @base;
+    color: white;
     text-shadow: 0px 1px alpha(black,0.3);
 }
 
@@ -124,7 +119,7 @@
     border: 1px solid @selected_border;
     background-color: shade(@selection, 1.05);
     background-image: none;
-    color: @base;
+    color: white;
     text-shadow: 0px 1px alpha(black,0.3);
 }
 
@@ -133,7 +128,7 @@
 .selection-mode.toolbar GtkToolButton.suggested-action .button:hover:active {
     border: 1px solid @selected_border;
     text-shadow: 0px 1px alpha(black,0.3);
-    color: @base;
+    color: white;
 }
 
 /* menu button */
@@ -141,7 +136,7 @@
 .selection-mode.toolbar .selection-menu.button {
     border-style: none;
     background: none;
-    color: @base;
+    color: white;
     text-shadow: 0px 1px alpha(black,0.3);
 }
 
@@ -156,12 +151,12 @@
 .selection-mode.toolbar .dim-label:hover,
 .selection-mode.toolbar .selection-menu.button:hover,
 .selection-mode.toolbar .selection-menu.button .dim-label:hover {
-    color: shade(@base, 0.9);
+    color: alpha(white,0.8);
     text-shadow: 0px 1px alpha(black,0.3);
 }
 
 .selection-mode.header-bar .selection-menu.button:active,
 .selection-mode.toolbar .selection-menu.button:active {
-    color: @base;
+    color: white;
     text-shadow: 0px 1px alpha(black,0.3);
 }
