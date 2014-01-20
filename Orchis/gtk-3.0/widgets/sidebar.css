@@ -125,9 +125,8 @@
 .source-list.view:focus:selected,
 .source-list.category-expander:hover {
 
-    color: @foreground;
-    border: solid @border;
-    border-width: 1px 0 1px 0;
+    color: white;
+    border: none;
 
     background: @selection;
     box-shadow: inset 0 1px 0 0 alpha (#000, 0.15),
