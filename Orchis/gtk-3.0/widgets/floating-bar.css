@@ -24,7 +24,7 @@
     border: 1px solid @border;
 
     color: @text;
-    text-shadow: 0 1px @button_text_shadow;
+    text-shadow: 0 1px @text_shadow;
 
     border-radius: 3px;
     border-width: 1px;

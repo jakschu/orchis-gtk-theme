@@ -44,7 +44,7 @@
 }
 
 .nautilus-desktop.nautilus-canvas-item:selected:backdrop {
-    color: @unfocused_selected_foreground;
+    color: @backdrop_selected_foreground;
 }
 
 NautilusWindow .frame {
@@ -74,8 +74,8 @@ NautilusWindow > GtkGrid > .pane-separator:hover {
 
 NautilusWindow > GtkGrid > .pane-separator:backdrop,
 NautilusWindow > GtkGrid > .pane-separator:hover:backdrop {
-    border-color: @unfocused_border;
-    background-color: @unfocused_background;
+    border-color: @backdrop_border;
+    background-color: @backdrop_background;
 }
 
 NautilusNotebook .notebook {
@@ -87,11 +87,11 @@ NautilusNotebook .frame {
 }
 
 NautilusToolbar .button {
-    icon-shadow: 0 1px @button_text_shadow;
+    icon-shadow: 0 1px @text_shadow;
 }
 
 NautilusToolbar .button:active {
-    icon-shadow: 0 1px @button_active_text_shadow;
+    icon-shadow: 0 1px @text_shadow;
 }
 
 NautilusToolbar .button:insensitive,
@@ -112,7 +112,6 @@ NautilusQueryEditor .toolbar {
     border-style: solid;
     border-color: @background;
     
-    background-color: mix(@background, @base, 0.5);
 }
 
 NautilusQueryEditor .toolbar:nth-child(2) {
@@ -126,10 +125,10 @@ NautilusQueryEditor .primary-toolbar.toolbar:only-child {
 }
 
 NautilusQueryEditor .toolbar:backdrop {
-    background-color: @unfocused_base;
-    border-color: @unfocused_base;
+    background-color: @backdrop_background;
+    border-color: @backdrop_background;
 }
 
 NautilusQueryEditor .toolbar:backdrop:nth-child(2) {
-    border-color: @unfocused_border;
+    border-color: @backdrop_border;
 }

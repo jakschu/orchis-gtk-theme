@@ -28,12 +28,12 @@ SushiFontWidget {
  * gucharmap *
  *************/
 GucharmapChartable {
-    background-color: @theme_base;
+    background-color: @base;
 }
 
 GucharmapChartable:active,
 GucharmapChartable:focus,
 GucharmapChartable:selected {
-    background-color: @theme_selected_background;
-    color: @theme_selected_foreground;
+    background-color: @selected_background;
+    color: @selected_foreground;
 }

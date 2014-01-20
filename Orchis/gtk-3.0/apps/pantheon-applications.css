@@ -76,7 +76,7 @@
 
 .source-list.view:selected:backdrop,
 .source-list.view:hover:selected:backdrop {
-	background-color: @unfocused_selection;
+	background-color: @backdrop_selection;
 }
 
 .source-list.view:hover {
@@ -104,8 +104,8 @@
 .source-list.badge:selected:backdrop,
 .source-list.badge:selected:hover:backdrop {
     background-image: none;
-    background-color: @unfocused_background;
-    color: @unfocused_background;
+    background-color: @backdrop_background;
+    color: @backdrop_background;
 }
 
 /********

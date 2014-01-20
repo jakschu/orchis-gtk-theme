@@ -33,7 +33,7 @@
 .album-list-view GtkTreeView,
 .album-list-view GtkTreeView:backdrop {
     background-color: @background;
-    background-color: @unfocused_background;
+    background-color: @backdrop_background;
     color: @selected_foreground;
     -GtkTreeView-vertical-separator: 3;
     -GtkTreeView-grid-line-width: 0;

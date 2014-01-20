@@ -67,8 +67,8 @@
 
 /* Selected color */
 @define-color selected_background @selection;
-@define-color selected_foreground shade(@selection, 5.0);
-@define-color selected_border shade(@selection, 0.99);
+@define-color selected_foreground white;
+@define-color selected_border shade(@selection, 0.8);
 
 /****************
  * Theme colors *
@@ -290,13 +290,15 @@
  ***********/
 
 /* Import App-Specific CSS */
+@import url("apps/baobab.css");
 @import url("apps/fallback-panel.css");
 @import url("apps/gedit.css");
-@import url("apps/pantheon-applications.css");
 @import url("apps/gnome-applications.css");
+@import url("apps/gnome-documents.css");
 @import url("apps/gnome-terminal.css");
 @import url("apps/nautilus.css");
 @import url("apps/noise.css");
+@import url("apps/pantheon-applications.css");
 @import url("apps/unity.css");
 
 /* Import Widget CSS */
