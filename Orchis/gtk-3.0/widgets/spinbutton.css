@@ -20,11 +20,17 @@
 /**************
  * Spinbutton *
  **************/
+.spinbutton.button,
 .spinbutton .button {
     padding: 2px 4px;
     border-width: 0px;
     border-radius: 0px;
     border-style: none;
+    box-shadow: inset 1px 0 shade(@base, 0.9);
+    background-image: linear-gradient(to bottom,
+                                  @button_gradient_a,
+                                  @button_gradient_b
+                                  );
 }
 
 .spinbutton.entry {    
@@ -48,10 +54,6 @@
     color: @text;
 }
 
-.spinbutton .button {
-    box-shadow: inset 1px 0 shade(@base, 0.9);
-}
-
 .spinbutton .button:first-child {
     border-radius: 6px 0 0 6px;
     box-shadow: none;
@@ -61,6 +63,7 @@
     border-radius: 0 6px 6px 0;
 }
 
+/*Button Hover*/
 .spinbutton .button:hover,
 .spinbutton .button:hover:focus {
     color: @text;
@@ -97,7 +100,7 @@
 .spinbutton .button:focus:insensitive {
     color: @insensitive_text;
     border-color: @insensitive_border;
-    background-color: @background;
+    background-color: @insensitive_background;
     background-image: none;
 }
 

@@ -87,7 +87,7 @@
 .toolbar .separator,
 .toolbar .button .separator,
 .toolbar .button.separator {
-    color: @insensitive_separator;
+    color: @separator;
 }
 
 /* Hover */

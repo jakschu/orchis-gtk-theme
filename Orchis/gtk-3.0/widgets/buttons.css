@@ -46,7 +46,7 @@
 
 .button:focus,
 .button:hover {
-    border: 1px solid alpha(@selection,0.8);
+    border: 1px solid alpha(@selection,0.95);
     background-image: linear-gradient(to bottom,
                                   @button_gradient_a,
                                   @button_gradient_b

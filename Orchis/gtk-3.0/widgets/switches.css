@@ -88,8 +88,6 @@ GtkSwitch.trough:active:insensitive {
     text-shadow: none;
 }
 
-
-
 /* backdrop */
 GtkSwitch.slider:backdrop {
     border: 1px solid @backdrop_border;

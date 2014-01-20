@@ -20,11 +20,11 @@
  * List boxes *
  **************/
 EggListBox {
-    background-color: @list_box_background;
+    background-color: @base;
 }
 
 EggListBox:hover {
-    background-color: @content_view_background;
+    background-color: @background;
 }
 
 EggListBox:selected {
@@ -33,11 +33,11 @@ EggListBox:selected {
 }
 
 .list {
-    background-color: @list_box_background;
+    background-color: @base;
 }
 
 .list-row:hover {
-    background-color: @content_view_background;
+    background-color: @background;
 }
 
 .list-row:selected {
@@ -53,7 +53,7 @@ EggListBox:selected {
 }
 
 .content-view.view:insensitive {
-    background-color: @backdrop_base;
+    background-color: @insensitive_base;
     background-image: none;
 }
 

@@ -330,7 +330,7 @@
     border-radius: 0;
     background-image: none;
     background-color: transparent;
-    border-width: none;
+    border-width: 0;
 }
 
 /*----- Tab indicator bar -----*/

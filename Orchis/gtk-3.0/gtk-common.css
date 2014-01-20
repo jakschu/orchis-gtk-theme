@@ -68,7 +68,6 @@
 /* Selected color */
 @define-color selected_background @selection;
 @define-color selected_foreground white;
-@define-color selected_border shade(@selection, 0.8);
 
 /****************
  * Theme colors *
