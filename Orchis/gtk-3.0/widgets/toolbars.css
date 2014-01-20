@@ -323,7 +323,6 @@
                                   );
     box-shadow: none;
 
-    -GtkToolbar-button-relief: normal;
 }
 
 .inline-toolbar .toolbar:backdrop,
@@ -337,7 +336,6 @@
     background:@backdrop_background;
     box-shadow: none;
 
-    -GtkToolbar-button-relief: normal;
 }
 
 

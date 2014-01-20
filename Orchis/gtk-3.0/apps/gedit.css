@@ -19,6 +19,7 @@
 /*********
  * gedit *
  *********/
+ 
 GeditWindow .pane-separator, 
 GeditWindow .pane-separator:hover {
     border-width: 0 1px 1px 1px;

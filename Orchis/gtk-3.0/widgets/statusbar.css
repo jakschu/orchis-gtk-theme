@@ -27,6 +27,6 @@ GtkStatusbar {
 
 GtkStatusbar .frame {
     padding: 0;
-    border: 1px solid transparent;
+    border: none;
     background-color: @background;
 }

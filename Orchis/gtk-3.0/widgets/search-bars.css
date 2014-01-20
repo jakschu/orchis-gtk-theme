@@ -29,13 +29,10 @@
 }
 
 .search-bar:backdrop {
-    border-image: linear-gradient(to top,
-                                  @backdrop_border,
-                                  @backdrop_border 1px,
-                                  @backdrop_background_color 1px) 0 0 2;
+    border: 1px solid @backdrop_border;
     box-shadow: none;
 
-    background-color: @backdrop_background_color;
+    background-color: @backdrop_background;
 }
 
 .search-bar .button.close-button {
