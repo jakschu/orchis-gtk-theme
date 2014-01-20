@@ -50,11 +50,10 @@
     color: @backdrop_text;
     border: solid @backdrop_border;
     border-bottom-width: 1px;
-    background-image: linear-gradient(to bottom,
-                                  @backdrop_gradient_a,
-                                  @backdrop_gradient_b
-                                  );
+    background: @backdrop_background;
 }
+
+
 
 
 /* Button Padding */
@@ -330,6 +329,20 @@
     -GtkToolbar-button-relief: normal;
 }
 
+.inline-toolbar .toolbar:backdrop,
+.inline-toolbar.toolbar:backdrop {
+    border: solid @backdrop_border;
+    border-width: 0px 1px 1px 1px;
+    padding-top: 4px;
+    padding-left: 4px;
+    padding-bottom: 4px;
+    padding-right: 4px;
+    background:@backdrop_background;
+    box-shadow: none;
+
+    -GtkToolbar-button-relief: normal;
+}
+
 
 .inline-toolbar.toolbar.vertical:first-child {
     border-radius: 0 0 6px 6px;
@@ -476,10 +489,7 @@
 .header-bar.toolbar:backdrop {
     border: solid @backdrop_border;
     border-bottom-width: 1px;
-    background-image: linear-gradient(to bottom,
-                                  @backdrop_gradient_a,
-                                  @backdrop_gradient_b
-                                  );
+    background: @backdrop_background;
 }
 
 .header-bar .button.text-button {
