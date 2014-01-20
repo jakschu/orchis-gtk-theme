@@ -120,6 +120,7 @@ NautilusQueryEditor .toolbar:nth-child(2) {
 
 NautilusQueryEditor .toolbar:last-child,
 NautilusQueryEditor .primary-toolbar.toolbar:only-child {
+    border-top-width: 0;
     border-bottom-width: 1px;
     border-bottom-color: @border;
 }
