@@ -1,5 +1,5 @@
-﻿_pkgname=orchis-gtk-theme
 pkgname=orchis-gtk
+﻿_pkgname=orchis-gtk-theme
 pkgver=2.0.0
 pkgrel=1
 pkgdesc="Orchis is a modern GTK3 theme for Linux."
@@ -22,9 +22,12 @@ pkgver() {
 package() {
 
   # create theme dirs
-  install -d -m 755 "$pkgdir"/usr/share/icons/Moka
+  install -d -m 755 "$pkgdir"/usr/share/themes/Orchis
+  install -d -m 755 "$pkgdir"/usr/share/themes/Orchis-Dark
 
   # install theme
-  cd $srcdir/orchis-gtk-theme/Moka
-  cp -r . "$pkgdir"/usr/share/icons/Moka/
+  cd $srcdir/orchis-gtk-theme/Orchis
+  cp -r . "$pkgdir"/usr/share/themes/Orchis/
+  cd $srcdir/moka-gtk-theme/Orchis-Dark
+  cp -r . "$pkgdir"/usr/share/themes/Orchis-Dark/
 }
