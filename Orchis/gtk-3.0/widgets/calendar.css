@@ -46,8 +46,11 @@ GtkCalendar:inconsistent {
 
 GtkCalendar.button,
 GtkCalendar.button:hover,
-GtkCalendar.button:insensitive {
-
+GtkCalendar.button:insensitive,
+GtkCalendar.header .button {
+    border:none;
+    box-shadow: none;
+    background:transparent;
 }
 
 /* Header */

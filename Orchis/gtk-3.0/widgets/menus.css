@@ -32,7 +32,7 @@ GtkComboBox .menu {
 .header-bar .menu,
 .header-bar .primary-toolbar .menu,
 .menu {
-    padding: 0;
+    padding: 2px 0px 4px 0;
     border-radius: 0;
     border-style: none;
     background-color: @base;
@@ -42,20 +42,14 @@ GtkComboBox .menu {
 /*************
  * Menu Item *
  *************/
-GtkTreeMenu .menuitem {
-    padding: 0;
-    border-width: 0;
-}
-
-GtkTreeMenu .menuitem * {
-    color: @text;
-}
-
+GtkTreeMenu .menuitem,
+GtkTreeMenu .menuitem *,
 .menuitem,
 .menu .menuitem {
     padding: 3px;
     border: transparent;
     border-radius: 0;
+    border-width: 0;
     background-color: transparent;
     color: @text;
     text-shadow: 0 1px @text_shadow;
@@ -68,6 +62,7 @@ GtkTreeMenu .menuitem * {
     border: none;
     background-color: @selection;
     background-image: none;
+    text-shadow: 0 1px @panel_text_shadow;
 }
 
 .menu .menuitem:active,
@@ -107,6 +102,7 @@ GtkTreeMenu .menuitem * {
 
 /* Separator color */
 .menuitem.separator {
+    padding: 2px 0 2px 0;
     border: none;
     color: @menu_separator; 
     -GtkMenuItem-horizontal-padding: 0;
