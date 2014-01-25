@@ -31,7 +31,7 @@
 @define-color text @foreground; /* Text color */
 @define-color panel #444; /* Panel color */
 @define-color selection shade(#a348b1,1.1); /* Selection color */
-@define-color selected_border @border; /* Selection Border */
+@define-color selected_border #a348b1; /* Selection Border */
 @define-color gradient_a @background; /* Gradient color A */
 @define-color gradient_b shade(@background, 0.95); /* Gradient color B */
 @define-color view_background #555; /* View background */
