@@ -23,6 +23,7 @@
 GtkTreeMenu.menu,
 GtkMenuToolButton.menu,
 GtkComboBox .menu {
+    border:none;
     background-color: @base;
 }
 
@@ -46,7 +47,7 @@ GtkTreeMenu .menuitem,
 GtkTreeMenu .menuitem *,
 .menuitem,
 .menu .menuitem {
-    padding: 3px;
+    padding: 6px;
     border: transparent;
     border-radius: 0;
     border-width: 0;

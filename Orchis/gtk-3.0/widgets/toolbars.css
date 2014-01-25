@@ -298,7 +298,9 @@
     -gtk-image-effect: dim;
 }
 
+.secondary-toolbar.toolbar .linked-button,
 .secondary-toolbar.toolbar .button {
+    padding: 2px;
     border-color: alpha (#000, 0.3);
 
     text-shadow: 0 1px @text_shadow;
