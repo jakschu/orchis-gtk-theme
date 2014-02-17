@@ -39,8 +39,12 @@ esac
 function main {
 if [ "$UID" -eq "$ROOT_UID" ]; then
 	rm -Rf /usr/share/themes/Orchis 2>/dev/null
+	rm -Rf /usr/share/themes/Orchis-Dark 2>/dev/null
 else
+	rm -Rf $HOME/.local/share/themes/Orchis 2>/dev/null
+	rm -Rf $HOME/.local/share/themes/Orchis-Dark 2>/dev/null
 	rm -Rf $HOME/.themes/Orchis 2>/dev/null
+	rm -Rf $HOME/.themes/Orchis-Dark 2>/dev/null
 fi
 echo
 echo "Uninstallation complete."
@@ -56,7 +60,7 @@ exit 0
 ROOT_UID=0
 if [ "$UID" -ne "$ROOT_UID" ]; then
 	echo
-	echo "Orchis GTK Theme will be removed from '$HOME/.themes'."
+	echo "Orchis GTK Theme will be removed from '$HOME/.local/share/themes'."
 	echo "To remove it from the system-wide themes, run this script as root."
 	continue
 else
