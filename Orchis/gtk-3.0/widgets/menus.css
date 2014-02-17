@@ -21,6 +21,7 @@
  ********/
 
 GtkTreeMenu.menu,
+GtkMenuButton .menu,
 GtkMenuToolButton.menu,
 GtkComboBox .menu {
     border:none;
@@ -84,6 +85,8 @@ GtkTreeMenu .menuitem *,
 .menuitem.radio:hover,
 .menuitem.check:insensitive,
 .menuitem.radio:insensitive {
+    height: 16px;
+    width: 16px;
     border-style: none;
     background-color: transparent;
     background-image: none;
@@ -98,6 +101,7 @@ GtkTreeMenu .menuitem *,
 
 /* Arrow color */
 .menuitem.arrow {
+    background:transparent;
     color: alpha(@text, 0.6);
 }
 
@@ -124,14 +128,8 @@ GtkTreeMenu .menuitem *,
 }
 
 /* Accelerators */
-.menuitem .accelerator {
-    color: @insensitive_text;
-}
-
-.menuitem .accelerator:hover {
-    color: @insensitive_text;
-}
-
+.menuitem .accelerator,
+.menuitem .accelerator:hover,
 .menuitem .accelerator:insensitive {
     color: @insensitive_text;
 }

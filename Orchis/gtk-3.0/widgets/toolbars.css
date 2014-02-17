@@ -486,7 +486,10 @@
 .header-bar.toolbar:backdrop {
     border: solid @backdrop_border;
     border-bottom-width: 1px;
-    background: @backdrop_background;
+    background-image: linear-gradient(to bottom,
+                                  @backdrop_gradient_a,
+                                  @backdrop_gradient_b
+                                  );
 }
 
 .header-bar .button.text-button {

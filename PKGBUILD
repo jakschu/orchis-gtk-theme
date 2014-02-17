@@ -1,4 +1,4 @@
-pkgname=orchis-gtk
+pkgname=orchis-gtk-git
 ﻿_pkgname=orchis-gtk-theme
 pkgver=2.0.0
 pkgrel=1
@@ -9,9 +9,9 @@ license=('GPL3')
 depends=(gtk-engine-murrine)
 makedepends=('git')
 optdepends=()
-provides=('orchis-gtk')
-conflicts=('orchis-gtk')
-source=('git://github.com/snwh/orchis-gtk-theme.git')
+provides=('orchis-gtk-git')
+conflicts=('orchis-gtk-git')
+source=('git+https://github.com/snwh/orchis-gtk-theme.git')
 md5sums=('SKIP')
 
 pkgver() {

@@ -16,16 +16,51 @@
 * with the Orchis GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
+/* This will theme the top decoration, so the whole space above the window */
+UnityDecoration.top {
+	border: 1px solid @border;
+    border-bottom-width: 0;
+    border-radius: 8px 8px 0 0; /* Corner radius, only the top ones should be */
+    padding: 1px 8px 0 8px; /* This padding will be applied to the content of the top layout */
+    background-color: @background; /* Decoration background */
+    color: @foreground; /* The foreground color will be used to paint the text */
+    text-shadow: @text_shadow;
+}
+
+/* Top decoration for inactive windows */
+UnityDecoration.top:backdrop {
+    border: 1px solid @backdrop_border;
+    border-bottom-width: 0;
+    background-color: @backdrop_background;
+    color: #807d78;
+}
+
+/* Left decoration, it themes only the space at the left of the window */
+UnityDecoration.left,
+/* Right decoration, it themes only the space at the right of the window */
+UnityDecoration.right,
+/* Bottom decoration, it themes all the space below the window */
+UnityDecoration.bottom {
+    background-color: @border;
+}
+
+/* Left, right and bottom decorations themes for inactive windows */
+UnityDecoration.left:backdrop,
+UnityDecoration.right:backdrop,
+UnityDecoration.bottom:backdrop {
+    background-color: @backdrop_border;
+}
+
 /***************
- * Unity Panel *
- ***************/
+* Unity Panel *
+***************/
 
 UnityPanelWidget,
 .unity-panel {
-    border-width: 0 0 1px 0;
-    border-style: solid;
-    border-color: @panel;
-    background-color: @panel;
-    background-image: none;
-    color: @panel_text;
+	border-width: 0 0 1px 0;
+	border-style: solid;
+	border-color: @panel;
+	background-color: @panel;
+	background-image: none;
+	color: @panel_text;
 }
