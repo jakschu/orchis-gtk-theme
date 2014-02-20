@@ -38,6 +38,8 @@
 @define-color backdrop_separator shade(@separator, 0.99);
 @define-color backdrop_text alpha(@text, 0.8);
 @define-color backdrop_selection shade(@selection, 1.3);
+@define-color backdrop_gradient_a shade(@background, 0.99);
+@define-color backdrop_gradient_b shade(@background, 0.99);
 
 /* Unfocused-insensitive colors */
 @define-color backdrop_insensitive_border mix(@backdrop_background, @backdrop_border, 0.5);

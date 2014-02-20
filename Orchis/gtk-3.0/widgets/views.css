@@ -208,8 +208,8 @@ GtkHTML:active,
 GtkHTML:active:backdrop,
 .entry:active,
 .entry:active:backdrop {
-    color: @unfocused_foreground;
-    background-color: @unfocused_background;
+    color: @backdrop_foreground;
+    background-color: @backdrop_background;
 }
 
 .cursor-handle.top,
