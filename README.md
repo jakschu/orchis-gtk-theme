@@ -1,7 +1,7 @@
 Orchis GTK Theme
 ================
 
-Orchis is an accompanying GTK3 theme to the Orchis icon set.
+Orchis is an GTK3 theme of the Moka Project.
 
 Orchis GTK Theme is distributed under the terms the GNU GPL v.3
 
