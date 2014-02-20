@@ -1,7 +1,7 @@
 Orchis GTK Theme
 ================
 
-Orchis is a modern GTK3 theme for Linux.
+Orchis is an accompanying GTK3 theme to the Orchis icon set.
 
 Orchis GTK Theme is distributed under the terms the GNU GPL v.3
 
@@ -14,6 +14,7 @@ If you find any bugs or issues with Orchis or if you have a question, you can vi
 Orchis can be downloaded [here](http://www.mokaproject.com/orchis-gtk-theme/#download) for whatever you like.
 
 ###Getting the Source
+=======
 
 The source for Orchis GTK3 Theme can be found [here](https://github.com/snwh/orchis-gtk-theme).
 

@@ -194,3 +194,33 @@ GtkDrawingArea {
 GtkDrawingArea:insensitive {
     background-color: @insensitive_background;
 }
+
+/***********
+ * gtkhtml *
+ ***********/
+GtkHTML {
+    background-color: @base;
+    color: @text;
+}
+
+/* needed for webkit/GtkStyle/Evolution compatibility */
+GtkHTML:active,
+GtkHTML:active:backdrop,
+.entry:active,
+.entry:active:backdrop {
+    color: @unfocused_foreground;
+    background-color: @unfocused_background;
+}
+
+.cursor-handle.top,
+.cursor-handle.bottom {
+    background-color: transparent;
+    box-shadow: none;
+    border-style: none;
+    border-image: none;
+    border-radius: 0px;
+    border-width: 0px;
+
+    /* background-image in assets */
+}
+
