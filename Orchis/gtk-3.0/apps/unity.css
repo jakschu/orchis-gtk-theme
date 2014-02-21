@@ -16,17 +16,12 @@
 * with the Orchis GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-/* This will theme the top decoration, so the whole space above the window */
-UnityDecoration.top {
-	border: 1px solid alpha(@background,0.5);
-    border-bottom-width: 0;
-    border-radius: 8px 8px 0 0; /* Corner radius, only the top ones should be */
-    padding: 1px 8px 0 8px; /* This padding will be applied to the content of the top layout */
-    background-color: @background; /* Decoration background */
-    color: @foreground; /* The foreground color will be used to paint the text */
-    text-shadow: @text_shadow;
-}
+/*********************
+ * Unity Decorations *
+ *********************/
+
 UnityDecoration {
+    
     /* Border properties (top, right, bottom, left) */
     -UnityDecoration-extents: 28px 1px 1px 1px; /* the size of the decorations  */
     -UnityDecoration-input-extents: 10px; /* the extra size of the input areas */
@@ -49,10 +44,20 @@ UnityDecoration {
     -UnityDecoration-title-alignment: 0.0; /* Float from 0.0 to 1.0, to align the title */
 }
 
+/* This will theme the top decoration, so the whole space above the window */
+UnityDecoration.top {
+	border: 1px solid alpha(white,0.2);
+    border-bottom-width: 0;
+    border-radius: 8px 8px 0 0; /* Corner radius, only the top ones should be */
+    padding: 1px 8px 0 8px; /* This padding will be applied to the content of the top layout */
+    background-color: @background; /* Decoration background */
+    color: @foreground; /* The foreground color will be used to paint the text */
+    text-shadow: @text_shadow;
+}
 
 /* Top decoration for inactive windows */
 UnityDecoration.top:backdrop {
-    border: 1px solid alpha(@backdrop_background,0.5);
+    border: 1px solid alpha(white,0.2);
     border-bottom-width: 0;
     background-color: @backdrop_background;
     color: #807d78;
@@ -64,14 +69,14 @@ UnityDecoration.left,
 UnityDecoration.right,
 /* Bottom decoration, it themes all the space below the window */
 UnityDecoration.bottom {
-    background-color: alpha(@background,0.5);
+    background-color: alpha(white,0.4);
 }
 
 /* Left, right and bottom decorations themes for inactive windows */
 UnityDecoration.left:backdrop,
 UnityDecoration.right:backdrop,
 UnityDecoration.bottom:backdrop {
-    background-color: alpha(@backdrop_background,0.5);
+    background-color: alpha(white,0.4);
 }
 
 /***************
