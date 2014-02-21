@@ -47,6 +47,7 @@ UnityDecoration {
 UnityDecoration.top {
     padding: 0 8px 0 8px;
     border: 1px solid alpha(@panel,0.8);
+    border-bottom-width: 0px;
     border-radius: 8px 8px 0 0;
     box-shadow: none;
     background-image: none;
@@ -62,8 +63,11 @@ UnityDecoration.top.menuitem {
 
 UnityDecoration.top:backdrop {
     border: 1px solid alpha(@panel,0.9);
-    background-color: shade(@panel, 0.99);
-    color: shade(@panel_text, 0.99);
+    box-shadow: none;
+    background-image: none;
+    background-color: @backdrop_foreground;
+    color: @backdrop_background;
+    text-shadow: none;
 }
 
 UnityDecoration.left,
