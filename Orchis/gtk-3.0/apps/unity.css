@@ -18,7 +18,7 @@
 
 /* This will theme the top decoration, so the whole space above the window */
 UnityDecoration.top {
-	border: 1px solid @border;
+	border: 1px solid alpha(@background,0.5);
     border-bottom-width: 0;
     border-radius: 8px 8px 0 0; /* Corner radius, only the top ones should be */
     padding: 1px 8px 0 8px; /* This padding will be applied to the content of the top layout */
@@ -26,10 +26,33 @@ UnityDecoration.top {
     color: @foreground; /* The foreground color will be used to paint the text */
     text-shadow: @text_shadow;
 }
+UnityDecoration {
+    /* Border properties (top, right, bottom, left) */
+    -UnityDecoration-extents: 28px 1px 1px 1px; /* the size of the decorations  */
+    -UnityDecoration-input-extents: 10px; /* the extra size of the input areas */
+
+    /* Shadows settings */
+    -UnityDecoration-shadow-offset-x: 1px; /* Size property, the shadow x offset */
+    -UnityDecoration-shadow-offset-y: 1px; /* Size property, the shadow y offset */
+    -UnityDecoration-active-shadow-color: rgba (0, 0, 0, 0.647); /* Color property, active window shadow color */
+    -UnityDecoration-active-shadow-radius: 8px; /* Size property, active window shadow radius */
+    -UnityDecoration-inactive-shadow-color: rgba (0, 0, 0, 0.647); /* Color property, inactive windows shadow color */
+    -UnityDecoration-inactive-shadow-radius: 5px; /* Size property, inactive windows shadow radius */
+
+    /* Glow applied to the selected scaled window */
+    -UnityDecoration-glow-size: 10px; /* Size property, size of glow */
+    -UnityDecoration-glow-color: rgb(159, 68, 173) /* Color property of the glow */
+
+    /* Title settings */
+    -UnityDecoration-title-indent: 10px; /* Size property, left indent of the title */
+    -UnityDecoration-title-fade: 35px; /* Size property, space of the title that can be faded */
+    -UnityDecoration-title-alignment: 0.0; /* Float from 0.0 to 1.0, to align the title */
+}
+
 
 /* Top decoration for inactive windows */
 UnityDecoration.top:backdrop {
-    border: 1px solid @backdrop_border;
+    border: 1px solid alpha(@backdrop_background,0.5);
     border-bottom-width: 0;
     background-color: @backdrop_background;
     color: #807d78;
@@ -41,14 +64,14 @@ UnityDecoration.left,
 UnityDecoration.right,
 /* Bottom decoration, it themes all the space below the window */
 UnityDecoration.bottom {
-    background-color: @border;
+    background-color: alpha(@background,0.5);
 }
 
 /* Left, right and bottom decorations themes for inactive windows */
 UnityDecoration.left:backdrop,
 UnityDecoration.right:backdrop,
 UnityDecoration.bottom:backdrop {
-    background-color: @backdrop_border;
+    background-color: alpha(@backdrop_background,0.5);
 }
 
 /***************
