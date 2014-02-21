@@ -4,5 +4,4 @@
 	dh $@ 
 
 override_dh_auto_install:
-    --sourcedir=Orchis
-    --sourcedir=Orchis-Dark
+    --sourcedir=Orchis, Orchis-Dark
