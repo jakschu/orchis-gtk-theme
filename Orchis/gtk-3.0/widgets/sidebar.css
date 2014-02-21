@@ -27,7 +27,7 @@
 .source-list.view
 .sidebar GtkScrolledWindow {
     background-color: @background;
-    color: @foreground;    
+    color: @foreground;   
     border: solid @border;
     border-width: 0;
 }

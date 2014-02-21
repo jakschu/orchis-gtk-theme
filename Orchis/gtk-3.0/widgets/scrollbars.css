@@ -27,7 +27,7 @@
     -GtkScrollbar-has-backward-stepper: false;
     -GtkScrollbar-has-forward-stepper: false;
     -GtkRange-slider-width: 8;
-    -GtkScrollbar-min-slider-length: 60; /* minimum size for the slider. sadly can't be in '.slider' where it belongs */
+    -GtkScrollbar-min-slider-length: 60;/* minimum size for the slider. sadly can't be in '.slider' where it belongs */
 
     -GtkRange-stepper-spacing: 0;
     -GtkRange-trough-under-steppers: 1;

@@ -82,7 +82,7 @@ GtkScrolledWindow.frame {
 }
 
 GtkScrolledWindow GtkViewport.frame {
-    border-style: none; /* To avoid double border when a viewport is packed into a GtkScrolledWindow */
+    border-style: none;/* To avoid double border when a viewport is packed into a GtkScrolledWindow */
 }
 
 /************

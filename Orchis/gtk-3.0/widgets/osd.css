@@ -314,7 +314,7 @@ GtkProgressBar.osd.progressbar {
     border-style: none;
     background-color: @selection_color;
     background-image: none;
-    border-radius: 0;    
+    border-radius: 0;   
 }
 
 .osd .view,

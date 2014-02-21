@@ -53,7 +53,7 @@
     -GtkWidget-focus-padding: 2;
     -GtkWidget-focus-line-width: 1;
     -GtkWindow-resize-grip-width: 0;
-    -GtkWindow-resize-grip-height: 0;   
+    -GtkWindow-resize-grip-height: 0;  
 
     outline-color: alpha(@text, 0.3);
     outline-style: dashed;

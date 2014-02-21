@@ -23,12 +23,12 @@
 .menu.button {
     background-image: none;
     background-color: @base;
-    border: 1px solid @selection; 
+    border: 1px solid @selection;
 }
 
 .menu.button.separator {
     border-style: none;
-    color: shade(@foreground, 3.2);    
+    color: shade(@foreground, 3.2);   
     -GtkMenuItem-horizontal-padding: 0;
     -GtkWidget-separator-height: 1;
 }

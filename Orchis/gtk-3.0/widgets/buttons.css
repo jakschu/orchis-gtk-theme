@@ -61,7 +61,7 @@
 
 /* Active/Pressed Button */
 .button:active {
-    border: 1px solid @border; 
+    border: 1px solid @border;
     background-image: linear-gradient(to bottom,
                                   @button_active_gradient_a,
                                   @button_active_gradient_b

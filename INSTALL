@@ -1,5 +1,5 @@
 #!/bin/bash
-# -*- Mode: sh; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
+# -*- Mode: sh;coding: utf-8;indent-tabs-mode: nil;tab-width: 4 -*-
 #
 # Authors:
 #   Sam Hewitt <hewittsamuel@gmail.com>
@@ -9,9 +9,9 @@
 #
 # Legal Stuff:
 #
-# This file is part of the Orchis-Dark GTK Theme and is free software; you can redistribute it and/or modify it under
+# This file is part of the Orchis-Dark GTK Theme and is free software;you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
-# Foundation; version 3.
+# Foundation;version 3.
 #
 # This file is part of the Orchis-Dark GTK Theme and is distributed in the hope that it will be useful, but WITHOUT
 # ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
@@ -19,7 +19,7 @@
 # details.
 #
 # You should have received a copy of the GNU General Public License along with
-# this program; if not, see <https://www.gnu.org/licenses/gpl-3.0.txt>
+# this program;if not, see <https://www.gnu.org/licenses/gpl-3.0.txt>
 
 echo '#----------------------------------------------#'
 echo '#         Orchis GTK Theme Install Script        #'
@@ -37,13 +37,13 @@ read -p "Do you want to continue? (Y)es, (N)o : " INPUT
 case $INPUT in
 	[Yy]* ) main;;
     [Nn]* ) exit 99;;
-    * ) echo; echo "Sorry, try again."; continue;;
+    * ) echo;echo "Sorry, try again.";continue;;
 esac
 }
 
 function main {
-if [ "$UID" -eq "$ROOT_UID" ]; then
-	if [ -d /usr/share/themes/Orchis-Dark ]; then
+if [ "$UID" -eq "$ROOT_UID" ];then
+	if [ -d /usr/share/themes/Orchis-Dark ];then
 		echo
 		read -p "Found an existing installation. Replace it? (Y)es, (N)o : " INPUT
 		case $INPUT in
@@ -65,8 +65,8 @@ if [ "$UID" -eq "$ROOT_UID" ]; then
 	chmod -R 755 /usr/share/themes/Orchis-Dark
 	echo "Installation complete!"
 	set
-elif [ "$UID" -ne "$ROOT_UID" ]; then
-	if [ -d $HOME/.local/share/themes/Orchis-Dark ]; then
+elif [ "$UID" -ne "$ROOT_UID" ];then
+	if [ -d $HOME/.local/share/themes/Orchis-Dark ];then
 		echo
 		read -p "Found an existing installation. Replace it? (Y)es, (N)o : " INPUT
 		case $INPUT in
@@ -95,7 +95,7 @@ read -p "Do you want to set Orchis as your desktop theme now? (Y)es, (N)o : " IN
 case $INPUT in
 	[Yy]* ) settheme;;
     [Nn]* ) end;;
-    * ) echo; echo "Uh oh, invalid response. Please retry."; set;;
+    * ) echo;echo "Uh oh, invalid response. Please retry.";set;;
 esac
 }
 
@@ -133,7 +133,7 @@ function end {
 }
 
 ROOT_UID=0
-if [ "$UID" -ne "$ROOT_UID" ]; then
+if [ "$UID" -ne "$ROOT_UID" ];then
 	echo
 	echo "Orchis GTK Theme will be installed in '$HOME/.local/share/themes'."
 	echo "To make them available to all users, run this script as root."

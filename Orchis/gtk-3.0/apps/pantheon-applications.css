@@ -186,14 +186,14 @@ GraniteWidgetsPopOver * {
 GraniteWidgetsPopOver .button {
 
     background-image: none;
-    border-width: 0px;    
+    border-width: 0px;   
     background-color: alpha(#fff, 0.0);
 }
 
 GraniteWidgetsPopOver .button:active,
 GraniteWidgetsPopOver .button:hover:active {
 
-	background-image: none;    
+	background-image: none;   
     border-width: 0px;
     background-color: @active_background;
 }
@@ -216,7 +216,7 @@ GraniteWidgetsPopOver .entry {
 }
 
 .app:hover {
-    background-color: alpha(#000, 0.08);   
+    background-color: alpha(#000, 0.08);  
 }
 
 .app:focus {
