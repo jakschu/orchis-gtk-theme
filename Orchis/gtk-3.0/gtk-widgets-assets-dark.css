@@ -573,5 +573,5 @@
  *************************/
 
 .header-bar > GtkBox > .separator.vertical {
-    /*border-image: -gtk-scaled(url("assets/header-separator-dark.png"),url("assets/header-separator-dark@2.png")) 0 1 0 1 / 0 1px 0 1px stretch;*/
+    border-image: -gtk-scaled(url("assets/header-separator-dark.png"),url("assets/header-separator-dark@2.png")) 0 1 0 1 / 0 1px 0 1px stretch;
 }
