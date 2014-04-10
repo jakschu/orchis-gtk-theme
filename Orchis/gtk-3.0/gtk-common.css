@@ -244,6 +244,11 @@
 @define-color highlight #fff;
 @define-color shadow #000;
 
+/***********
+ * Popover *
+ ***********/
+@define-color osd_popover_bg alpha(@osd_base, 0.90);
+
 /******************
  * Infobar colors *
  ******************/
@@ -295,7 +300,7 @@
 @define-color wm_gradient_a @gradient_a;
 @define-color wm_gradient_b @gradient_b;
 
-@define-color wm_shadow alpha(black, 0.7);
+@define-color wm_shadow alpha(black, 0.4);
 
 @define-color wm_button_gradient_a @button_gradient_a;
 @define-color wm_button_gradient_b @button_gradient_b;
