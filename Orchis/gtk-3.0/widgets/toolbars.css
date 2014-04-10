@@ -73,7 +73,6 @@
 .toolbar GtkComboBox,
 .toolbar .button {
     color: @text;
-    border: 1px solid @border;
     background:none;
     box-shadow: none;
 }
@@ -81,7 +80,6 @@
 .toolbar GtkComboBox:active,
 .toolbar .button:active {
     color: @text;
-    border: 1px solid @border;
     background-image: linear-gradient(to bottom,
                                   @button_active_gradient_a,
                                   @button_active_gradient_b
@@ -98,7 +96,6 @@
 /* Hover */
 .toolbar .button:hover {
     color: @hover_text;
-    border: 1px solid @hover_border;
     background-image: linear-gradient(to bottom,
                                   @button_hover_gradient_a,
                                   @button_hover_gradient_b
@@ -108,7 +105,6 @@
 
 .toolbar .button:active:hover {
     color: @hover_text;
-    border: 1px solid @hover_border;
     background-image: linear-gradient(to bottom,
                                   @button_hover_gradient_b,
                                   @button_hover_gradient_a
@@ -119,7 +115,6 @@
 .toolbar .button:insensitive,
 .toolbar .button:active:insensitive {
     color: @insensitive_foreground;
-    border: 1px solid @insensitive_border;
     background-image: linear-gradient(to bottom,
                                       @button_insensitive_gradient_a,
                                       @button_insensitive_gradient_b
@@ -136,7 +131,6 @@
 .toolbar .button:backdrop,
 .toolbar .button:active:backdrop {
     color: @backdrop_text;
-    border: 1px solid @backdrop_border;
     background-image: linear-gradient(to bottom,
                                       @button_backdrop_gradient_a,
                                       @button_backdrop_gradient_b
@@ -197,7 +191,6 @@
 .primary-toolbar .button,
 .primary-toolbar .button.image-button {
     color: @text;
-    border: 1px solid shade(@border,0.95);
     background-image: linear-gradient(to bottom,
                                   @button_gradient_a,
                                   @button_gradient_b
@@ -210,7 +203,6 @@
 .primary-toolbar .button:active,
 .primary-toolbar .button.image-button:active {
     color: @text;
-    border: 1px solid shade(@border,0.95);
     background-image: linear-gradient(to bottom,
                                   @button_active_gradient_a,
                                   @button_active_gradient_b
@@ -229,7 +221,6 @@
 .primary-toolbar .button:hover,
 .primary-toolbar .button:active:hover {
     color: @hover_text;
-    border: 1px solid shade(@hover_border,0.95);
     background-image: linear-gradient(to bottom,
                                   @button_hover_gradient_a,
                                   @button_hover_gradient_b
@@ -242,7 +233,6 @@
 .primary-toolbar .button:insensitive,
 .primary-toolbar .button:active:insensitive {
     color: @insensitive_foreground;
-    border: 1px solid @insensitive_border;
     background-image: linear-gradient(to bottom,
                                       @button_insensitive_gradient_a,
                                       @button_insensitive_gradient_b
@@ -259,7 +249,6 @@
 .primary-toolbar .button:backdrop,
 .primary-toolbar .button:active:backdrop {
     color: @backdrop_text;
-    border: 1px solid @backdrop_border;
     background-image: linear-gradient(to bottom,
                                       @button_backdrop_gradient_a,
                                       @button_backdrop_gradient_b
@@ -378,7 +367,6 @@
     padding-left: 2px;
     padding-bottom: 2px;
     padding-right: 2px;
-    border: 1px solid @border;
     background-image: linear-gradient(to bottom,
                               @button_gradient_a,
                               @button_gradient_b
@@ -388,7 +376,6 @@
 .inline-toolbar GtkComboBox,
 .inline-toolbar .button {
     color: @text;
-    border: 1px solid @border;
     padding-top: 2px;
     padding-left: 2px;
     padding-bottom: 2px;
@@ -402,7 +389,6 @@
 .inline-toolbar GtkComboBox:active,
 .inline-toolbar .button:active {
     color: @text;
-    border: 1px solid @border;
     background-image: linear-gradient(to bottom,
                                   @button_active_gradient_a,
                                   @button_active_gradient_b
@@ -418,7 +404,6 @@
 /* Hover */
 .inline-toolbar .button:hover {
     color: @hover_text;
-    border: 1px solid @hover_border;
     background-image: linear-gradient(to bottom,
                                   @button_hover_gradient_a,
                                   @button_hover_gradient_b
@@ -427,7 +412,6 @@
 
 .inline-toolbar .button:active:hover {
     color: @hover_text;
-    border: 1px solid @hover_border;
     background-image: linear-gradient(to bottom,
                                   @button_hover_gradient_b,
                                   @button_hover_gradient_a
@@ -439,7 +423,6 @@
 .inline-toolbar .button:insensitive,
 .inline-toolbar .button:active:insensitive {
     color: @insensitive_text;
-    border: 1px solid @insensitive_border;
     background-image: linear-gradient(to bottom,
                                       @button_insensitive_gradient_a,
                                       @button_insensitive_gradient_b
@@ -456,7 +439,6 @@
 .inline-toolbar .button:backdrop,
 .inline-toolbar .button:active:backdrop {
     color: @backdrop_text;
-    border: 1px solid @backdrop_border;
     background-image: linear-gradient(to bottom,
                                       @button_backdrop_gradient_a,
                                       @button_backdrop_gradient_b
@@ -534,7 +516,6 @@
 .header-bar GtkComboBox,
 .header-bar .button {
     color: @text;
-    border: 1px solid @border;
     background-image: linear-gradient(to bottom,
                                   @button_gradient_a,
                                   @button_gradient_b
@@ -545,7 +526,6 @@
 .header-bar GtkComboBox:active,
 .header-bar .button:active {
     color: @text;
-    border: 1px solid @border;
     background-image: linear-gradient(to bottom,
                                   @button_active_gradient_a,
                                   @button_active_gradient_b
@@ -556,7 +536,6 @@
 .header-bar .button:backdrop,
 .header-bar .button.image-button:backdrop {
     color: @backdrop_text;
-    border: 1px solid @backdrop_border;
     background-image: linear-gradient(to bottom,
                                   @backdrop_gradient_a,
                                   @backdrop_gradient_b
@@ -567,7 +546,6 @@
 .header-bar GtkComboBox:insensitive,
 .header-bar .button:insensitive {
     color: @insensitive_text;
-    border: 1px solid @insensitive_border;
     background-image: linear-gradient(to bottom,
                                   @button_insensitive_gradient_a,
                                   @button_insensitive_gradient_b
@@ -581,7 +559,6 @@
 .header-bar GtkComboBox:hover,
 .header-bar .button:hover {
     color: @hover_text;
-    border: 1px solid @hover_border;
     background-image: linear-gradient(to bottom,
                                   @button_hover_gradient_a,
                                   @button_hover_gradient_b
@@ -591,7 +568,6 @@
 .header-bar GtkComboBox:active:hover,
 .header-bar .button:active:hover {
     color: @hover_text;
-    border: 1px solid @hover_border;
     background-image: linear-gradient(to bottom,
                                   @button_hover_gradient_b,
                                   @button_hover_gradient_a

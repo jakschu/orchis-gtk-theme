@@ -247,7 +247,7 @@
 /***********
  * Popover *
  ***********/
-@define-color osd_popover_bg alpha(@osd_base, 0.90);
+@define-color osd_popover_background alpha(@osd_base, 0.90);
 
 /******************
  * Infobar colors *
