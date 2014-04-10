@@ -516,10 +516,7 @@
 .header-bar GtkComboBox,
 .header-bar .button {
     color: @text;
-    background-image: linear-gradient(to bottom,
-                                  @button_gradient_a,
-                                  @button_gradient_b
-                                  );
+    background-image: none;
     box-shadow: none;
 }
 
