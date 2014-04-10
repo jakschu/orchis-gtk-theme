@@ -598,6 +598,20 @@
                                   );
 }
 
+
+/*************************
+ * Header bar separator  *
+ *************************/
+
+.header-bar > GtkBox > .separator.vertical {
+    -GtkWidget-wide-separators: 1;
+    -GtkWidget-separator-width: 2px;
+    background: transparent;
+    border-width: 0 1px 0 1px;
+    border-style: solid;
+    border-color: transparent;
+}
+
 /* Separator */
 .header-bar .separator,
 .header-bar .button .separator,

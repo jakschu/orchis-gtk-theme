@@ -85,8 +85,6 @@ GtkTreeMenu .menuitem *,
 .menuitem.radio:hover,
 .menuitem.check:insensitive,
 .menuitem.radio:insensitive {
-    height: 16px;
-    width: 16px;
     border-style: none;
     background-color: transparent;
     background-image: none;
@@ -129,9 +127,16 @@ GtkTreeMenu .menuitem *,
 
 /* Accelerators */
 .menuitem .accelerator,
-.menuitem .accelerator:hover,
 .menuitem .accelerator:insensitive {
     color: @insensitive_text;
+    text-shadow:none;
+}
+
+
+.menuitem .accelerator:hover,
+.menuitem .accelerator:insensitive:hover {
+    color: white;
+    text-shadow:none;
 }
 
 
@@ -191,8 +196,6 @@ GtkTreeMenu .menuitem *,
 .menuitem.radio:active,
 .menuitem.radio:active:hover,
 .menuitem.radio:active:insensitive {
-    background-size: 16px 16px;
-    background-position: center center;
-    background-repeat: no-repeat;
+    padding: 2px;
     color: transparent;
 }

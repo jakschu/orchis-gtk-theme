@@ -39,6 +39,7 @@
 @define-color panel_text #EEE;/* Panel text color */
 @define-color panel_text_shadow alpha(black, 0.2);/* Panel text color */
 @define-color text_shadow alpha(black, 0.2);/* Text shadow */
+@define-color icon_shadow @text_shadow;/* Icon shadow */
 @define-color titlebar shade(@background, 0.95);/* Titlebar */
 
 /***********
@@ -46,7 +47,8 @@
  ***********/
 
 /* Import Main CSS */
-@import url("gtk-common.css");
 @import url("gtk-widgets-assets-dark.css");
+@import url("gtk-widgets-borders-dark.css");
 @import url("gtk-fallback.css");
 @import url("gtk-widgets.css");
+@import url("gtk-common.css");

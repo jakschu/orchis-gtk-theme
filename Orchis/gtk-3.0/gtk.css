@@ -22,7 +22,7 @@
  **********/
 
 /* Base colors */
-@define-color base #fff;/* Base color */
+@define-color base #f7f7f7;/* Base color */
 @define-color background #efefef;/* Background color */
 @define-color foreground #555;/* Foreground color */
 @define-color border shade(@background, 0.8);/* Borders color */
@@ -39,14 +39,17 @@
 @define-color panel_text #efefef;/* Panel text color */
 @define-color panel_text_shadow alpha(black, 0.2);/* Panel text color */
 @define-color text_shadow alpha(white, 0.2);/* Text shadow */
+@define-color icon_shadow @text_shadow;/* Icon shadow */
 @define-color titlebar shade(@background, 0.95);/* Titlebar */
+
 
 /***********
  * Imports *
  ***********/
 
 /* Import Main CSS */
-@import url("gtk-common.css");
 @import url("gtk-widgets-assets.css");
+@import url("gtk-widgets-borders.css");
 @import url("gtk-fallback.css");
 @import url("gtk-widgets.css");
+@import url("gtk-common.css");

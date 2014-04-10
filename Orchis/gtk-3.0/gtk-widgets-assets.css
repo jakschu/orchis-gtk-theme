@@ -567,3 +567,12 @@
     background: -gtk-scaled(url("assets/scale-slider-down-backdrop.png"),url("assets/scale-slider-down-backdrop@2.png"));
     background-image: url("assets/scale-slider-down-backdrop.png");
 }
+
+
+/*************************
+ * Header bar separator  *
+ *************************/
+
+.header-bar > GtkBox > .separator.vertical {
+    /*border-image: -gtk-scaled(url("assets/header-separator.png"),url("assets/header-separator@2.png")) 0 1 0 1 / 0 1px 0 1px stretch;*/
+}
