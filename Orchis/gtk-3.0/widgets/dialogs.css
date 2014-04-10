@@ -25,8 +25,8 @@ GtkMessageDialog {
     -GtkDialog-content-area-border: 0;
     -GtkDialog-action-area-border: 0;
     -GtkDialog-button-spacing: 0;
-    margin: 4px;
-    padding: 4px;
+    margin: 0;
+    padding: 0;
 }
 
 .dialog-action-area.linked .button,
@@ -45,26 +45,11 @@ GtkMessageDialog {
 .dialog-action-area.linked .button:active:last-child,
 .dialog-action-area.linked .button:active:hover:last-child,
 .dialog-action-area.linked .button:insensitive:last-child {
-    /*border-width: 1px 0 0px 0;*/
-    border: 1px solid @border;
-}
-
-
-.dialog-action-area.linked .button:first-child,
-.dialog-action-area.linked .button:active:first-child,
-.dialog-action-area.linked .button:active:hover:first-child,
-.dialog-action-area.linked .button:insensitive:first-child {
-    border-radius: 4px 0 0 4px;
-    border-right-width: 0;
-}
-
-
-.dialog-action-area.linked .button:last-child,
-.dialog-action-area.linked .button:active:last-child,
-.dialog-action-area.linked .button:active:hover:last-child,
-.dialog-action-area.linked .button:insensitive:last-child {
-    border-radius: 0 4px 4px 0;
-
+    border-style: solid;
+    border-radius: 0;
+    border-width: 1px 0 0px 0;
+    border-color: @border;
+    border-image: none;
 }
 
 .dialog-action-area.linked .button:only-child,
@@ -75,7 +60,7 @@ GtkMessageDialog {
 .dialog-action-area.linked .button:active:last-child,
 .dialog-action-area.linked .button:active:hover:last-child,
 .dialog-action-area.linked .button:insensitive:last-child {
-    border-right-width: 1px;
+    /*border-right-width: 1px;*/
 }
 
 .dialog-action-area.linked .button:only-child,
@@ -86,7 +71,7 @@ GtkMessageDialog {
 .dialog-action-area.linked .button:active:first-child,
 .dialog-action-area.linked .button:active:hover:first-child,
 .dialog-action-area.linked .button:insensitive:first-child {
-    border-left-width: 1px;
+    /*border-left-width: 1px;*/
 }
 
 .dialog-action-area.linked .button.default,
@@ -94,6 +79,7 @@ GtkMessageDialog {
 .dialog-action-area.linked .button.default:insensitive,
 .dialog-action-area.linked .button:focus {
     border-color: @selection;
+    border-width: 1px;
     -GtkWidget-focus-line-width: 0;
 }
 
