@@ -143,7 +143,7 @@
                                       @suggested_action_button_a,
                                       @suggested_action_button_b);
 
-    color: @suggested_action_button_foreground;
+    color: white;
 }
 
 .toolbar .suggested-action.button:hover,
@@ -163,7 +163,7 @@
                                       @suggested_action_button_b,
                                       @suggested_action_button_a);
 
-    color: @suggested_action_button_foreground;
+    color: white;
 }
 
 .toolbar .suggested-action.button:backdrop,

@@ -50,7 +50,7 @@ GtkCalendar.button:insensitive,
 GtkCalendar.header .button {
     border:none;
     box-shadow: none;
-    background:transparent;
+    background:none;
 }
 
 /* Header */
@@ -64,6 +64,6 @@ GtkCalendar.header {
 /* Highlight */
 GtkCalendar.highlight {
     border-width: 0;
-    background-color: transparent;
-    color: @selection;
+    background-color: @selection;
+    color: white;
 }

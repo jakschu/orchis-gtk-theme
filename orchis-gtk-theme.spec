@@ -14,7 +14,7 @@
 
 
 Name:		orchis-gtk-theme
-Version:	2.0
+Version:	2.2
 Release:	0
 
 Summary:	Orchis GTK Theme

@@ -22,7 +22,7 @@
  **********/
 
 /* Base colors */
-@define-color base #f7f7f7;/* Base color */
+@define-color base #fff;/* Base color */
 @define-color background #efefef;/* Background color */
 @define-color foreground #555;/* Foreground color */
 @define-color border shade(@background, 0.8);/* Borders color */

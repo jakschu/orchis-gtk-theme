@@ -116,10 +116,9 @@
 
 @define-color button_text_shadow alpha(@base, 0.2);
 
-
-@define-color suggested_action_button_a @selection;
-@define-color suggested_action_button_b shade(@suggested_action_button_a, 0.9);
-@define-color suggested_action_button_border shade(@selection, 0.5);
+@define-color suggested_action_button_a shade(@selection, 1.1);
+@define-color suggested_action_button_b shade(@suggested_action_button_a, 0.95);
+@define-color suggested_action_button_border shade(@selection, 0.8);
 @define-color suggested_action_button_foreground white;
 @define-color suggested_action_button_shadow shade(@suggested_action_button_border, 1.15);
 
@@ -220,7 +219,7 @@
 
 @define-color selection_toolbar_suggested_button_a @base;
 @define-color selection_toolbar_suggested_button_b @background;
-@define-color selection_toolbar_suggested_button_c #f3f4f3;
+@define-color selection_toolbar_suggested_button_c #f7f7f7;
 @define-color selection_toolbar_suggested_button_foreground @text;
 @define-color selection_toolbar_suggested_button_border @selection_toolbar_button_border;
 @define-color selection_toolbar_suggested_button_border_backdrop @selection_toolbar_button_border_backdrop;
