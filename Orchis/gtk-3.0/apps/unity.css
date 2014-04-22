@@ -63,7 +63,7 @@ UnityDecoration.top.menuitem {
 UnityDecoration.top:backdrop {
     box-shadow: none;
     background-image: none;
-    /*background-color: @backdrop_foreground;*/
+    background-color: @backdrop_foreground;
     color: @backdrop_background;
     text-shadow: none;
 }

@@ -40,6 +40,7 @@
     background-color: @backdrop_background;
     border-color:  @backdrop_border;
     color: @backdrop_text;
+    text-shadow: none;
 }
 
 .view:selected,
@@ -51,7 +52,8 @@
 .view:selected:backdrop,
 .view:selected:backdrop:focus {
     background-color: @backdrop_background;
-    color: @text;
+    color: @backdrop_text;
+    text-shadow:none;
 }
 
 .view.separator {
@@ -208,8 +210,9 @@ GtkHTML:active,
 GtkHTML:active:backdrop,
 .entry:active,
 .entry:active:backdrop {
-    color: @backdrop_foreground;
+    color: @backdrop_text;
     background-color: @backdrop_background;
+    text-shadow:none;
 }
 
 .cursor-handle.top,

@@ -33,6 +33,10 @@
     color: @text;
 }
 
+.nautilus-desktop.nautilus-canvas-item:backdrop {
+    color: white;
+}
+
 .nautilus-desktop.nautilus-canvas-item:selected {
     color: @selected_foreground;
 }

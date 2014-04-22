@@ -50,12 +50,14 @@
     background-color: @backdrop_background;
     border-color: @backdrop_border;
     color: @backdrop_text;
+    text-shadow:none;
 }
 
 .notebook:insensitive:backdrop,
 .notebook GtkViewport:insensitive:backdrop {
     background-color: @backdrop_insensitive_background;
     border-color: @backdrop_border;
+    text-shadow:none;
 }
 
 /*----- Tabs -----*/
