@@ -17,7 +17,7 @@
    inkscape:export-filename="test.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90"
-   sodipodi:docname="launcher_arrow_rtl_37.svg">
+   sodipodi:docname="launcher_arrow_outline_ltr_37.svg">
   <defs
      id="defs4">
     <clipPath
@@ -34,14 +34,14 @@
   </defs>
   <sodipodi:namedview
      id="base"
-     pagecolor="#5b5b5b"
+     pagecolor="#5c48bb"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0.61960784"
+     inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.313708"
-     inkscape:cx="6.7349854"
-     inkscape:cy="28.865085"
+     inkscape:zoom="22.737367"
+     inkscape:cx="-7.2716847"
+     inkscape:cy="18.647143"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -96,14 +96,9 @@
      id="layer1"
      transform="translate(0,-1015.3622)">
     <path
-       sodipodi:type="arc"
        style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:12;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new"
-       id="path3019"
-       sodipodi:cx="11.84375"
-       sodipodi:cy="17.03125"
-       sodipodi:rx="3.90625"
-       sodipodi:ry="4.15625"
-       d="m 15.75,17.03125 a 3.90625,4.15625 0 1 1 -7.8125,0 3.90625,4.15625 0 1 1 7.8125,0 z"
-       transform="matrix(1.024,0,0,0.96240604,-0.128,1017.9712)" />
+       d="M 8 15 C 5.790861 15 4 16.790861 4 19 C 4 21.209139 5.790861 23 8 23 C 10.209139 23 12 21.209139 12 19 C 12 16.790861 10.209139 15 8 15 z M 8 17 C 9.1045695 17 10 17.89543 10 19 C 10 20.10457 9.1045695 21 8 21 C 6.8954305 21 6 20.10457 6 19 C 6 17.89543 6.8954305 17 8 17 z "
+       transform="translate(0,1015.3622)"
+       id="path3019" />
   </g>
 </svg>
