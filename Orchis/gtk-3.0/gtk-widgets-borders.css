@@ -34,8 +34,6 @@ GtkComboBox.combobox-entry .button,
 .inline-toolbar.toolbar.vertical .button.default:insensitive,
 .trough,
 .trough.highlight,
-GtkSwitch.trough,
-GtkSwitch.trough:active:insensitive,
 .titlebar .titlebutton:hover, 
 .titlebar .titlebutton:active {
     border-image: -gtk-scaled(url("borders/generic-border.png"),url("borders/generic-border@2.png")) 4 3 4 3 / 4px 3px 4px 3px stretch;
@@ -57,8 +55,7 @@ GtkSwitch.trough:active:insensitive,
 .entry:focus,
 GtkComboBox.combobox-entry .entry:focus,
 .button.default:active,
-.inline-toolbar.toolbar.vertical .button.default:active,
-GtkSwitch.trough:active { 
+.inline-toolbar.toolbar.vertical .button.default:active { 
     border-image: -gtk-scaled(url("borders/generic-border-focused.png"),url("borders/generic-border-focused@2.png")) 4 3 4 3 / 4px 3px 4px 3px stretch;
     border-radius: 3px;
     border-width: 1px 1px 2px 1px;
@@ -117,9 +114,6 @@ GtkSwitch.trough:active {
 .inline-toolbar.toolbar .button.default:insensitive,
 .inline-toolbar.toolbar .button:active,
 .inline-toolbar.toolbar .button:insensitive,
-.primary-toolbar GtkSwitch.trough,
-.primary-toolbar GtkSwitch.trough:insensitive,
-.primary-toolbar GtkSwitch.trough:active:insensitive,
 .primary-toolbar GtkComboBox .button:active,
 .primary-toolbar GtkComboBox .button:insensitive {
     border-image: -gtk-scaled(url("borders/primary-toolbar-generic-border.png"),url("borders/primary-toolbar-generic-border@2.png")) 4 / 4px stretch;
@@ -230,7 +224,6 @@ column-header:last-child .button:backdrop {
 GtkComboBox.combobox-entry .entry:backdrop,
 GtkComboBox.combobox-entry .button:backdrop,
 .entry:backdrop,
-GtkSwitch.trough:backdrop,
 .trough:backdrop,
 .inline-toolbar.toolbar.vertical .button:backdrop,
 .inline-toolbar.toolbar.vertical .button:backdrop:insensitive,
@@ -261,7 +254,6 @@ GtkSwitch.trough:backdrop,
 .primary-toolbar GtkComboBox.combobox-entry .button:backdrop,
 .primary-toolbar GtkComboBox .button:backdrop,
 .primary-toolbar .entry:backdrop,
-.primary-toolbar GtkSwitch.trough:backdrop,
 .inline-toolbar.toolbar .button:backdrop,
 .inline-toolbar.toolbar .button:backdrop:insensitive,
 .inline-toolbar.toolbar .button:backdrop:active {
