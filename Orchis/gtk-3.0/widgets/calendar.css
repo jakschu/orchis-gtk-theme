@@ -20,50 +20,37 @@
 * Calendar *
 ************/
 
-
-GtkCalendar,
-.menuitem GtkCalendar {
-    border-radius: 2px;
-    padding: 4px;
-    border: 1px solid;
-    background-color: transparent;
-    background-image: none;
-}
-
-.menuitem GtkCalendar:inconsistent {
-    color: mix(@text, @background, 0.5);
+GtkCalendar {
+    padding: 2px;
 }
 
 GtkCalendar.view {
-    border-style: none;
-    background-color: transparent;
-    background-image: none;
+    border-color: @border;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 2px;
 }
 
-GtkCalendar:inconsistent {
-    color: mix(@foreground, @background, 0.5);
+GtkCalendar.header {
+    border-radius: 0;
+    background: @background;
+    border-width: 0;
 }
 
 GtkCalendar.button,
-GtkCalendar.button:hover,
 GtkCalendar.button:insensitive,
-GtkCalendar.header .button {
-    border:none;
-    box-shadow: none;
-    background:none;
+GtkCalendar.button:backdrop,
+GtkCalendar.button:insensitive:backdrop {
+    background: none;
+    background-color: transparent;
 }
 
-/* Header */
-GtkCalendar.header {
-    border: 1px solid alpha(@foreground, 0.4);
-    background-color: alpha(@foreground, 0.2);
-    background-image: none;
-    font-weight: bold;
-}
-
-/* Highlight */
+.highlight,
 GtkCalendar.highlight {
-    border-width: 0;
     background-color: @selection;
-    color: white;
+    color: @selected_foreground;
+    border-radius: 0;
+    padding: 0;
+    border-width: 0;
 }

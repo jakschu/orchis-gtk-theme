@@ -52,7 +52,7 @@ GtkTreeMenu .menuitem *,
     border: transparent;
     border-radius: 0;
     border-width: 0;
-    background-color: transparent;
+    /*background-color: transparent;*/
     color: @text;
     text-shadow: 0 1px @text_shadow;
 
@@ -63,7 +63,7 @@ GtkTreeMenu .menuitem *,
 .menu .menuitem:hover {
     border: none;
     background-color: @selection;
-    background-image: none;
+    /*background-image: none;*/
     text-shadow: 0 1px @panel_text_shadow;
 }
 
@@ -79,27 +79,9 @@ GtkTreeMenu .menuitem *,
     color: @insensitive_text;
 }
 
-.menuitem.check,
-.menuitem.radio,
-.menuitem.check:hover,
-.menuitem.radio:hover,
-.menuitem.check:insensitive,
-.menuitem.radio:insensitive {
-    border-style: none;
-    background-color: transparent;
-    background-image: none;
-}
-
-.menuitem.check:active,
-.menuitem.radio:active {
-    border-style: none;
-    background-color: transparent;
-    color: white;
-}
-
 /* Arrow color */
 .menuitem.arrow {
-    background:transparent;
+    background-color: @background;
     color: alpha(@text, 0.6);
 }
 
@@ -157,7 +139,7 @@ GtkTreeMenu .menuitem *,
     padding: 2px 6px;
     border: 1px solid transparent;
     background-color: transparent;
-    background-image: none;
+    /*background-image: none;*/
     color: @foreground;
 }
 
@@ -166,7 +148,7 @@ GtkTreeMenu .menuitem *,
 .menubar .menuitem *:hover {
     border: none;
     background-color: @selection;
-    background-image: none;
+    /*background-image: none;*/
     color: @selected_foreground;
 }
 
@@ -184,6 +166,33 @@ GtkTreeMenu .menuitem *,
  * Checks & Radios *
  *******************/
 
+ .menuitem.radio,
+ .menuitem.check {
+    background: none;
+    top:0;
+    left:0;
+    height:16px;
+    width:16px;
+    border-style: none;
+ }
+
+
+.menuitem.check,
+.menuitem.radio,
+.menuitem.check:hover,
+.menuitem.radio:hover,
+.menuitem.check:insensitive,
+.menuitem.radio:insensitive {
+    background-color: transparent;
+}
+
+.menuitem.check:active,
+.menuitem.radio:active {
+    border-style: none;
+    background-color: transparent;
+    color: white;
+}
+
 .menuitem.check:active,
 .menuitem.check:active:hover,
 .menuitem.check:active:insensitive,
@@ -196,6 +205,5 @@ GtkTreeMenu .menuitem *,
 .menuitem.radio:active,
 .menuitem.radio:active:hover,
 .menuitem.radio:active:insensitive {
-    padding: 2px;
     color: transparent;
 }

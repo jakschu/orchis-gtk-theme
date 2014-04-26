@@ -50,7 +50,7 @@ UnityDecoration.top {
     border-radius: 8px 8px 0 0;
     box-shadow: none;
     background-image: none;
-    /*background-color: @panel;*/
+    background-color: @panel;
     color: @panel_text;
     text-shadow: 0 1px @panel_text_shadow;
 }
@@ -63,8 +63,8 @@ UnityDecoration.top.menuitem {
 UnityDecoration.top:backdrop {
     box-shadow: none;
     background-image: none;
-    background-color: @backdrop_foreground;
-    color: @backdrop_background;
+    background-color: @backdrop_background;
+    color: @backdrop_foreground;
     text-shadow: none;
 }
 
@@ -73,16 +73,16 @@ UnityDecoration.right {
     background-color: transparent;
     background-size: 1px;
     background-repeat: repeat-x;
-    /*background-image: -gtk-gradient (linear, left top, left bottom,
+    background-image: -gtk-gradient (linear, left top, left bottom,
                                      color-stop (0, @panel),
                                      color-stop (0.5, @border),
-                                     color-stop (1, @border));*/
-    background-image: none;
+                                     color-stop (1, @border));
+    /*background-image: none;*/
 }
 
 UnityDecoration.bottom {
     background:none;
-    /*background-color: alpha(white,0.4);*/
+    background-color: alpha(white,0.4);
 }
 
 UnityDecoration.left:backdrop,
@@ -118,7 +118,7 @@ UnityPanelWidget,
 
 .unity-panel.menubar:backdrop,
 .unity-panel .menubar *:backdrop {
-    color: @backdrop_background;
+    color: @backdrop_foreground;
 }
 
 .unity-panel.menubar.menuitem,
