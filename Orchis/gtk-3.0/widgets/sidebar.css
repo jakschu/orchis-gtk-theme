@@ -56,8 +56,8 @@
 .source-list.view,
 .source-list.view:selected:backdrop,
 .source-list.view:prelight:selected:backdrop {
-    text-shadow: 0 1px @text_shadow;
-    icon-shadow: 0 1px @text_shadow;
+    text-shadow: none;
+    icon-shadow: none;
 }
 
 /* Frame */
