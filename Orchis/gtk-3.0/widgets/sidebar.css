@@ -129,10 +129,9 @@
     border: none;
 
     background: @selection;
-    box-shadow: inset 0 1px 0 0 alpha (#000, 0.15),
-                inset 0 -1px 0 0 alpha (#000, 0.08);
-    text-shadow: 0 1px alpha (#000, 0.4);
-    icon-shadow: 0 1px alpha (#000, 0.4);
+    box-shadow: none;
+    text-shadow:none;
+    icon-shadow:none;
 }
 
 /* Hover */
