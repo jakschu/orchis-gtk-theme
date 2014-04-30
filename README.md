@@ -7,7 +7,7 @@ Orchis GTK Theme is distributed under the terms the GNU GPL v.3
 
 ###Preamble
 
-If you find any bugs or issues with Orchis or if you have a question, you can visit Orchis's primary issue tracker on [GitHub](https://github.com/snwh/orchis-gtk-theme/issues).
+If you find any bugs or issues with Orchis or if you have a question, you can visit Orchis's primary issue tracker on [GitHub](https://github.com/moka-project/orchis-gtk-theme/issues).
 
 ###Download
 
@@ -15,11 +15,11 @@ Orchis can be downloaded [here](http://www.mokaproject.com/orchis-gtk-theme/#dow
 
 ###Getting the Source
 
-The source for Orchis GTK3 Theme can be found [here](https://github.com/snwh/orchis-gtk-theme).
+The source for Orchis GTK3 Theme can be found [here](https://github.com/moka-project/orchis-gtk-theme).
 
 Alternatively, you can clone the latest version its git repository:
 
-    git clone https://github.com/snwh/orchis-gtk-theme.git
+    git clone https://github.com/moka-project/orchis-gtk-theme.git
 
 ###Using the Source
 
