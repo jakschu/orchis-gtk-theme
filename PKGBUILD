@@ -1,5 +1,5 @@
 pkgname=orchis-gtk-git
-﻿_pkgname=orchis-gtk-theme
+_pkgname=orchis-gtk-theme
 pkgver=2.2
 pkgrel=1
 pkgdesc="Orchis is a modern GTK3 theme for Linux."
